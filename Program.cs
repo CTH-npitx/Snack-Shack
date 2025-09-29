@@ -19,7 +19,9 @@ namespace snackShack
             Application.Run(new Form1());
         }
         internal const bool debug = true; //global var to controll default for debugs
+        internal const string preMadeErrorMsg = "I'm sorry dave, I'm afraid I can't do that"; //pre-made error message
     }
+}
 
     internal static class coreCommands
     {
