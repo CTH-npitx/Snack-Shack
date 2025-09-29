@@ -11,5 +11,6 @@ namespace snackShack
         internal string name; //name of snack
         internal string cost; //cost of snack
         internal string imagePath; //path of image
+        internal int index; //the index of the entry
     }
 }
