@@ -20,6 +20,8 @@ namespace snackShack
         }
     }
 
+    internal static bool debug = true;
+
     internal static class coreCommands
     {
         internal static void error(string message, Exception ex = null, bool revealException = false)
