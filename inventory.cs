@@ -8,8 +8,8 @@ namespace snackShack
 {
     internal class inventory
     {
-        internal string name; //first name
-        internal string cost; //last name
-        internal string imagePath; //e-mail address
+        internal string name; //name of snack
+        internal string cost; //cost of snack
+        internal string imagePath; //path of image
     }
 }
