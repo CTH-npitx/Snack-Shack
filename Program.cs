@@ -18,9 +18,8 @@ namespace snackShack
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+        internal const bool debug = true; //global var to controll default for debugs
     }
-
-    internal static bool debug = true;
 
     internal static class coreCommands
     {
