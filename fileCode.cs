@@ -17,7 +17,7 @@ namespace snackShack.files
                 {
                     using (StreamWriter sw = new StreamWriter(filepath))
                     {
-                        foreach (var c in Program.contacts) //the loop for createing the contents which will be saved
+                        foreach (var c in Program.inventory) //the loop for createing the contents which will be saved
                         {
                             //csv - comma seperated values
                             //firstname-lastname-email-phone-buisness-notes
