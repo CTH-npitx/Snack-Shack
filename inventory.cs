@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdressBook
 {
-    internal class Contact
+    internal class inventory
     {
         internal string firstname; //first name
         internal string lastname; //last name
