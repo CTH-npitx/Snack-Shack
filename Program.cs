@@ -39,11 +39,11 @@ namespace snackShack
     
         internal static string path()
         {
-            var pathSpliter = '\\';
+            var pathSpliter = '\\'; //part between paths
             var loc = AppDomain.CurrentDomain.BaseDirectory; //get the current domain
-            var comps = loc.Split('\\');
-            var len = comps.Length;
-            var completeLoc = string.Empty;
+            var comps = loc.Split('\\'); //array of path after being split
+            var len = comps.Length; //length of path
+            var completeLoc = string.Empty; //blank variable for path
             for (var i = 0; i < len-2; i++)
             {
                 var comp = comps[i];
