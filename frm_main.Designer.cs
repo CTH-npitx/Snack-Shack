@@ -1,6 +1,6 @@
 ﻿namespace snackShack
 {
-    partial class Form1
+    partial class frm_main
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusStrip1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Main Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
