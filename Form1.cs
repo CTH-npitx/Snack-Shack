@@ -20,5 +20,7 @@ namespace snackShack
         string rootPath = string.Empty;
         string inventoryFile = string.Empty;
         string imageFolder = string.Empty;
+        const char fileSepChar = '\\';
+        string fileSep = char.ToString(fileSepChar);
     }
 }
