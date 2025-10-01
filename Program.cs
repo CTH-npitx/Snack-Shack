@@ -44,6 +44,11 @@ namespace snackShack
             var comps = loc.Split('\\');
             var len = comps.Length;
             var completeLoc = string.Empty;
+            for (var i = 0; i < len-2; i++)
+            {
+                var comp = comps[i];
+                completeLoc = comp + char.ToString(pathSpliter);
+            }
         }
     }
 }
