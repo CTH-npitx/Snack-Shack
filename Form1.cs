@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization.Configuration;
 
 namespace snackShack
 {
@@ -16,11 +17,16 @@ namespace snackShack
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        string rootPath = string.Empty;
+        string inventoryFile = string.Empty;
+        string imageFolder = string.Empty;
+        const char fileSepChar = '\\';
+        string fileSep = char.ToString(fileSepChar);
+        private void Form1_Load(object sender, EventArgs e)
         {
-            var path = snackShack.coreCommands.path();
-            button1.Text = path;
+            rootPath = snackShack.coreCommands.path();
+            inventoryFile = rootPath + nameof(inventory) + ".csv";
+            imageFolder = rootPath + "presetImages" + fileSep;
         }
     }
 }
