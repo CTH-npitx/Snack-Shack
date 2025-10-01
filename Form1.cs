@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization.Configuration;
 
 namespace snackShack
 {
@@ -16,5 +17,8 @@ namespace snackShack
         {
             InitializeComponent();
         }
+        string rootPath = string.Empty;
+        string inventoryFile = string.Empty;
+        string imageFolder = string.Empty;
     }
 }
