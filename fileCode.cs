@@ -23,8 +23,8 @@ namespace snackShack.files
                             //firstname-lastname-email-phone-buisness-notes
                             string ind = (c.index + 1).ToString();
                             string cost = c.cost.ToString();
-                            string line = cost + sep + c.imagePath + sep +  //first and last name
-                                 sep + ind;
+                            string line = c.name + sep + c.imagePath + sep +  //first and last name
+                                cost + sep + ind;
                             sw.WriteLine(line); //write the information to the line
                         }
                     } //streamwriter
@@ -53,26 +53,23 @@ namespace snackShack.files
                         //firstname-lastname-email-phone-buisness-notes
                         while (!sr.EndOfStream) //add each line to it one by one
                         {
-                            string contact = sr.ReadLine(); //gets the next line of text from the file
-                            var cont = contact.Split(sep); //splits it by the seperator
-                            if (cont.Length >= min)
+                            string item = sr.ReadLine(); //gets the next line of text from the file
+                            var entry = item.Split(sep); //splits it by the seperator
+                            if (entry.Length >= min)
                             {
-                                Contact c = new Contact //make new constact
+                                inventory c = new inventory //make new constact
                                 {
-                                    firstname = cont[0], //put the realevent input into the releavent field
-                                    lastname = cont[1], //same
-                                    phone = cont[2], //same
-                                    email = cont[3], //same
-                                    buisness = Convert.ToBoolean(cont[4]), //same
-                                    notes = cont[5], //same
-                                    index = Convert.ToInt32(cont[6]) - 1 //more of the same             
+                                    name = entry[0], //put the realevent input into the releavent field
+                                    imagePath = entry[1], //same
+                                    cost = Convert.ToInt32(entry[2]), //same
+                                    index = Convert.ToInt32(entry[3]) -1 //any guesses?
                                 };
-                                Program.contacts.Add(c); //add to list
+                                Program.inventory.Add(c); //add to list
                             }
                             else
                             {
 
-                                snackShack.coreCommands.error("error: below Max Length");
+                                coreCommands.error("error: below Max Length");
                             }
                         }
                     }
