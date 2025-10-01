@@ -38,6 +38,6 @@ namespace snackShack
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
           // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
           internal static string path() {
-        return AppDomain.CurrentDomain.BaseDirectory;
-    }
+            return AppDomain.CurrentDomain.BaseDirectory;
+          }
 };
