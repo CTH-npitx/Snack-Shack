@@ -16,5 +16,11 @@ namespace snackShack
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var path = snackShack.coreCommands.path();
+            button1.Text = path;
+        }
     }
 }
