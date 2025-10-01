@@ -31,12 +31,12 @@ namespace snackShack.files
                 }
                 catch (Exception ex)
                 {
-                    coreCommands.error(Program.preMadeErrorMsg, ex, true); //show error
+                    snackShack.coreCommands.error(Program.preMadeErrorMsg, ex, true); //show error
                 }
             }
             else
             {
-                coreCommands.error("File Not Found"); //show error
+                snackShack.coreCommands.error("File Not Found"); //show error
             }
         } //the write function
 
