@@ -44,7 +44,7 @@ namespace snackShack
             var comps = loc.Split('\\'); //array of path after being split
             var len = comps.Length; //length of path
             var completeLoc = string.Empty; //blank variable for path
-            for (var i = 0; i < len-2; i++)
+            for (var i = 0; i < len-3; i++)
             {
                 var comp = comps[i];
                 completeLoc = completeLoc + comp + char.ToString(pathSpliter);
