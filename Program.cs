@@ -39,8 +39,8 @@ namespace snackShack
     
         internal static string path()
         {
+            var pathSpliter = '\\';
             var loc = AppDomain.CurrentDomain.BaseDirectory; //get the current domain
-            var comps = loc.Split('/')
         }
     }
 }
