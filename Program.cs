@@ -49,7 +49,7 @@ namespace snackShack
                 var comp = comps[i];
                 completeLoc = completeLoc + comp + char.ToString(pathSpliter);
             }
-            return completeLoc;
+            return completeLoc; //output path
         }
     }
 }
