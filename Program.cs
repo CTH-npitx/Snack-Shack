@@ -44,7 +44,6 @@ namespace snackShack
             var comps = loc.Split('\\'); //array of path after being split
             var len = comps.Length; //length of path
             var completeLoc = string.Empty; //blank variable for path
-            for (var i = 0; i < len-3; i++)
             for (var i = 0; i < len-3; i++) //repeat by the length minus 2, which will lead to it excluding the 2 folders that are unwanted
             {
                 var comp = comps[i];
