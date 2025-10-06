@@ -28,5 +28,10 @@ namespace snackShack
             inventoryFile = rootPath + nameof(inventory) + ".csv";
             imageFolder = rootPath + "presetImages" + fileSep;
         }
+
+        private void tsb_close(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
