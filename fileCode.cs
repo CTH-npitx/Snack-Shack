@@ -22,9 +22,15 @@ namespace snackShack.files
                             //csv - comma seperated values
                             //firstname-lastname-email-phone-buisness-notes
                             string ind = (c.index + 1).ToString();
+<<<<<<< Updated upstream
                             string cost = c.cost.ToString();
                             string line = c.name + sep + c.imagePath + sep +  //first and last name
                                 cost + sep + ind;
+=======
+                            string line = c.firstname + sep + c.lastname + sep +  //first and last name
+                                c.phone + sep + c.email + sep + c.buisness + sep + //contact information
+                                c.notes + sep + ind; //notes
+>>>>>>> Stashed changes
                             sw.WriteLine(line); //write the information to the line
                         }
                     } //streamwriter
