@@ -28,10 +28,5 @@ namespace snackShack
             inventoryFile = rootPath + nameof(inventory) + ".csv";
             imageFolder = rootPath + "presetImages" + fileSep;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
