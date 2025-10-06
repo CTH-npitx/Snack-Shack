@@ -22,7 +22,9 @@ namespace snackShack
         string imageFolder = string.Empty;
         const char fileSepChar = '\\';
         string fileSep = char.ToString(fileSepChar);
-        private void Form1_Load(object sender, EventArgs e)
+
+
+        private void frm_main_Load(object sender, EventArgs e)
         {
             rootPath = snackShack.coreCommands.path();
             inventoryFile = rootPath + nameof(inventory) + ".csv";
