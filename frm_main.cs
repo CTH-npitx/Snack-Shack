@@ -29,9 +29,9 @@ namespace snackShack
             imageFolder = rootPath + "presetImages" + fileSep;
         }
 
-        private void tsb_close(object sender, EventArgs e)
+        private void frm_main_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
     }
 }
