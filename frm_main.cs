@@ -13,7 +13,7 @@ namespace snackShack
 {
     public partial class frm_main : Form
     {
-        public frm_main()
+        public frm_main() 
         {
             InitializeComponent();
         }
