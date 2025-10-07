@@ -29,7 +29,7 @@ namespace snackShack
             imageFolder = rootPath + "presetImages" + fileSep;
         }
 
-        private void tsb_close(object sender, EventArgs e)
+        private void btn_appClose(object sender, EventArgs e)
         {
             Application.Exit();
         }
