@@ -55,7 +55,7 @@ namespace snackShack.files
                 {
                     using (StreamReader sr = new StreamReader(path)) //make stringreader
                     {
-                        //csv - comma seperated values
+                        //csv - comma seperated values 
                         //firstname-lastname-email-phone-buisness-notes
                         while (!sr.EndOfStream) //add each line to it one by one
                         {
