@@ -11,9 +11,9 @@ using System.Xml.Serialization.Configuration;
 
 namespace snackShack
 {
-    public partial class frmMain : Form
+    public partial class frm_main : Form
     {
-        public frmMain()
+        public frm_main()
         {
             InitializeComponent();
         }
