@@ -66,6 +66,7 @@
             this.dgv_invent.Location = new System.Drawing.Point(0, 28);
             this.dgv_invent.MultiSelect = false;
             this.dgv_invent.Name = "dgv_invent";
+            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_invent.Size = new System.Drawing.Size(543, 235);
             this.dgv_invent.TabIndex = 1;
             // 
