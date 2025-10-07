@@ -33,7 +33,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.tsp_close = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsb_manuImport = new System.Windows.Forms.ToolStripButton();
             this.tsb_manuSave = new System.Windows.Forms.ToolStripButton();
@@ -64,7 +64,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSplitButton1,
+            this.tsp_close,
             this.toolStripSeparator1,
             this.tsb_manuImport,
             this.tsb_manuSave});
@@ -74,14 +74,15 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripSplitButton1
+            // tsp_close
             // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(52, 22);
-            this.toolStripSplitButton1.Text = "Close";
+            this.tsp_close.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsp_close.Image = ((System.Drawing.Image)(resources.GetObject("tsp_close.Image")));
+            this.tsp_close.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsp_close.Name = "tsp_close";
+            this.tsp_close.Size = new System.Drawing.Size(40, 22);
+            this.tsp_close.Text = "Close";
+            this.tsp_close.Click += new System.EventHandler(this.tsb_close);
             // 
             // toolStripSeparator1
             // 
@@ -136,8 +137,8 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsb_manuImport;
         private System.Windows.Forms.ToolStripButton tsb_manuSave;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton tsp_close;
     }
 }
 
