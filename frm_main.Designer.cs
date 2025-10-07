@@ -39,7 +39,7 @@
             this.tsb_manuSave = new System.Windows.Forms.ToolStripButton();
             this.col_snaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_snaIcon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,11 +63,13 @@
             this.col_snaName,
             this.col_snaPri,
             this.col_snaIcon});
-            this.dgv_invent.Location = new System.Drawing.Point(0, 28);
+            this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgv_invent.Location = new System.Drawing.Point(0, 0);
             this.dgv_invent.MultiSelect = false;
             this.dgv_invent.Name = "dgv_invent";
+            this.dgv_invent.RowHeadersVisible = false;
             this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_invent.Size = new System.Drawing.Size(543, 235);
+            this.dgv_invent.Size = new System.Drawing.Size(397, 428);
             this.dgv_invent.TabIndex = 1;
             // 
             // toolStrip1
@@ -77,9 +79,9 @@
             this.toolStripSeparator1,
             this.tsb_manuImport,
             this.tsb_manuSave});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(397, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(403, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -132,6 +134,8 @@
             // 
             this.col_snaIcon.HeaderText = "Icon of Snack";
             this.col_snaIcon.Name = "col_snaIcon";
+            this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // frm_main
             // 
@@ -165,7 +169,7 @@
         private System.Windows.Forms.ToolStripButton tsp_close;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaName;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaPri;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_snaIcon;
+        private System.Windows.Forms.DataGridViewImageColumn col_snaIcon;
     }
 }
 
