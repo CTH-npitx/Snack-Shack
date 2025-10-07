@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace snackShack
 {
-    public partial class frm_main : Form
+    public partial class frmMain : Form
     {
-        public frm_main()
+        public frmMain()
         {
             InitializeComponent();
         }
