@@ -82,6 +82,7 @@
             this.tsp_close.Name = "tsp_close";
             this.tsp_close.Size = new System.Drawing.Size(40, 22);
             this.tsp_close.Text = "Close";
+            this.tsp_close.Click += new System.EventHandler(this.tsb_close);
             // 
             // toolStripSeparator1
             // 
