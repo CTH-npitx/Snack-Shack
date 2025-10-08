@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization.Configuration;
+
 
 namespace snackShack
 {
@@ -22,6 +24,7 @@ namespace snackShack
         string imageFolder = string.Empty;
         const char fileSepChar = '\\';
         string fileSep = char.ToString(fileSepChar);
+        //remove close (based on https://csharphelper.com/howtos/howto_remove_close_x.html )
         private void frmMain_load(object sender, EventArgs e)
         {
             rootPath = snackShack.coreCommands.path();
