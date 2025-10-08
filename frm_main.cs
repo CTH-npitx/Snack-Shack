@@ -37,6 +37,13 @@ namespace snackShack
         [DllImport("User32")]
         private static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
         // Remove the X button.
+        void removeClose()
+        {
+            IntPtr hMenu = GetSystemMenu(this.Handle, false);
+            int num_menu_items = GetMenuItemCount(hMenu);
+            RemoveMenu(hMenu, num_menu_items - 1, MF_BYPOSITION); // Remove Close
+            RemoveMenu(hMenu, num_menu_items - 2, MF_BYPOSITION); // Remove Minimise
+        }
         #endregion
         private void frmMain_load(object sender, EventArgs e)
         {
