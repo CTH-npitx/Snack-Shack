@@ -26,6 +26,17 @@ namespace snackShack
         string fileSep = char.ToString(fileSepChar);
         //remove close (based on https://csharphelper.com/howtos/howto_remove_close_x.html )
         #region removeClose
+        // Declare User32 constants and methods.
+        private const int MF_BYPOSITION = 0x400;
+        [DllImport("User32")]
+        private static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
+
+        [DllImport("User32")]
+        private static extern int GetMenuItemCount(IntPtr hWnd);
+
+        [DllImport("User32")]
+        private static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
+        // Remove the X button.
         #endregion
         private void frmMain_load(object sender, EventArgs e)
         {
