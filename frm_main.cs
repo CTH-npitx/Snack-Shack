@@ -27,11 +27,16 @@ namespace snackShack
             rootPath = snackShack.coreCommands.path();
             inventoryFile = rootPath + nameof(inventory) + ".csv";
             imageFolder = rootPath + "presetImages" + fileSep;
+            dgv_invent.Rows.Add();
         }
 
         private void btn_appClose(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dgv_invent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }
