@@ -37,6 +37,15 @@ namespace snackShack
 
         private void dgv_invent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void dgv_invent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+                Application.Exit();
+            }
         }
     }
 }
