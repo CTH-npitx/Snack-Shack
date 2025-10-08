@@ -32,13 +32,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsp_close = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsb_manuImport = new System.Windows.Forms.ToolStripButton();
-            this.tsb_manuSave = new System.Windows.Forms.ToolStripButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -61,70 +59,46 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 1;
             // 
-            // toolStrip1
+            // menuStrip1
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsp_close,
-            this.toolStripSeparator1,
-            this.tsb_manuImport,
-            this.tsb_manuSave});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.closeToolStripMenuItem,
+            this.manualSaveToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // tsp_close
+            // closeToolStripMenuItem
             // 
-            this.tsp_close.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsp_close.Image = ((System.Drawing.Image)(resources.GetObject("tsp_close.Image")));
-            this.tsp_close.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsp_close.Name = "tsp_close";
-            this.tsp_close.Size = new System.Drawing.Size(40, 22);
-            this.tsp_close.Text = "Close";
-            this.tsp_close.Click += new System.EventHandler(this.tsb_close);
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.closeToolStripMenuItem.Text = "Close";
             // 
-            // toolStripSeparator1
+            // manualSaveToolStripMenuItem
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // tsb_manuImport
-            // 
-            this.tsb_manuImport.BackColor = System.Drawing.SystemColors.Control;
-            this.tsb_manuImport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tsb_manuImport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsb_manuImport.Image = ((System.Drawing.Image)(resources.GetObject("tsb_manuImport.Image")));
-            this.tsb_manuImport.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsb_manuImport.Name = "tsb_manuImport";
-            this.tsb_manuImport.Size = new System.Drawing.Size(47, 22);
-            this.tsb_manuImport.Text = "Import";
-            // 
-            // tsb_manuSave
-            // 
-            this.tsb_manuSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsb_manuSave.Image = ((System.Drawing.Image)(resources.GetObject("tsb_manuSave.Image")));
-            this.tsb_manuSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsb_manuSave.Name = "tsb_manuSave";
-            this.tsb_manuSave.Size = new System.Drawing.Size(78, 22);
-            this.tsb_manuSave.Text = "Manual Save";
+            this.manualSaveToolStripMenuItem.Name = "manualSaveToolStripMenuItem";
+            this.manualSaveToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.manualSaveToolStripMenuItem.Text = "Manual Save";
             // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Form";
             this.Load += new System.EventHandler(this.frmMain_load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,11 +109,9 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton tsb_manuImport;
-        private System.Windows.Forms.ToolStripButton tsb_manuSave;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton tsp_close;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manualSaveToolStripMenuItem;
     }
 }
 
