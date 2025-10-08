@@ -25,6 +25,8 @@ namespace snackShack
         const char fileSepChar = '\\';
         string fileSep = char.ToString(fileSepChar);
         //remove close (based on https://csharphelper.com/howtos/howto_remove_close_x.html )
+        #region removeClose
+        #endregion
         private void frmMain_load(object sender, EventArgs e)
         {
             rootPath = snackShack.coreCommands.path();
@@ -36,5 +38,6 @@ namespace snackShack
         {
             Application.Exit();
         }
+
     }
 }
