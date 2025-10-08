@@ -32,6 +32,7 @@ namespace snackShack
             rootPath = snackShack.coreCommands.path();
             inventoryFile = rootPath + nameof(inventory) + ".csv";
             imageFolder = rootPath + "presetImages" + fileSep;
+            removeClose();
         }
 
         private void tsb_close(object sender, EventArgs e)
