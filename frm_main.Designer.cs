@@ -89,7 +89,7 @@
             this.dgv_invent.MultiSelect = false;
             this.dgv_invent.Name = "dgv_invent";
             this.dgv_invent.RowHeadersVisible = false;
-            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_invent.Size = new System.Drawing.Size(397, 404);
             this.dgv_invent.TabIndex = 3;
             // 
