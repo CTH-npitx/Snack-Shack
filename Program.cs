@@ -54,6 +54,33 @@ namespace snackShack
     }
     internal static class constants
     {
-        const char fileSepChar = '\\';
+        const char fileSepChar_con = '\\'
+        private string fileSepChar(bool outString = true, bool outChar = false)
+        {
+            
+            string fileSep = char.ToString(fileSepChar_con);
+            if(outString)
+            {
+                return fileSep;
+            }
+            else
+            {
+                return fileSepChar_con;
+            }
+        }
+        private char fileSepChar(bool outString = false, bool outChar = true)
+        {
+            char fileSepChar = '\\';
+            string fileSep = char.ToString(fileSepChar);
+            if (outChar)
+            {
+                return fileSepChar_con;
+            }
+            else
+            {
+                return fileSep;
+            }
+        }
+
     }
 }
