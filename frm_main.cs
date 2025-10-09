@@ -13,25 +13,20 @@ namespace snackShack
 {
     public partial class frm_main : Form
     {
-        
-        string fileSep = char.ToString(fileSepChar);
+        string rootPath = snackShack.coreCommands.path();
+
+        string imageFolder = snackShack.coreCommands.path() + "presetImages" + fileSep;
 
         public frm_main()
         {
             InitializeComponent();
-            string rootPath = snackShack.coreCommands.path();
-            string imageFolder = rootPath + "presetImages" + fileSep;
             openFileDialog1.InitialDirectory = imageFolder;
             string inventoryFile = rootPath + nameof(inventory) + ".csv";
         }
 
         private void frmMain_load(object sender, EventArgs e)
-        {
-
-            
-
+        { 
             dgv_invent.Rows.Add();
-
         }
 
         private void btn_appClose(object sender, EventArgs e)
