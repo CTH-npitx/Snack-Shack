@@ -15,7 +15,7 @@ namespace snackShack
     {
         string rootPath = snackShack.coreCommands.path();
 
-        string imageFolder = snackShack.coreCommands.path() + "presetImages" + fileSep;
+        string imageFolder = snackShack.coreCommands.path() + "presetImages" + char.ToString(snackShack.constants.fileSepChar);
 
         public frm_main()
         {
