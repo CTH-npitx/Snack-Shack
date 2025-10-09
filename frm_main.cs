@@ -28,7 +28,7 @@ namespace snackShack
             inventoryFile = rootPath + nameof(inventory) + ".csv";
             imageFolder = rootPath + "presetImages" + fileSep;
             dgv_invent.Rows.Add();
-            openFileDialog1.InitialDirectory = imageFolder;
+             openFileDialog1.InitialDirectory = imageFolder;
         }
 
         private void btn_appClose(object sender, EventArgs e)
