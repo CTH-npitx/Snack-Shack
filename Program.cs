@@ -52,4 +52,8 @@ namespace snackShack
             return completeLoc; //output path
         }
     }
+    internal static class constants
+    {
+        internal const char fileSepChar = '\\';
+    }
 }
