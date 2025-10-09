@@ -54,5 +54,6 @@ namespace snackShack
     }
     internal static class constants
     {
+        const char fileSepChar = '\\';
     }
 }

@@ -13,7 +13,7 @@ namespace snackShack
 {
     public partial class frm_main : Form
     {
-        const char fileSepChar = '\\';
+        
         string fileSep = char.ToString(fileSepChar);
 
         public frm_main()
