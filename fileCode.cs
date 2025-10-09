@@ -45,7 +45,7 @@ namespace snackShack.files
                 snackShack.coreCommands.error("File Not Found"); //show error
             }
         } //the write function
-
+        
         internal static void read(string path, char sep, int min) //the read function
         {
             bool status = File.Exists(path); //check if the file exists
