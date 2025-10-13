@@ -1,4 +1,5 @@
-﻿using System;
+﻿using snackShack.files;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,15 +15,13 @@ namespace snackShack
     public partial class frm_main : Form
     {
         string rootPath = snackShack.coreCommands.path();
-        string imageFolder = snackShack.coreCommands.path() + "presetImages" + char.ToString(snackShack.constants.fileSepChar);
-        OpenFileDialog openFileDialog = new OpenFileDialog()
-        {
-            InitialDirectory = snackShack.coreCommands.path() + "presetImages" + char.ToString(snackShack.constants.fileSepChar)
-        };
+
+        string imageFolder = snackShack.coreCommands.path() + "presetImages" + constants.fileSepString();
 
         public frm_main()
         {
             InitializeComponent();
+            openFileDialog1.InitialDirectory = imageFolder;
             string inventoryFile = rootPath + nameof(inventory) + ".csv";
         }
 
@@ -46,10 +45,10 @@ namespace snackShack
             string imagePath;
             if (e.ColumnIndex == 2)
             {
-                openFileDialog.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    imagePath = openFileDialog.FileName;
+                    imagePath = openFileDialog1.FileName;
                 }
             }
         }
