@@ -19,7 +19,6 @@ namespace snackShack
             Application.Run(new frm_main());
         }
         internal const bool debug = true; //global var to controll default for debugs
-        internal const string preMadeErrorMsg = "I'm sorry dave, I'm afraid I can't do that"; //pre-made error message
         internal static List<inventory> inventory = new List<inventory>(); //makes a collection that refferences the class that will store information
     }
 
@@ -41,7 +40,7 @@ namespace snackShack
         {
             var pathSpliter = '\\'; //part between paths
             var loc = AppDomain.CurrentDomain.BaseDirectory; //get the current domain
-            var comps = loc.Split('\\'); //array of path after being splits
+            var comps = loc.Split('\\'); //array of path after being split
             var len = comps.Length; //length of path
             var completeLoc = string.Empty; //blank variable for path
             for (var i = 0; i < len-3; i++) //repeat by the length minus 2, which will lead to it excluding the 2 folders that are unwanted
@@ -51,9 +50,5 @@ namespace snackShack
             }
             return completeLoc; //output path
         }
-    }
-    internal static class constants
-    {
-        internal const char fileSepChar = '\\';
     }
 }
