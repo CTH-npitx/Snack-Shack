@@ -1,4 +1,5 @@
-﻿using System;
+﻿using snackShack.files;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,7 @@ namespace snackShack
     {
         string rootPath = snackShack.coreCommands.path();
 
-        string imageFolder = snackShack.coreCommands.path() + "presetImages" + char.ToString(snackShack.constants.fileSepChar);
+        string imageFolder = snackShack.coreCommands.path() + "presetImages" + constants.fileSepString();
 
         public frm_main()
         {
