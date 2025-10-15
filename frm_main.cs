@@ -1,10 +1,10 @@
-﻿using snackShack.files;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +23,7 @@ namespace snackShack
             InitializeComponent();
             openFileDialog1.InitialDirectory = imageFolder;
             string inventoryFile = rootPath + "Files" + constants.fileSepString() + nameof(inventory) + ".csv";
+            snackShack.files.read(inventoryFile);
         }
 
         private void frmMain_load(object sender, EventArgs e)
