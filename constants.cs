@@ -3,8 +3,8 @@ namespace snackShack
     internal static class constants
     {
         const char fileSepChar_con = '\\';
-        const int min = 4;
-        const char entrySep = ',';
+        internal const int min = 4;
+        internal const char entrySep = ',';
         internal const string preMadeErrorMsg = "I'm sorry dave, I'm afraid I can't do that"; //pre-made error message
 
         internal static string fileSepString()
