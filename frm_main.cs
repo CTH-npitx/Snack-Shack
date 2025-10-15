@@ -1,4 +1,5 @@
-﻿using System;
+﻿using snackShack.files;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,22 +14,20 @@ namespace snackShack
 {
     public partial class frm_main : Form
     {
+        string rootPath = snackShack.coreCommands.path();
+
+        string imageFolder = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + "presetImages" + constants.fileSepString();
+
         public frm_main()
         {
             InitializeComponent();
+            openFileDialog1.InitialDirectory = imageFolder;
+            string inventoryFile = rootPath + "Files" + constants.fileSepString() + nameof(inventory) + ".csv";
         }
-        string rootPath = string.Empty;
-        string inventoryFile = string.Empty;
-        string imageFolder = string.Empty;
-        const char fileSepChar = '\\';
-        string fileSep = char.ToString(fileSepChar);
+
         private void frmMain_load(object sender, EventArgs e)
-        {
-            rootPath = snackShack.coreCommands.path();
-            inventoryFile = rootPath + nameof(inventory) + ".csv";
-            imageFolder = rootPath + "presetImages" + fileSep;
+        { 
             dgv_invent.Rows.Add();
-             openFileDialog1.InitialDirectory = imageFolder;
         }
 
         private void btn_appClose(object sender, EventArgs e)
