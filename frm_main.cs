@@ -22,8 +22,8 @@ namespace snackShack
         {
             InitializeComponent();
             openFileDialog1.InitialDirectory = imageFolder;
-            textBox2.Text = inventoryFile;
             string inventoryFile = rootPath + "Files" + nameof(inventory) + ".csv";
+            textBox2.Text = inventoryFile;
         }
 
         private void frmMain_load(object sender, EventArgs e)
