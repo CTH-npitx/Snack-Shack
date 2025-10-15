@@ -94,8 +94,6 @@
             this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_invent.Size = new System.Drawing.Size(397, 404);
             this.dgv_invent.TabIndex = 3;
-            this.dgv_invent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_invent_CellClick);
-            this.dgv_invent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_invent_CellContentClick);
             // 
             // col_snaName
             // 

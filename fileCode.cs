@@ -31,7 +31,7 @@ namespace snackShack
                 }
                 catch (Exception ex)
                 {
-                    snackShack.coreCommands.error(Program.preMadeErrorMsg, ex, true); //show error
+                    snackShack.coreCommands.error(constants.preMadeErrorMsg, ex, true); //show error
                 }
             }
             else

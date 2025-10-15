@@ -32,10 +32,8 @@ namespace snackShack
         }
 
         private void frmMain_load(object sender, EventArgs e)
-        {
-            rootPath = snackShack.coreCommands.path();
-            inventoryFile = rootPath + nameof(inventory) + ".csv";
-            imageFolder = rootPath + "presetImages" + fileSep;
+        { 
+            dgv_invent.Rows.Add();
         }
 
         private void btn_appClose(object sender, EventArgs e)
