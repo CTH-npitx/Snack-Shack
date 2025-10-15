@@ -23,7 +23,7 @@ namespace snackShack
         {
             InitializeComponent();
             openFileDialog1.InitialDirectory = imageFolder;
-            snackShack.files.read(inventoryFile);
+            readInvent();
         }
 
         private void readInvent()
