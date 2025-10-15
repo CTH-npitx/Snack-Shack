@@ -16,7 +16,7 @@ namespace snackShack
     {
         string rootPath = snackShack.coreCommands.path();
 
-        string imageFolder = snackShack.coreCommands.path() + "presetImages" + constants.fileSepString();
+        string imageFolder = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + "presetImages" + constants.fileSepString();
 
         public frm_main()
         {
