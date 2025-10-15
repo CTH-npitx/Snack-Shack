@@ -17,13 +17,18 @@ namespace snackShack
         string rootPath = snackShack.coreCommands.path();
 
         string imageFolder = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + "presetImages" + constants.fileSepString();
+        string inventoryFile = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + nameof(inventory) + ".csv";
 
         public frm_main()
         {
             InitializeComponent();
             openFileDialog1.InitialDirectory = imageFolder;
-            string inventoryFile = rootPath + "Files" + constants.fileSepString() + nameof(inventory) + ".csv";
             snackShack.files.read(inventoryFile);
+        }
+
+        private void readInvent()
+        {
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min);
         }
 
         private void frmMain_load(object sender, EventArgs e)
