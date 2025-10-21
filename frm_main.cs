@@ -41,17 +41,12 @@ namespace snackShack
             Application.Exit();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txt_2_textChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void txt_1_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -38,14 +38,12 @@
             this.col_snaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_1 = new System.Windows.Forms.TextBox();
+            this.txt_2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -118,23 +116,23 @@
             this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // textBox1
+            // txt_1
             // 
-            this.textBox1.Location = new System.Drawing.Point(415, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Text 1";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txt_1.Location = new System.Drawing.Point(415, 52);
+            this.txt_1.Name = "txt_1";
+            this.txt_1.Size = new System.Drawing.Size(100, 20);
+            this.txt_1.TabIndex = 4;
+            this.txt_1.Text = "Text 1";
+            this.txt_1.TextChanged += new System.EventHandler(this.txt_1_TextChanged);
             // 
-            // textBox2
+            // txt_2
             // 
-            this.textBox2.Location = new System.Drawing.Point(550, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Text 2";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txt_2.Location = new System.Drawing.Point(550, 52);
+            this.txt_2.Name = "txt_2";
+            this.txt_2.Size = new System.Drawing.Size(100, 20);
+            this.txt_2.TabIndex = 5;
+            this.txt_2.Text = "Text 2";
+            this.txt_2.TextChanged += new System.EventHandler(this.txt_2_textChanged);
             // 
             // label1
             // 
@@ -154,25 +152,15 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "label2";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(476, 213);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_2);
+            this.Controls.Add(this.txt_1);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -185,7 +173,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,9 +189,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaName;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaPri;
         private System.Windows.Forms.DataGridViewImageColumn col_snaIcon;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txt_1;
+        private System.Windows.Forms.TextBox txt_2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }
