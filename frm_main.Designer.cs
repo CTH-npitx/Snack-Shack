@@ -107,7 +107,7 @@
             this.dgv_snackName,
             this.dgv_SnackPrice,
             this.dgv_snackIcon});
-            this.dgv_inputUI.Location = new System.Drawing.Point(496, 27);
+            this.dgv_inputUI.Location = new System.Drawing.Point(496, 24);
             this.dgv_inputUI.MultiSelect = false;
             this.dgv_inputUI.Name = "dgv_inputUI";
             this.dgv_inputUI.RowHeadersVisible = false;
