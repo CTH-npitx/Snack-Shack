@@ -100,17 +100,18 @@
             this.dgv_inputUI.AllowUserToDeleteRows = false;
             this.dgv_inputUI.AllowUserToResizeColumns = false;
             this.dgv_inputUI.AllowUserToResizeRows = false;
+            this.dgv_inputUI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_inputUI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_inputUI.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgv_snackName,
             this.dgv_SnackPrice,
             this.dgv_snackIcon});
-            this.dgv_inputUI.Location = new System.Drawing.Point(451, 90);
+            this.dgv_inputUI.Location = new System.Drawing.Point(496, 27);
             this.dgv_inputUI.MultiSelect = false;
             this.dgv_inputUI.Name = "dgv_inputUI";
             this.dgv_inputUI.RowHeadersVisible = false;
             this.dgv_inputUI.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_inputUI.Size = new System.Drawing.Size(342, 150);
+            this.dgv_inputUI.Size = new System.Drawing.Size(304, 96);
             this.dgv_inputUI.TabIndex = 8;
             // 
             // closeToolStripMenuItem
