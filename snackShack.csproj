@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="constants.cs" />
     <Compile Include="inventory.cs" />
     <Compile Include="fileCode.cs" />
     <Compile Include="frm_main.cs">

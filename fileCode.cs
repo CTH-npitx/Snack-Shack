@@ -4,7 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using System;
 
-namespace snackShack.files
+namespace snackShack
 {
     internal static class files
     {
@@ -31,7 +31,7 @@ namespace snackShack.files
                 }
                 catch (Exception ex)
                 {
-                    snackShack.coreCommands.error(Program.preMadeErrorMsg, ex, true); //show error
+                    snackShack.coreCommands.error(constants.preMadeErrorMsg, ex, true); //show error
                 }
             }
             else
