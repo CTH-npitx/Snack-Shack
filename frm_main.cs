@@ -41,9 +41,8 @@ namespace snackShack
             Application.Exit();
         }
 
-        private void btn_addEntry(object sender, EventArgs e)
+        private void btn_addItem_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

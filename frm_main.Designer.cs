@@ -142,6 +142,7 @@
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.btn_appClose);
             // 
             // manualSaveToolStripMenuItem
             // 
@@ -166,7 +167,7 @@
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.addToolStripMenuItem.Text = "Add";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addEntry);
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
             // 
             // btn_addItem
             // 
@@ -176,8 +177,7 @@
             this.btn_addItem.TabIndex = 9;
             this.btn_addItem.Text = "btn_addEntry";
             this.btn_addItem.UseVisualStyleBackColor = true;
-            this.btn_addItem.Visible = false;
-            this.btn_addItem.Click += new System.EventHandler(this.btn_appClose);
+            this.btn_addItem.Click += new System.EventHandler(this.btn_addItem_Click);
             // 
             // frm_main
             // 
