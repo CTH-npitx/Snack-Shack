@@ -40,15 +40,5 @@ namespace snackShack
         {
             Application.Exit();
         }
-
-        private void txt_2_textChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
