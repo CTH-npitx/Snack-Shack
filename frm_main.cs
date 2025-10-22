@@ -32,7 +32,7 @@ namespace snackShack
         }
 
         private void frmMain_load(object sender, EventArgs e)
-        { 
+        {
             dgv_inputUI.Rows.Add();
         }
 
@@ -43,6 +43,7 @@ namespace snackShack
 
         private void btn_addItem_Click(object sender, EventArgs e)
         {
+            Application.Exit();
         }
     }
 }
