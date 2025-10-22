@@ -42,6 +42,7 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_inputUI)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -106,7 +107,7 @@
             this.dgv_snackName,
             this.dgv_SnackPrice,
             this.dgv_snackIcon});
-            this.dgv_inputUI.Location = new System.Drawing.Point(496, 41);
+            this.dgv_inputUI.Location = new System.Drawing.Point(496, 27);
             this.dgv_inputUI.MultiSelect = false;
             this.dgv_inputUI.Name = "dgv_inputUI";
             this.dgv_inputUI.RowHeadersVisible = false;
@@ -140,6 +141,7 @@
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.btn_appClose);
             // 
             // manualSaveToolStripMenuItem
             // 
@@ -151,12 +153,20 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.closeToolStripMenuItem,
-            this.manualSaveToolStripMenuItem});
+            this.manualSaveToolStripMenuItem,
+            this.addToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
             // 
             // frm_main
             // 
@@ -197,6 +207,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_snackName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_SnackPrice;
         private System.Windows.Forms.DataGridViewImageColumn dgv_snackIcon;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
     }
 }
 
