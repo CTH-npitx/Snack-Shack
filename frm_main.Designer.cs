@@ -77,7 +77,6 @@
             this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_invent.Size = new System.Drawing.Size(397, 404);
             this.dgv_invent.TabIndex = 3;
-            this.dgv_invent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_invent_CellClick);
             // 
             // col_snaName
             // 
@@ -115,7 +114,7 @@
             this.dgv_inputUI.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_inputUI.Size = new System.Drawing.Size(304, 96);
             this.dgv_inputUI.TabIndex = 8;
-            this.dgv_inputUI.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_cellClick);
+            this.dgv_inputUI.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInput_CellClick);
             // 
             // dgv_snackName
             // 
