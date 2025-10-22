@@ -32,8 +32,8 @@ namespace snackShack
         }
 
         private void frmMain_load(object sender, EventArgs e)
-        { 
-            dgv_invent.Rows.Add();
+        {
+            dgv_inputUI.Rows.Add();
         }
 
         private void btn_appClose(object sender, EventArgs e)
@@ -41,11 +41,15 @@ namespace snackShack
             Application.Exit();
         }
 
-        private void dgv_invent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btn_addItem_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void dgv_cellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
         private void dgv_invent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string imagePath;
