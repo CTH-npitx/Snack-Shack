@@ -46,7 +46,7 @@ namespace snackShack
             for (var i = 0; i < len-3; i++) //repeat by the length minus 2, which will lead to it excluding the 2 folders that are unwanted
             {
                 var comp = comps[i];
-                completeLoc = completeLoc + comp + char.ToString(pathSpliter);
+                completeLoc = completeLoc + comp + char.ToString(pathSpliter); //add next part to path
             }
             return completeLoc; //output path
         }

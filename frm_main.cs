@@ -33,27 +33,12 @@ namespace snackShack
 
         private void frmMain_load(object sender, EventArgs e)
         { 
-            dgv_invent.Rows.Add();
+            dgv_inputUI.Rows.Add();
         }
 
         private void btn_appClose(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
