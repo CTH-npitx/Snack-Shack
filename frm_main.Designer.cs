@@ -36,12 +36,12 @@
             this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgv_inputUI = new System.Windows.Forms.DataGridView();
-            this.dgv_snackName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_SnackPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_snackIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dgv_snackName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_SnackPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_snackIcon = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_inputUI)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -111,30 +111,8 @@
             this.dgv_inputUI.Name = "dgv_inputUI";
             this.dgv_inputUI.RowHeadersVisible = false;
             this.dgv_inputUI.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_inputUI.ShowCellErrors = false;
             this.dgv_inputUI.Size = new System.Drawing.Size(304, 96);
             this.dgv_inputUI.TabIndex = 8;
-            // 
-            // dgv_snackName
-            // 
-            this.dgv_snackName.HeaderText = "Snack Name";
-            this.dgv_snackName.Name = "dgv_snackName";
-            this.dgv_snackName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dgv_SnackPrice
-            // 
-            this.dgv_SnackPrice.HeaderText = "Snack Price";
-            this.dgv_SnackPrice.Name = "dgv_SnackPrice";
-            this.dgv_SnackPrice.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_SnackPrice.Width = 99;
-            // 
-            // dgv_snackIcon
-            // 
-            this.dgv_snackIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgv_snackIcon.HeaderText = "Snack Icon";
-            this.dgv_snackIcon.Name = "dgv_snackIcon";
-            this.dgv_snackIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_snackIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // closeToolStripMenuItem
             // 
@@ -158,6 +136,27 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // dgv_snackName
+            // 
+            this.dgv_snackName.HeaderText = "Snack Name";
+            this.dgv_snackName.Name = "dgv_snackName";
+            this.dgv_snackName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dgv_SnackPrice
+            // 
+            this.dgv_SnackPrice.HeaderText = "Snack Price";
+            this.dgv_SnackPrice.Name = "dgv_SnackPrice";
+            this.dgv_SnackPrice.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_SnackPrice.Width = 99;
+            // 
+            // dgv_snackIcon
+            // 
+            this.dgv_snackIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgv_snackIcon.HeaderText = "Snack Icon";
+            this.dgv_snackIcon.Name = "dgv_snackIcon";
+            this.dgv_snackIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_snackIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // frm_main
             // 
