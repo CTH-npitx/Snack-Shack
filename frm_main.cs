@@ -46,7 +46,7 @@ namespace snackShack
 
         }
 
-        private void dgv_cellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvInput_cellClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

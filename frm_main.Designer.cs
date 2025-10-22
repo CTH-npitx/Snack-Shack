@@ -114,7 +114,7 @@
             this.dgv_inputUI.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_inputUI.Size = new System.Drawing.Size(304, 96);
             this.dgv_inputUI.TabIndex = 8;
-            this.dgv_inputUI.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_cellClick);
+            this.dgv_inputUI.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInput_cellClick);
             // 
             // dgv_snackName
             // 
