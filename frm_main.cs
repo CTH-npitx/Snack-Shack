@@ -46,7 +46,7 @@ namespace snackShack
 
         }
 
-        private void dgvInput_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_inputUI_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string imagePath;
             if (e.ColumnIndex == 2)
