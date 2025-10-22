@@ -108,6 +108,7 @@
             this.dgv_inputUI.Location = new System.Drawing.Point(451, 90);
             this.dgv_inputUI.MultiSelect = false;
             this.dgv_inputUI.Name = "dgv_inputUI";
+            this.dgv_inputUI.RowHeadersVisible = false;
             this.dgv_inputUI.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_inputUI.Size = new System.Drawing.Size(342, 150);
             this.dgv_inputUI.TabIndex = 8;
