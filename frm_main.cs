@@ -40,5 +40,10 @@ namespace snackShack
         {
             Application.Exit();
         }
+
+        private void btn_addEntry(object sender, EventArgs e)
+        {
+
+        }
     }
 }
