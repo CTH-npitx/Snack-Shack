@@ -34,8 +34,10 @@ namespace snackShack
         private void frmMain_load(object sender, EventArgs e)
         {
             int input = 50;
+            int header = 25;
             dgv_inputUI.Rows.Add();
             dgv_inputUI.Rows[0].Height = input;
+            dgv_inputUI.ColumnHeadersHeight = header;
             dgv_inputUI.Height = input + header;
         }
 
