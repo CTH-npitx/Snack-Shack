@@ -113,9 +113,10 @@
             this.dgv_inputUI.Name = "dgv_inputUI";
             this.dgv_inputUI.RowHeadersVisible = false;
             this.dgv_inputUI.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgv_inputUI.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_inputUI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgv_inputUI.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_inputUI.Size = new System.Drawing.Size(304, 24);
+            this.dgv_inputUI.Size = new System.Drawing.Size(304, 151);
             this.dgv_inputUI.TabIndex = 8;
             this.dgv_inputUI.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_inputUI_CellClick);
             // 
