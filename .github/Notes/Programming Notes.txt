@@ -24,3 +24,5 @@ https://www.freecodecamp.org/news/programming-naming-conventions-explained/
 pnl = panel
 
 timer = tmr
+
+data grid = dgv
