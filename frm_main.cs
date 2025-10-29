@@ -34,6 +34,7 @@ namespace snackShack
         private void frmMain_load(object sender, EventArgs e)
         {
             dgv_inputUI.Rows.Add();
+            
         }
 
         private void btn_appClose(object sender, EventArgs e)
