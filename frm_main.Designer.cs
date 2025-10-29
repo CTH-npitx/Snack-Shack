@@ -102,7 +102,6 @@
             this.dgv_inputUI.AllowUserToResizeColumns = false;
             this.dgv_inputUI.AllowUserToResizeRows = false;
             this.dgv_inputUI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_inputUI.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgv_inputUI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_inputUI.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgv_snackName,
@@ -112,10 +111,8 @@
             this.dgv_inputUI.MultiSelect = false;
             this.dgv_inputUI.Name = "dgv_inputUI";
             this.dgv_inputUI.RowHeadersVisible = false;
-            this.dgv_inputUI.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgv_inputUI.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgv_inputUI.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_inputUI.Size = new System.Drawing.Size(304, 24);
+            this.dgv_inputUI.Size = new System.Drawing.Size(304, 96);
             this.dgv_inputUI.TabIndex = 8;
             this.dgv_inputUI.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_inputUI_CellClick);
             // 
