@@ -46,22 +46,15 @@ namespace snackShack
            
         }
 
-        private void dgv_inputUI_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string imagePath;
-            if (e.ColumnIndex == 2)
-            {
-                openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    imagePath = openFileDialog1.FileName;
-                }
-            }
-        }
-
         private void picBox_icon_Click(object sender, EventArgs e)
         {
-
+            string imagePath;        
+            openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                imagePath = openFileDialog1.FileName;
+            }
+            
         }
     }
 }
