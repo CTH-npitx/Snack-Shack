@@ -45,7 +45,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,8 +147,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.picBox_icon);
-            this.groupBox1.Controls.Add(this.num_snackCost);
             this.groupBox1.Location = new System.Drawing.Point(600, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
@@ -160,7 +157,7 @@
             // picBox_icon
             // 
             this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
-            this.picBox_icon.Location = new System.Drawing.Point(3, 16);
+            this.picBox_icon.Location = new System.Drawing.Point(393, 27);
             this.picBox_icon.Name = "picBox_icon";
             this.picBox_icon.Size = new System.Drawing.Size(100, 50);
             this.picBox_icon.TabIndex = 5;
@@ -171,7 +168,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.picBox_icon);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.num_snackCost);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -185,7 +184,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
