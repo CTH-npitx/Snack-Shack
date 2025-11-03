@@ -134,7 +134,7 @@
             0,
             0,
             131072});
-            this.num_snackCost.Location = new System.Drawing.Point(125, 0);
+            this.num_snackCost.Location = new System.Drawing.Point(125, 19);
             this.num_snackCost.Maximum = new decimal(new int[] {
             10,
             0,
