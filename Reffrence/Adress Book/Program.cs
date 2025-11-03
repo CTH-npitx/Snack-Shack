@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdressBook.files; //this is the namespace for the files that are in the project. This is where the classes are stored
 
-namespace snackShack
+namespace AdressBook
 {
     internal static class Program
     {
@@ -16,12 +18,12 @@ namespace snackShack
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_main());
+            Application.Run(new frm_addressForm());
         }
         internal const bool debug = true; //global var to controll default for debugs
-        internal static List<inventory> inventory = new List<inventory>(); //makes a collection that refferences the class that will store information
+        internal static List<Contact> contacts = new List<Contact>(); //makes a collection that refferences the class that will store information
+        internal const string preMadeErrorMsg = "I'm sorry dave, I'm afraid I can't do that";
     }
-
     internal static class coreCommands
     {
         internal static void error(string message, Exception ex = null, bool revealException = false)
@@ -35,20 +37,5 @@ namespace snackShack
         } //this is for error messages. the text is mandatory, but the
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
           // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
-
-        internal static string path()
-        {
-            var pathSpliter = '\\'; //part between paths
-            var loc = AppDomain.CurrentDomain.BaseDirectory; //get the current domain
-            var comps = loc.Split('\\'); //array of path after being split
-            var len = comps.Length; //length of path
-            var completeLoc = string.Empty; //blank variable for path
-            for (var i = 0; i < len-3; i++) //repeat by the length minus 2, which will lead to it excluding the 2 folders that are unwanted
-            {
-                var comp = comps[i];
-                completeLoc = completeLoc + comp + char.ToString(pathSpliter); //add next part to path
-            }
-            return completeLoc; //output path
-        }
     }
 }
