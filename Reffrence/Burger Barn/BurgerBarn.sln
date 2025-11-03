@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerBarn", "BurgerBarn.csproj", "{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Icons", "Icons", "{2BD124C3-6E61-4BBA-B025-7DE653B6A01F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Ico Files", ".Ico Files", "{29230DF5-AE11-42AE-9243-A883FF4700EF}"
+	ProjectSection(SolutionItems) = preProject
+		icon1_29HHLO.ico = icon1_29HHLO.ico
+		Icons\.Ico Files\Thumbs.db = Icons\.Ico Files\Thumbs.db
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base Images", "Base Images", "{B5464856-F1C2-437C-948B-596D3221FAB7}"
+	ProjectSection(SolutionItems) = preProject
+		Icons\Base Image\Icon1.png = Icons\Base Image\Icon1.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29230DF5-AE11-42AE-9243-A883FF4700EF} = {2BD124C3-6E61-4BBA-B025-7DE653B6A01F}
+		{B5464856-F1C2-437C-948B-596D3221FAB7} = {2BD124C3-6E61-4BBA-B025-7DE653B6A01F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7363F277-E3D9-4C4B-B876-03095C42FE23}
+	EndGlobalSection
+EndGlobal
