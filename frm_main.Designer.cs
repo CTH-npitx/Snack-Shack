@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txt_snackName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
@@ -160,14 +161,15 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txt_snackName);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.num_snackCost);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.picBox_icon);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(600, 24);
+            this.panel1.Location = new System.Drawing.Point(600, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 152);
+            this.panel1.Size = new System.Drawing.Size(200, 149);
             this.panel1.TabIndex = 6;
             // 
             // label1
@@ -196,6 +198,13 @@
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Name";
+            // 
+            // txt_snackName
+            // 
+            this.txt_snackName.Location = new System.Drawing.Point(54, 40);
+            this.txt_snackName.Name = "txt_snackName";
+            this.txt_snackName.Size = new System.Drawing.Size(100, 20);
+            this.txt_snackName.TabIndex = 9;
             // 
             // frm_main
             // 
@@ -242,6 +251,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_snackName;
     }
 }
 
