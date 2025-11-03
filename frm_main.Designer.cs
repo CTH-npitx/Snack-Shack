@@ -143,7 +143,6 @@
             this.num_snackCost.Name = "num_snackCost";
             this.num_snackCost.Size = new System.Drawing.Size(75, 20);
             this.num_snackCost.TabIndex = 4;
-            this.num_snackCost.ValueChanged += new System.EventHandler(this.num_snackCost_ValueChanged);
             // 
             // groupBox1
             // 
