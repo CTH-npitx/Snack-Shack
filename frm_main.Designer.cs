@@ -41,10 +41,12 @@
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.num_snackCost = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picBox_icon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -134,7 +136,7 @@
             0,
             0,
             131072});
-            this.num_snackCost.Location = new System.Drawing.Point(125, 19);
+            this.num_snackCost.Location = new System.Drawing.Point(125, 10);
             this.num_snackCost.Maximum = new decimal(new int[] {
             10,
             0,
@@ -146,6 +148,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.picBox_icon);
             this.groupBox1.Controls.Add(this.num_snackCost);
             this.groupBox1.Location = new System.Drawing.Point(600, 27);
             this.groupBox1.Name = "groupBox1";
@@ -153,6 +156,15 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // picBox_icon
+            // 
+            this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
+            this.picBox_icon.Location = new System.Drawing.Point(3, 16);
+            this.picBox_icon.Name = "picBox_icon";
+            this.picBox_icon.Size = new System.Drawing.Size(100, 50);
+            this.picBox_icon.TabIndex = 5;
+            this.picBox_icon.TabStop = false;
             // 
             // frm_main
             // 
@@ -174,6 +186,7 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,6 +206,7 @@
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown num_snackCost;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox picBox_icon;
     }
 }
 
