@@ -40,12 +40,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.num_snackCost = new System.Windows.Forms.NumericUpDown();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.picBox_icon = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -135,7 +136,7 @@
             0,
             0,
             131072});
-            this.num_snackCost.Location = new System.Drawing.Point(125, 10);
+            this.num_snackCost.Location = new System.Drawing.Point(122, 3);
             this.num_snackCost.Maximum = new decimal(new int[] {
             10,
             0,
@@ -145,32 +146,30 @@
             this.num_snackCost.Size = new System.Drawing.Size(75, 20);
             this.num_snackCost.TabIndex = 4;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(600, 27);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
             // picBox_icon
             // 
             this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
-            this.picBox_icon.Location = new System.Drawing.Point(393, 27);
+            this.picBox_icon.Location = new System.Drawing.Point(16, 3);
             this.picBox_icon.Name = "picBox_icon";
             this.picBox_icon.Size = new System.Drawing.Size(100, 50);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.num_snackCost);
+            this.panel1.Controls.Add(this.picBox_icon);
+            this.panel1.Location = new System.Drawing.Point(600, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 6;
             // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.picBox_icon);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.num_snackCost);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -185,6 +184,7 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,8 +203,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown num_snackCost;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox picBox_icon;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
