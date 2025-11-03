@@ -167,14 +167,14 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.picBox_icon);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(526, 24);
+            this.panel1.Location = new System.Drawing.Point(526, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 100);
+            this.panel1.Size = new System.Drawing.Size(274, 103);
             this.panel1.TabIndex = 6;
             // 
             // txt_nameInput
             // 
-            this.txt_nameInput.Location = new System.Drawing.Point(44, 3);
+            this.txt_nameInput.Location = new System.Drawing.Point(44, 6);
             this.txt_nameInput.Name = "txt_nameInput";
             this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
             this.txt_nameInput.TabIndex = 7;
@@ -182,7 +182,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Location = new System.Drawing.Point(3, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 8;
