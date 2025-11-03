@@ -153,12 +153,11 @@
             // picBox_icon
             // 
             this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
-            this.picBox_icon.Location = new System.Drawing.Point(213, 26);
+            this.picBox_icon.Location = new System.Drawing.Point(171, 36);
             this.picBox_icon.Name = "picBox_icon";
             this.picBox_icon.Size = new System.Drawing.Size(100, 50);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
-            this.picBox_icon.Click += new System.EventHandler(this.picBox_icon_Click);
             // 
             // panel1
             // 
