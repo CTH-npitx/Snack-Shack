@@ -35,16 +35,11 @@
             this.col_snaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgv_inputUI = new System.Windows.Forms.DataGridView();
-            this.dgv_snackName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_SnackPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_snackIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_inputUI)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,52 +90,6 @@
             this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // dgv_inputUI
-            // 
-            this.dgv_inputUI.AllowUserToAddRows = false;
-            this.dgv_inputUI.AllowUserToDeleteRows = false;
-            this.dgv_inputUI.AllowUserToResizeColumns = false;
-            this.dgv_inputUI.AllowUserToResizeRows = false;
-            this.dgv_inputUI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_inputUI.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dgv_inputUI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_inputUI.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgv_snackName,
-            this.dgv_SnackPrice,
-            this.dgv_snackIcon});
-            this.dgv_inputUI.Location = new System.Drawing.Point(496, 24);
-            this.dgv_inputUI.MultiSelect = false;
-            this.dgv_inputUI.Name = "dgv_inputUI";
-            this.dgv_inputUI.RowHeadersVisible = false;
-            this.dgv_inputUI.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgv_inputUI.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_inputUI.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgv_inputUI.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_inputUI.Size = new System.Drawing.Size(304, 151);
-            this.dgv_inputUI.TabIndex = 8;
-            this.dgv_inputUI.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_inputUI_CellClick);
-            // 
-            // dgv_snackName
-            // 
-            this.dgv_snackName.HeaderText = "Snack Name";
-            this.dgv_snackName.Name = "dgv_snackName";
-            this.dgv_snackName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dgv_SnackPrice
-            // 
-            this.dgv_SnackPrice.HeaderText = "Snack Price";
-            this.dgv_SnackPrice.Name = "dgv_SnackPrice";
-            this.dgv_SnackPrice.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_SnackPrice.Width = 99;
-            // 
-            // dgv_snackIcon
-            // 
-            this.dgv_snackIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgv_snackIcon.HeaderText = "Snack Icon";
-            this.dgv_snackIcon.Name = "dgv_snackIcon";
-            this.dgv_snackIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_snackIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
@@ -178,7 +127,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgv_inputUI);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -189,7 +137,6 @@
             this.Text = "Main Form";
             this.Load += new System.EventHandler(this.frmMain_load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_inputUI)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -205,13 +152,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaName;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaPri;
         private System.Windows.Forms.DataGridViewImageColumn col_snaIcon;
-        private System.Windows.Forms.DataGridView dgv_inputUI;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manualSaveToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_snackName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_SnackPrice;
-        private System.Windows.Forms.DataGridViewImageColumn dgv_snackIcon;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
     }
 }
