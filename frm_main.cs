@@ -38,12 +38,12 @@ namespace snackShack
 
         private void btn_appClose(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //close app
         }
 
-        private void btn_addItem_Click(object sender, EventArgs e)
+        private void btn_addItem_Click(object sender, EventArgs e) //add item
         {
-
+           
         }
 
         private void dgv_inputUI_CellClick(object sender, DataGridViewCellEventArgs e)
