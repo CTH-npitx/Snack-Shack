@@ -39,8 +39,12 @@
             this.manualSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.num_snackCost = new System.Windows.Forms.NumericUpDown();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -122,11 +126,41 @@
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
             // 
+            // num_snackCost
+            // 
+            this.num_snackCost.DecimalPlaces = 2;
+            this.num_snackCost.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.num_snackCost.Location = new System.Drawing.Point(125, 0);
+            this.num_snackCost.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.num_snackCost.Name = "num_snackCost";
+            this.num_snackCost.Size = new System.Drawing.Size(75, 20);
+            this.num_snackCost.TabIndex = 4;
+            this.num_snackCost.ValueChanged += new System.EventHandler(this.num_snackCost_ValueChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.num_snackCost);
+            this.groupBox1.Location = new System.Drawing.Point(600, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -139,6 +173,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,6 +192,8 @@
         private System.Windows.Forms.ToolStripMenuItem manualSaveToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown num_snackCost;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

@@ -58,5 +58,10 @@ namespace snackShack
                 }
             }
         }
+
+        private void num_snackCost_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
