@@ -46,10 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_nameInput = new System.Windows.Forms.TextBox();
-            this.txt_snackName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
@@ -176,17 +172,10 @@
             this.panel1.Size = new System.Drawing.Size(200, 152);
             this.panel1.TabIndex = 6;
             // 
-            // txt_snackName
-            // 
-            this.txt_snackName.Location = new System.Drawing.Point(54, 40);
-            this.txt_snackName.Name = "txt_snackName";
-            this.txt_snackName.Size = new System.Drawing.Size(100, 20);
-            this.txt_snackName.TabIndex = 9;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 18);
+            this.label3.Location = new System.Drawing.Point(13, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 8;
@@ -195,7 +184,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 47);
+            this.label2.Location = new System.Drawing.Point(13, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 7;
@@ -204,11 +193,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 75);
+            this.label1.Location = new System.Drawing.Point(13, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Cost";
+            // 
+            // txt_nameInput
+            // 
+            this.txt_nameInput.Location = new System.Drawing.Point(47, 40);
+            this.txt_nameInput.Name = "txt_nameInput";
+            this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
+            this.txt_nameInput.TabIndex = 7;
             // 
             // frm_main
             // 
