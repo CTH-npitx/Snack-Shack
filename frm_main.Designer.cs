@@ -44,7 +44,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -134,7 +133,7 @@
             0,
             0,
             131072});
-            this.num_snackCost.Location = new System.Drawing.Point(125, 19);
+            this.num_snackCost.Location = new System.Drawing.Point(490, 27);
             this.num_snackCost.Maximum = new decimal(new int[] {
             10,
             0,
@@ -147,7 +146,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.num_snackCost);
             this.groupBox1.Location = new System.Drawing.Point(600, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
@@ -160,6 +158,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.num_snackCost);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
@@ -174,7 +173,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
