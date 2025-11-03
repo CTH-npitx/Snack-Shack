@@ -42,10 +42,10 @@
             this.num_snackCost = new System.Windows.Forms.NumericUpDown();
             this.picBox_icon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_nameInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_nameInput = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
@@ -140,7 +140,7 @@
             0,
             0,
             131072});
-            this.num_snackCost.Location = new System.Drawing.Point(47, 131);
+            this.num_snackCost.Location = new System.Drawing.Point(55, 45);
             this.num_snackCost.Maximum = new decimal(new int[] {
             10,
             0,
@@ -153,7 +153,7 @@
             // picBox_icon
             // 
             this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
-            this.picBox_icon.Location = new System.Drawing.Point(47, 75);
+            this.picBox_icon.Location = new System.Drawing.Point(171, 36);
             this.picBox_icon.Name = "picBox_icon";
             this.picBox_icon.Size = new System.Drawing.Size(100, 50);
             this.picBox_icon.TabIndex = 5;
@@ -167,15 +167,22 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.picBox_icon);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(600, 24);
+            this.panel1.Location = new System.Drawing.Point(526, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 152);
+            this.panel1.Size = new System.Drawing.Size(274, 100);
             this.panel1.TabIndex = 6;
+            // 
+            // txt_nameInput
+            // 
+            this.txt_nameInput.Location = new System.Drawing.Point(44, 3);
+            this.txt_nameInput.Name = "txt_nameInput";
+            this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
+            this.txt_nameInput.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 43);
+            this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 8;
@@ -184,7 +191,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 93);
+            this.label2.Location = new System.Drawing.Point(210, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 7;
@@ -193,18 +200,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 131);
+            this.label1.Location = new System.Drawing.Point(10, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Cost";
-            // 
-            // txt_nameInput
-            // 
-            this.txt_nameInput.Location = new System.Drawing.Point(47, 40);
-            this.txt_nameInput.Name = "txt_nameInput";
-            this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
-            this.txt_nameInput.TabIndex = 7;
             // 
             // frm_main
             // 
