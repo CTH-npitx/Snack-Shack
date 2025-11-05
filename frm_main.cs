@@ -31,6 +31,11 @@ namespace snackShack
             snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
         }
 
+        private void saveInvent() //save inventory
+        {
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //save inventory function
+        }
+
         private void frmMain_load(object sender, EventArgs e)
         {
 
