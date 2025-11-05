@@ -37,6 +37,10 @@ namespace snackShack
             snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //save inventory function
         }
 
+        private void saveInvent()
+        {
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min);        }
+
         private void frmMain_load(object sender, EventArgs e)
         {
 
