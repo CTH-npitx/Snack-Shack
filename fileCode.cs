@@ -20,10 +20,10 @@ namespace snackShack.files
                         foreach (var c in Program.inventory) //the loop for createing the contents which will be saved
                         {
                             //csv - comma seperated values
-                            //firstname-lastname-email-phone-buisness-notes
+                            //name-imagepath-cost-index
                             string ind = (c.index + 1).ToString(); //indux to string
                             string cost = c.cost.ToString(); //cost to string
-                            string line = c.name + sep + c.imagePath + sep +  //first and last name
+                            string line = c.name + sep + c.imagePath + sep +  //combine string
                                 cost + sep + ind;
                             sw.WriteLine(line); //write the information to the line
                         }
