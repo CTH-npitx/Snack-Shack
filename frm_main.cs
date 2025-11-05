@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Security.Policy;
@@ -42,8 +43,13 @@ namespace snackShack
 
         private void btn_appClose(object sender, EventArgs e)
         {
-            Application.Exit(); //close app
-            saveInvent();
+            if { confirm == true}
+            {
+                Application.Exit(); //close app
+                saveInvent() //autosave
+            } else { 
+            
+            };
         }
 
         private void btn_addItem_Click(object sender, EventArgs e) //add item
