@@ -34,7 +34,7 @@ namespace snackShack
 
         private void saveInvent() //save inventory
         {
-            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //save inventory function
+            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //save inventory function
         }
 
         private void frmMain_load(object sender, EventArgs e)
