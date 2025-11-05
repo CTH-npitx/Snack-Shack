@@ -29,7 +29,7 @@ namespace snackShack
 
         private void readInvent() //readInvent
         {
-            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //read inventory function
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
         }
 
         private void frmMain_load(object sender, EventArgs e)
