@@ -11,30 +11,30 @@ namespace snackShack.files
         internal static void Write(string filepath, char sep) 
         {
             bool status = File.Exists(filepath); //check if the file exists
-            if (status || Program.debug)
+            if (status || Program.debug) //if file exists, or debug is active, run system
             {
                 try
                 {
-                    using (StreamWriter sw = new StreamWriter(filepath))
+                    using (StreamWriter sw = new StreamWriter(filepath)) //utilize the file path to find the file
                     {
                         foreach (var c in Program.inventory) //the loop for createing the contents which will be saved
                         {
                             //csv - comma seperated values
                             //firstname-lastname-email-phone-buisness-notes
-                            string ind = (c.index + 1).ToString();
-                            string cost = c.cost.ToString();
+                            string ind = (c.index + 1).ToString(); //indux to string
+                            string cost = c.cost.ToString(); //cost to string
                             string line = c.name + sep + c.imagePath + sep +  //first and last name
                                 cost + sep + ind;
                             sw.WriteLine(line); //write the information to the line
                         }
                     } //streamwriter
                 }
-                catch (Exception ex)
+                catch (Exception ex) //find if exception
                 {
                     snackShack.coreCommands.error(Program.preMadeErrorMsg, ex, true); //show error
                 }
             }
-            else
+            else //say if no file
             {
                 snackShack.coreCommands.error("File Not Found"); //show error
             }
