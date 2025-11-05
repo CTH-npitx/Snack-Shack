@@ -34,7 +34,7 @@ namespace snackShack
 
         private void saveInvent() //save inventory
         {
-            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //save inventory function
+            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre - setup function for writing files, to make auto - saveing easier
         }
 
         private void frmMain_load(object sender, EventArgs e)
