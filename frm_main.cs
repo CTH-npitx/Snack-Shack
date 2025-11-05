@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Security.Policy;
@@ -26,9 +27,14 @@ namespace snackShack
             readInvent();
         }
 
-        private void readInvent()
+        private void readInvent() //readInvent
         {
-            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min);
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
+        }
+
+        private void saveInvent() //save inventory
+        {
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //save inventory function
         }
 
         private void frmMain_load(object sender, EventArgs e)
@@ -38,7 +44,13 @@ namespace snackShack
 
         private void btn_appClose(object sender, EventArgs e)
         {
-            Application.Exit(); //close app
+            if { confirm == true}
+            {
+                Application.Exit(); //close app
+
+            } else { 
+            
+            };
         }
 
         private void btn_addItem_Click(object sender, EventArgs e) //add item
