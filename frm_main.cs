@@ -22,16 +22,16 @@ namespace snackShack
         string imageFolder = string.Empty;
         const char fileSepChar = '\\';
         string fileSep = char.ToString(fileSepChar);
-        private void frmMain_load(object sender, EventArgs e)
+        private void frmMain_load(object sender, EventArgs e) //on load
         {
-            rootPath = snackShack.coreCommands.path();
-            inventoryFile = rootPath + nameof(inventory) + ".csv";
-            imageFolder = rootPath + "presetImages" + fileSep;
+            rootPath = snackShack.coreCommands.path(); //derive the path on load
+            inventoryFile = rootPath + nameof(inventory) + ".csv"; //start finalizing path on load
+            imageFolder = rootPath + "presetImages" + fileSep; //image path on load
         }
 
-        private void btn_appClose(object sender, EventArgs e)
+        private void btn_appClose(object sender, EventArgs e) //close button
         {
-            Application.Exit();
+            Application.Exit(); //close
         }
     }
 }
