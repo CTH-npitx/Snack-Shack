@@ -34,7 +34,7 @@ namespace snackShack
 
         private void saveInvent() //save inventory
         {
-            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup function for writing files, to make auto-saveing easierread inventory function. That way reffernecing it is easier
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup function for writing files, to make auto-saveing easier
         }
 
         private void saveInvent()
