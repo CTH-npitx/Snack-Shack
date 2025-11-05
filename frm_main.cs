@@ -43,6 +43,7 @@ namespace snackShack
         private void btn_appClose(object sender, EventArgs e)
         {
             Application.Exit(); //close app
+            saveInvent();
         }
 
         private void btn_addItem_Click(object sender, EventArgs e) //add item
