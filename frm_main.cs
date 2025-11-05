@@ -37,7 +37,7 @@ namespace snackShack
 
         }
 
-        private void btn_appClose(object sender, EventArgs e)
+        private void btn_appClose(object sender, EventArgs e) //close app system
         {
             if { confirm == true}
             {
