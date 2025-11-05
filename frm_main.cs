@@ -26,9 +26,9 @@ namespace snackShack
             readInvent();
         }
 
-        private void readInvent()
+        private void readInvent() //readInvent
         {
-            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min);
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //read inventory function
         }
 
         private void frmMain_load(object sender, EventArgs e)
