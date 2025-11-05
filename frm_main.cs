@@ -39,13 +39,15 @@ namespace snackShack
 
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
-            if { confirm == true}
+            bool confirm = false; //make confirm variable, default to false
+            if (confirm == true)
             {
                 Application.Exit(); //close app
 
-            } else { 
-            
-            };
+            } else
+            {
+
+            }
         }
 
         private void btn_addItem_Click(object sender, EventArgs e) //add item
