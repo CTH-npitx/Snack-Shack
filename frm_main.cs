@@ -46,7 +46,7 @@ namespace snackShack
             if { confirm == true}
             {
                 Application.Exit(); //close app
-                saveInvent() //autosave
+                saveInvent(); //autosave
             } else { 
             
             };
