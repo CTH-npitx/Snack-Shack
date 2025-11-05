@@ -46,8 +46,8 @@ namespace snackShack
             var completeLoc = string.Empty; //blank variable for path
             for (var i = 0; i < len-3; i++) //repeat by the length minus 2, which will lead to it excluding the 2 folders that are unwanted
             {
-                var comp = comps[i];
-                completeLoc = completeLoc + comp + char.ToString(pathSpliter);
+                var comp = comps[i]; //check length, adjust variable to disable it when ready
+                completeLoc = completeLoc + comp + char.ToString(pathSpliter); //set up the complete loc file
             }
             return completeLoc; //output path
         }
