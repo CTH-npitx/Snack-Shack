@@ -33,6 +33,8 @@ namespace snackShack
             snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min);
         }
 
+        const char fileSepChar = '\\';
+        string fileSep = char.ToString(fileSepChar);
         private void frmMain_load(object sender, EventArgs e) //on load
         {
             rootPath = snackShack.coreCommands.path();
@@ -45,11 +47,7 @@ namespace snackShack
         {
             Application.Exit(); //close app
         }
-        string rootPath = string.Empty;
-        string inventoryFile = string.Empty;
-        string imageFolder = string.Empty;
-        const char fileSepChar = '\\';
-        string fileSep = char.ToString(fileSepChar);
+
         //remove close (based on https://csharphelper.com/howtos/howto_remove_close_x.html )
         #region removeClose
         // Declare User32 constants and methods.
