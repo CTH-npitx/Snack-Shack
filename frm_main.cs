@@ -52,7 +52,7 @@ namespace snackShack
             openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                imagePath = openFileDialog1.FileName;
+                imagePath = openFileDialog1.FileName; //set the path
             }
             
         }
