@@ -35,7 +35,10 @@ namespace snackShack
 
         private void frmMain_load(object sender, EventArgs e) //on load
         {
-
+            rootPath = snackShack.coreCommands.path();
+            inventoryFile = rootPath + nameof(inventory) + ".csv";
+            imageFolder = rootPath + "presetImages" + fileSep;
+            removeClose();
         }
 
         private void btn_appClose(object sender, EventArgs e) //close button
@@ -68,13 +71,6 @@ namespace snackShack
             RemoveMenu(hMenu, num_menu_items - 2, MF_BYPOSITION); // Remove Minimise
         }
         #endregion
-        private void frmMain_load(object sender, EventArgs e)
-        {
-            rootPath = snackShack.coreCommands.path();
-            inventoryFile = rootPath + nameof(inventory) + ".csv";
-            imageFolder = rootPath + "presetImages" + fileSep;
-            removeClose();
-        }
 
         private void picBox_icon_Click(object sender, EventArgs e) //click on image input
         {
