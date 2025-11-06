@@ -19,7 +19,6 @@ namespace snackShack
             Application.Run(new frm_main());
         }
         internal const bool debug = true; //global var to controll default for debugs
-        internal const string preMadeErrorMsg = "I'm sorry dave, I'm afraid I can't do that"; //pre-made error message
         internal static List<inventory> inventory = new List<inventory>(); //makes a collection that refferences the class that will store information
     }
 
@@ -46,8 +45,8 @@ namespace snackShack
             var completeLoc = string.Empty; //blank variable for path
             for (var i = 0; i < len-3; i++) //repeat by the length minus 2, which will lead to it excluding the 2 folders that are unwanted
             {
-                var comp = comps[i]; //check length, adjust variable to disable it when ready
-                completeLoc = completeLoc + comp + char.ToString(pathSpliter); //set up the complete loc file
+                var comp = comps[i];
+                completeLoc = completeLoc + comp + char.ToString(pathSpliter); //add next part to path
             }
             return completeLoc; //output path
         }
