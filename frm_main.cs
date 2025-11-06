@@ -71,7 +71,6 @@ namespace snackShack
         #endregion
 
         private void picBox_icon_Click(object sender, EventArgs e) //click on image input
-        private void btn_appClose(object sender, EventArgs e)
         {
             string imagePath; //the path
             openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
