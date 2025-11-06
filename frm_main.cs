@@ -22,7 +22,7 @@ namespace snackShack
         public frm_main()
         {
             InitializeComponent();
-            openFileDialog1.InitialDirectory = imageFolder;
+            openFileDialog1.InitialDirectory = imageFolder; //set default path
             readInvent();
         }
 
@@ -31,12 +31,12 @@ namespace snackShack
             snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min);
         }
 
-        private void frmMain_load(object sender, EventArgs e)
+        private void frmMain_load(object sender, EventArgs e) //on load
         {
 
         }
 
-        private void btn_appClose(object sender, EventArgs e)
+        private void btn_appClose(object sender, EventArgs e) //close button
         {
             Application.Exit(); //close app
         }
@@ -46,13 +46,13 @@ namespace snackShack
            
         }
 
-        private void picBox_icon_Click(object sender, EventArgs e)
+        private void picBox_icon_Click(object sender, EventArgs e) //click on image input
         {
-            string imagePath;        
+            string imagePath; //the path
             openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                imagePath = openFileDialog1.FileName;
+                imagePath = openFileDialog1.FileName; //set the path
             }
             
         }
