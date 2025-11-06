@@ -69,7 +69,7 @@ namespace snackShack.files
                             else
                             {
 
-                                coreCommands.error("error: below Max Length");
+                                coreCommands.error("error: below Max Length"); //show error during read
                             }
                         }
                     }
