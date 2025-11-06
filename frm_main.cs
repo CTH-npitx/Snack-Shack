@@ -22,7 +22,7 @@ namespace snackShack
         public frm_main()
         {
             InitializeComponent();
-            openFileDialog1.InitialDirectory = imageFolder;
+            openFileDialog1.InitialDirectory = imageFolder; //set default path
             readInvent();
         }
 
