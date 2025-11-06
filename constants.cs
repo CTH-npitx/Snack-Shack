@@ -1,6 +1,6 @@
 namespace snackShack
 {
-    internal static class constants
+    internal static class constants //pre-defined constants
     {
         const char fileSepChar_con = '\\';
         internal const int min = 4;
