@@ -216,6 +216,7 @@
             // editModeToolStripMenuItem
             // 
             this.editModeToolStripMenuItem.Name = "editModeToolStripMenuItem";
+            this.editModeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.editModeToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.editModeToolStripMenuItem.Text = "Edit Mode";
             // 
