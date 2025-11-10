@@ -103,16 +103,13 @@
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.closeToolStripMenuItem.ShowShortcutKeys = false;
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.btn_appClose);
             // 
             // manualSaveToolStripMenuItem
             // 
             this.manualSaveToolStripMenuItem.Name = "manualSaveToolStripMenuItem";
-            this.manualSaveToolStripMenuItem.ShowShortcutKeys = false;
             this.manualSaveToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.manualSaveToolStripMenuItem.Text = "Manual Save";
             // 
@@ -131,7 +128,6 @@
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.ShowShortcutKeys = false;
             this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
