@@ -68,6 +68,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include=".github\README.md" />
     <None Include="Files\inventory.csv" />
     <None Include="Files\presetImages\AD3_SupplyCloset.drawio" />
     <None Include="Files\presetImages\Thumbs.db" />
