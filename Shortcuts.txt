@@ -1,5 +1,5 @@
 
-
+Edit Mode: ctrl + e
 
 
 
