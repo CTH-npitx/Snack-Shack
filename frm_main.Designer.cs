@@ -78,8 +78,9 @@
             this.dgv_invent.Location = new System.Drawing.Point(0, 24);
             this.dgv_invent.MultiSelect = false;
             this.dgv_invent.Name = "dgv_invent";
+            this.dgv_invent.ReadOnly = true;
             this.dgv_invent.RowHeadersVisible = false;
-            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_invent.Size = new System.Drawing.Size(397, 404);
             this.dgv_invent.TabIndex = 3;
             // 
@@ -87,16 +88,19 @@
             // 
             this.col_snaName.HeaderText = "Name of Snack";
             this.col_snaName.Name = "col_snaName";
+            this.col_snaName.ReadOnly = true;
             // 
             // col_snaPri
             // 
             this.col_snaPri.HeaderText = "Price of Snack";
             this.col_snaPri.Name = "col_snaPri";
+            this.col_snaPri.ReadOnly = true;
             // 
             // col_snaIcon
             // 
             this.col_snaIcon.HeaderText = "Icon of Snack";
             this.col_snaIcon.Name = "col_snaIcon";
+            this.col_snaIcon.ReadOnly = true;
             this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
