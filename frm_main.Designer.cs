@@ -46,7 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.editModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
@@ -79,9 +78,8 @@
             this.dgv_invent.Location = new System.Drawing.Point(0, 24);
             this.dgv_invent.MultiSelect = false;
             this.dgv_invent.Name = "dgv_invent";
-            this.dgv_invent.ReadOnly = true;
             this.dgv_invent.RowHeadersVisible = false;
-            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_invent.Size = new System.Drawing.Size(397, 404);
             this.dgv_invent.TabIndex = 3;
             // 
@@ -89,19 +87,16 @@
             // 
             this.col_snaName.HeaderText = "Name of Snack";
             this.col_snaName.Name = "col_snaName";
-            this.col_snaName.ReadOnly = true;
             // 
             // col_snaPri
             // 
             this.col_snaPri.HeaderText = "Price of Snack";
             this.col_snaPri.Name = "col_snaPri";
-            this.col_snaPri.ReadOnly = true;
             // 
             // col_snaIcon
             // 
             this.col_snaIcon.HeaderText = "Icon of Snack";
             this.col_snaIcon.Name = "col_snaIcon";
-            this.col_snaIcon.ReadOnly = true;
             this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
@@ -124,8 +119,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.closeToolStripMenuItem,
             this.manualSaveToolStripMenuItem,
-            this.addToolStripMenuItem,
-            this.editModeToolStripMenuItem});
+            this.addToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -213,13 +207,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Cost";
             // 
-            // editModeToolStripMenuItem
-            // 
-            this.editModeToolStripMenuItem.Name = "editModeToolStripMenuItem";
-            this.editModeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.editModeToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.editModeToolStripMenuItem.Text = "Edit Mode";
-            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,7 +253,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nameInput;
-        private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
     }
 }
 
