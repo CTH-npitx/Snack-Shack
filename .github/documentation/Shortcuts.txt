@@ -1,5 +1,2 @@
 Edit Mode: ctrl + e
 close: ctrl + x
-
-
-
