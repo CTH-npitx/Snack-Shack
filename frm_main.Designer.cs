@@ -35,9 +35,7 @@
             this.col_snaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.manualSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.num_snackCost = new System.Windows.Forms.NumericUpDown();
             this.picBox_icon = new System.Windows.Forms.PictureBox();
@@ -104,30 +102,15 @@
             this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // manualSaveToolStripMenuItem
-            // 
-            this.manualSaveToolStripMenuItem.Name = "manualSaveToolStripMenuItem";
-            this.manualSaveToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.manualSaveToolStripMenuItem.Text = "Manual Save";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manualSaveToolStripMenuItem,
-            this.addToolStripMenuItem,
             this.editModeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.addToolStripMenuItem.Text = "Add";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
             // 
             // editModeToolStripMenuItem
             // 
@@ -244,9 +227,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaName;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaPri;
         private System.Windows.Forms.DataGridViewImageColumn col_snaIcon;
-        private System.Windows.Forms.ToolStripMenuItem manualSaveToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown num_snackCost;
         private System.Windows.Forms.PictureBox picBox_icon;
         private System.Windows.Forms.Panel panel1;
