@@ -115,6 +115,7 @@
             // 
             // manualSaveToolStripMenuItem
             // 
+            this.manualSaveToolStripMenuItem.Enabled = false;
             this.manualSaveToolStripMenuItem.Name = "manualSaveToolStripMenuItem";
             this.manualSaveToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.manualSaveToolStripMenuItem.Text = "Manual Save";
@@ -134,6 +135,7 @@
             // 
             // addToolStripMenuItem
             // 
+            this.addToolStripMenuItem.Enabled = false;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.addToolStripMenuItem.Text = "Add";
@@ -141,6 +143,7 @@
             // 
             // editModeToolStripMenuItem
             // 
+            this.editModeToolStripMenuItem.Enabled = false;
             this.editModeToolStripMenuItem.Name = "editModeToolStripMenuItem";
             this.editModeToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.editModeToolStripMenuItem.Text = "Edit Mode";
