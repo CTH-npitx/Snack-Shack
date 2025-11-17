@@ -35,9 +35,11 @@
             this.col_snaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.num_snackCost = new System.Windows.Forms.NumericUpDown();
             this.picBox_icon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -77,8 +79,9 @@
             this.dgv_invent.Location = new System.Drawing.Point(0, 24);
             this.dgv_invent.MultiSelect = false;
             this.dgv_invent.Name = "dgv_invent";
+            this.dgv_invent.ReadOnly = true;
             this.dgv_invent.RowHeadersVisible = false;
-            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_invent.Size = new System.Drawing.Size(397, 404);
             this.dgv_invent.TabIndex = 3;
             // 
@@ -86,21 +89,33 @@
             // 
             this.col_snaName.HeaderText = "Name of Snack";
             this.col_snaName.Name = "col_snaName";
+            this.col_snaName.ReadOnly = true;
             // 
             // col_snaPri
             // 
             this.col_snaPri.HeaderText = "Price of Snack";
             this.col_snaPri.Name = "col_snaPri";
+            this.col_snaPri.ReadOnly = true;
             // 
             // col_snaIcon
             // 
             this.col_snaIcon.HeaderText = "Icon of Snack";
             this.col_snaIcon.Name = "col_snaIcon";
+            this.col_snaIcon.ReadOnly = true;
             this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.btn_appClose);
+            // 
             // manualSaveToolStripMenuItem
             // 
+            this.manualSaveToolStripMenuItem.Enabled = false;
             this.manualSaveToolStripMenuItem.Name = "manualSaveToolStripMenuItem";
             this.manualSaveToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.manualSaveToolStripMenuItem.Text = "Manual Save";
@@ -108,8 +123,10 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.closeToolStripMenuItem,
             this.manualSaveToolStripMenuItem,
-            this.addToolStripMenuItem});
+            this.addToolStripMenuItem,
+            this.editModeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -118,10 +135,18 @@
             // 
             // addToolStripMenuItem
             // 
+            this.addToolStripMenuItem.Enabled = false;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
+            // 
+            // editModeToolStripMenuItem
+            // 
+            this.editModeToolStripMenuItem.Enabled = false;
+            this.editModeToolStripMenuItem.Name = "editModeToolStripMenuItem";
+            this.editModeToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.editModeToolStripMenuItem.Text = "Edit Mode";
             // 
             // num_snackCost
             // 
@@ -232,6 +257,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaName;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaPri;
         private System.Windows.Forms.DataGridViewImageColumn col_snaIcon;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manualSaveToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
@@ -242,6 +268,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nameInput;
+        private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
     }
 }
 
