@@ -91,6 +91,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".github\Program Documentation\List of Keybinds.txt" />
     <Content Include="Files\presetImages\2fer.jpg" />
     <Content Include="Files\presetImages\airheads.jpg" />
     <Content Include="Files\presetImages\almondjoy.png" />
@@ -116,5 +117,6 @@
     <Content Include="Files\presetImages\utz.jpg" />
     <Content Include="Files\presetImages\VendingMachine.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
