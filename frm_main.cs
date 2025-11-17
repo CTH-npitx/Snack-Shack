@@ -49,6 +49,10 @@ namespace snackShack
                                                     "Confirm Close",
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                confirm = true;
+            }
             if (confirm == true)
             {
                 Application.Exit(); //close app
