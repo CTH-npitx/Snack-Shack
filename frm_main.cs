@@ -45,10 +45,7 @@ namespace snackShack
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
             bool confirm = false; //make confirm variable, default to false
-            DialogResult result = MessageBox.Show("Are you sure you want to close the application?",
-                                                    "Confirm Close",
-                                                    MessageBoxButtons.YesNo,
-                                                    MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(result == DialogResult.Yes)
             {
                 confirm = true;
