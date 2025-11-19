@@ -47,6 +47,11 @@ namespace snackShack
             close();
         }
 
+        private void btn_addItem_Click(object sender, EventArgs e) //add item
+        {
+           
+        }
+
         private void picBox_icon_Click(object sender, EventArgs e) //click on image input
         {
             string imagePath; //the path
@@ -55,13 +60,10 @@ namespace snackShack
             {
                 imagePath = openFileDialog1.FileName; //set the path
             }
+            
         }
-       }
-
-    #region Close System
-
-
-    private void close()
+        #region Close System
+        private void close()
         {
             bool confirm = false; //make confirm variable, default to false
             DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -79,12 +81,6 @@ namespace snackShack
 
             }
         }
-
-        private void btn_addItem_Click(object sender, EventArgs e) //add item
-        {
-           
-        }
-
-        #region Close System
         #endregion
     }
+}
