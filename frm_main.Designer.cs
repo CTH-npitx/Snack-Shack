@@ -177,6 +177,7 @@
             this.picBox_icon.Size = new System.Drawing.Size(226, 222);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
+            this.picBox_icon.Click += new System.EventHandler(this.picBox_icon_Click);
             // 
             // panel1
             // 
