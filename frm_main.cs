@@ -42,29 +42,14 @@ namespace snackShack
 
         }
 
+        private void frmMain_close(object sender, FormClosingEventArgs e)
+        {
+
+        }
 
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
             close();
-        }
-
-        private void close()
-        {
-            bool confirm = false; //make confirm variable, default to false
-            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                confirm = true;
-            }
-            if (confirm == true)
-            {
-                saveInvent(); //autosave
-                Application.Exit(); //close app
-            }
-            else
-            {
-
-            }
         }
 
         private void btn_addItem_Click(object sender, EventArgs e) //add item
@@ -83,9 +68,26 @@ namespace snackShack
             
         }
 
-        private void frmMain_close(object sender, FormClosingEventArgs e)
+        #region Close System
+        private void close()
         {
-            close();
-        }
+            bool confirm = false; //make confirm variable, default to false
+            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                confirm = true;
+            }
+            if (confirm == true)
+            {
+                saveInvent(); //autosave
+                Application.Exit(); //close app
+            }
+            else
+            {
+
+            }
+            
+
+        #endregion
     }
 }
