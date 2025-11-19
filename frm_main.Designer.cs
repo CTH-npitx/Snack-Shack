@@ -228,9 +228,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.picBox_icon);
-            this.groupBox1.Location = new System.Drawing.Point(561, 171);
+            this.groupBox1.Location = new System.Drawing.Point(561, 177);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(227, 241);
+            this.groupBox1.Size = new System.Drawing.Size(227, 235);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Snack Icon";
