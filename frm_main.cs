@@ -42,16 +42,27 @@ namespace snackShack
 
         }
 
-        private void closeSystem()
-        {
-
-        }
-
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
             closeSystem();
         }
 
+        private void btn_addItem_Click(object sender, EventArgs e) //add item
+        {
+           
+        }
+
+        private void picBox_icon_Click(object sender, EventArgs e) //click on image input
+        {
+            string imagePath; //the path
+            openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                imagePath = openFileDialog1.FileName; //set the path
+            }
+            
+        }
+        #region Close System
         private void close()
         {
             bool confirm = false; //make confirm variable, default to false
@@ -70,26 +81,10 @@ namespace snackShack
 
             }
         }
-
-        private void btn_addItem_Click(object sender, EventArgs e) //add item
+        private void closeSystem()
         {
-           
-        }
 
-        private void picBox_icon_Click(object sender, EventArgs e) //click on image input
-        {
-            string imagePath; //the path
-            openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                imagePath = openFileDialog1.FileName; //set the path
-            }
-            
         }
-
-        private void frmMain_close(object sender, FormClosingEventArgs e)
-        {
-            closeSystem();
-        }
+        #endregion
     }
 }
