@@ -49,6 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
@@ -227,7 +228,7 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // frm_main
             // 
@@ -278,6 +279,7 @@
         private System.Windows.Forms.TextBox txt_nameInput;
         private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
