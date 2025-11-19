@@ -63,6 +63,7 @@ namespace snackShack
 
         }
 
+
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
             close();
@@ -101,6 +102,11 @@ namespace snackShack
                 imagePath = openFileDialog1.FileName; //set the path
             }
             
+        }
+
+        private void frmMain_close(object sender, FormClosingEventArgs e)
+        {
+            close();
         }
     }
 }
