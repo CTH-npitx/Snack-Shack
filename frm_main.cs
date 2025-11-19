@@ -42,7 +42,6 @@ namespace snackShack
         private static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
         // Remove the X button.
         void removeClose()
-        private void readInvent() //readInvent
         {
             IntPtr hMenu = GetSystemMenu(this.Handle, false);
             int num_menu_items = GetMenuItemCount(hMenu);
@@ -64,34 +63,12 @@ namespace snackShack
 
         }
 
-        private void frmMain_close(object sender, FormClosingEventArgs e)
-        {
-            closeSystem(true);
-            
-        }
 
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
-            closeSystem();
+            close();
         }
 
-        private void btn_addItem_Click(object sender, EventArgs e) //add item
-        {
-
-        }
-
-        private void picBox_icon_Click(object sender, EventArgs e) //click on image input
-        {
-            string imagePath; //the path
-            openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                imagePath = openFileDialog1.FileName; //set the path
-            }
-
-        }
-
-        #region Close System
         private void close()
         {
             bool confirm = false; //make confirm variable, default to false
@@ -102,6 +79,7 @@ namespace snackShack
             }
             if (confirm == true)
             {
+                saveInvent(); //autosave
                 Application.Exit(); //close app
             }
             else
@@ -109,12 +87,17 @@ namespace snackShack
 
             }
         }
-        private void closeSystem(bool viaMeneu = false)
+
+        private void btn_addItem_Click(object sender, EventArgs e) //add item
         {
-            if (viaMeneu)
-            {
-                saveInvent();
-            } else
+           
+        }
+
+        private void picBox_icon_Click(object sender, EventArgs e) //click on image input
+        {
+            string imagePath; //the path
+            openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 imagePath = openFileDialog1.FileName; //set the path
             }
@@ -123,8 +106,7 @@ namespace snackShack
 
         private void frmMain_close(object sender, FormClosingEventArgs e)
         {
-            closesystem();
+            close();
         }
-        #endregion
     }
 }
