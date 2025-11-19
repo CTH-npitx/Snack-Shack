@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -49,19 +50,32 @@ namespace snackShack
         }
         #endregion
 
-        private void readInvent()
+        private void saveInvent() //save inventory
         {
-            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min);
+            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); //this is a pre - setup function for writing files, to make auto - saveing easier
         }
 
-        private void frmMain_load(object sender, EventArgs e) //on load
+        private void frmMain_load(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_appClose(object sender, EventArgs e) //close button
+        private void btn_appClose(object sender, EventArgs e) //close app system
         {
-            Application.Exit(); //close app
+            bool confirm = false; //make confirm variable, default to false
+            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                confirm = true;
+            }
+            if (confirm == true)
+            {
+                Application.Exit(); //close app
+                saveInvent(); //autosave
+            } else
+            {
+
+            }
         }
 
         private void btn_addItem_Click(object sender, EventArgs e) //add item
