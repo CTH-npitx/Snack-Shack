@@ -168,6 +168,7 @@
             // 
             // picBox_icon
             // 
+            this.picBox_icon.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
             this.picBox_icon.Location = new System.Drawing.Point(171, 36);
             this.picBox_icon.Name = "picBox_icon";
