@@ -63,9 +63,28 @@ namespace snackShack
 
         }
 
-        private void btn_appClose(object sender, EventArgs e) //close button
+        private void btn_appClose(object sender, EventArgs e) //close app system
         {
-            Application.Exit(); //close app
+            close();
+        }
+
+        private void close()
+        {
+            bool confirm = false; //make confirm variable, default to false
+            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                confirm = true;
+            }
+            if (confirm == true)
+            {
+                saveInvent(); //autosave
+                Application.Exit(); //close app
+            }
+            else
+            {
+
+            }
         }
 
         private void btn_addItem_Click(object sender, EventArgs e) //add item
