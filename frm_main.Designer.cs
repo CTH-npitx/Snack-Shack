@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -47,6 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
@@ -166,6 +168,7 @@
             this.num_snackCost.Name = "num_snackCost";
             this.num_snackCost.Size = new System.Drawing.Size(75, 20);
             this.num_snackCost.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.num_snackCost, "Cost in dollars and cents");
             // 
             // picBox_icon
             // 
@@ -177,6 +180,7 @@
             this.picBox_icon.Size = new System.Drawing.Size(226, 222);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
+            this.toolTip1.SetToolTip(this.picBox_icon, "Icon for snack");
             this.picBox_icon.Click += new System.EventHandler(this.picBox_icon_Click);
             // 
             // panel1
@@ -197,6 +201,7 @@
             this.txt_nameInput.Name = "txt_nameInput";
             this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
             this.txt_nameInput.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txt_nameInput, "Name of Snack");
             // 
             // label3
             // 
@@ -275,6 +280,7 @@
         private System.Windows.Forms.TextBox txt_nameInput;
         private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
