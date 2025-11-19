@@ -26,7 +26,6 @@ namespace snackShack
             openFileDialog1.InitialDirectory = imageFolder; //set default path
             readInvent();
         }
-        bool xButton = false;
         private void readInvent() //readInvent
         {
             snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
@@ -55,7 +54,7 @@ namespace snackShack
 
         private void btn_addItem_Click(object sender, EventArgs e) //add item
         {
-           
+
         }
 
         private void picBox_icon_Click(object sender, EventArgs e) //click on image input
@@ -66,7 +65,7 @@ namespace snackShack
             {
                 imagePath = openFileDialog1.FileName; //set the path
             }
-            
+
         }
 
         #region Close System
