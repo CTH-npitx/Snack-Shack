@@ -1,1 +1,2 @@
 close: ctrl + x
+force close: ctrl + alt + x
