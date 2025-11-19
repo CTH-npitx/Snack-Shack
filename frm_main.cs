@@ -42,6 +42,11 @@ namespace snackShack
 
         }
 
+        private void frmMain_close(object sender, FormClosingEventArgs e)
+        {
+            closeSystem();
+        }
+
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
             closeSystem();
@@ -62,6 +67,7 @@ namespace snackShack
             }
             
         }
+
         #region Close System
         private void close()
         {
