@@ -55,7 +55,6 @@ namespace snackShack
             {
                 imagePath = openFileDialog1.FileName; //set the path
             }
-
         }
        }
 
