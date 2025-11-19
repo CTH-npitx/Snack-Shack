@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,17 +28,37 @@ namespace snackShack
             readInvent();
         }
 
-        private void readInvent() //readInvent
-        {
-            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
-        }
+        //remove close (based on https://csharphelper.com/howtos/howto_remove_close_x.html )
+        #region removeClose
+        // Declare User32 constants and methods.
+        private const int MF_BYPOSITION = 0x400;
+        [DllImport("User32")]
+        private static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
 
-       private void saveInvent() //save inventory
-        {
-            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); //this is a pre - setup function for writing files, to make auto - saveing easier
-        }
+        [DllImport("User32")]
+        private static extern int GetMenuItemCount(IntPtr hWnd);
 
-        private void frmMain_load(object sender, EventArgs e)
+        [DllImport("User32")]
+        private static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
+        // Remove the X button.
+        void removeClose()
+        {
+            IntPtr hMenu = GetSystemMenu(this.Handle, false);
+            int num_menu_items = GetMenuItemCount(hMenu);
+            RemoveMenu(hMenu, num_menu_items - 1, MF_BYPOSITION); // Remove Close
+            RemoveMenu(hMenu, num_menu_items - 2, MF_BYPOSITION); // Remove Minimise
+        }
+        #endregion
+
+        private void saveInvent() {
+            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); 
+         }//save inventory
+        private void readInvent()
+        {
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min);
+        } //read inventory
+
+        private void frmMain_load(object sender, EventArgs e) //on load
         {
 
         }
@@ -45,17 +66,23 @@ namespace snackShack
 
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
+            close();
+        }
+
+        private void close()
+        {
             bool confirm = false; //make confirm variable, default to false
             DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 confirm = true;
             }
             if (confirm == true)
             {
+                saveInvent(); //autosave
                 Application.Exit(); //close app
-               // saveInvent(); //autosave
-            } else
+            }
+            else
             {
 
             }
