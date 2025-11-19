@@ -60,6 +60,11 @@ namespace snackShack
             }
         }
 
+        private void close()
+        {
+
+        }
+
         private void btn_addItem_Click(object sender, EventArgs e) //add item
         {
            
