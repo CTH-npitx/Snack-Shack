@@ -47,6 +47,9 @@ namespace snackShack
             close();
         }
 
+        #region Close System
+
+
         private void close()
         {
             bool confirm = false; //make confirm variable, default to false
@@ -82,4 +85,5 @@ namespace snackShack
             
         }
     }
+    #region
 }
