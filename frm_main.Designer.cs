@@ -47,11 +47,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -171,7 +173,7 @@
             this.picBox_icon.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.picBox_icon.Image = ((System.Drawing.Image)(resources.GetObject("picBox_icon.Image")));
             this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
-            this.picBox_icon.Location = new System.Drawing.Point(518, 167);
+            this.picBox_icon.Location = new System.Drawing.Point(0, 19);
             this.picBox_icon.Name = "picBox_icon";
             this.picBox_icon.Size = new System.Drawing.Size(226, 219);
             this.picBox_icon.TabIndex = 5;
@@ -223,17 +225,27 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Cost";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.picBox_icon);
+            this.groupBox1.Location = new System.Drawing.Point(561, 171);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(227, 241);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.picBox_icon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_main";
@@ -247,6 +259,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,6 +285,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nameInput;
         private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
