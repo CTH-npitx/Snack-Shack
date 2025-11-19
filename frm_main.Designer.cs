@@ -45,7 +45,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_nameInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
@@ -181,14 +180,14 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.txt_nameInput);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.num_snackCost);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(526, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 103);
+            this.panel1.Size = new System.Drawing.Size(274, 323);
             this.panel1.TabIndex = 6;
             // 
             // txt_nameInput
@@ -207,15 +206,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Name";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(210, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Icon";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -228,7 +218,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.picBox_icon);
-            this.groupBox1.Location = new System.Drawing.Point(561, 177);
+            this.groupBox1.Location = new System.Drawing.Point(47, 85);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(227, 235);
             this.groupBox1.TabIndex = 7;
@@ -241,7 +231,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
@@ -281,7 +270,6 @@
         private System.Windows.Forms.PictureBox picBox_icon;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nameInput;
         private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
