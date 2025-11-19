@@ -49,6 +49,6 @@ namespace snackShack
                 completeLoc = completeLoc + comp + char.ToString(pathSpliter); //add next part to path
             }
             return completeLoc; //output path
-        }
-    }
+        } //derive the path of the base file
+    } //base commands to aid in everything
 }

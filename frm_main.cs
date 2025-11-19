@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -49,10 +50,13 @@ namespace snackShack
         }
         #endregion
 
+        private void saveInvent() {
+            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); 
+         }//save inventory
         private void readInvent()
         {
             snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min);
-        }
+        } //read inventory
 
         private void frmMain_load(object sender, EventArgs e) //on load
         {
