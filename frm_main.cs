@@ -44,7 +44,8 @@ namespace snackShack
 
         private void frmMain_close(object sender, FormClosingEventArgs e)
         {
-            closeSystem();
+            closeSystem(true);
+            
         }
 
         private void btn_appClose(object sender, EventArgs e) //close app system
@@ -79,7 +80,6 @@ namespace snackShack
             }
             if (confirm == true)
             {
-                saveInvent(); //autosave
                 Application.Exit(); //close app
             }
             else
@@ -87,9 +87,15 @@ namespace snackShack
 
             }
         }
-        private void closeSystem()
+        private void closeSystem(bool viaMeneu = false)
         {
-
+            if (viaMeneu)
+            {
+                saveInvent();
+            } else
+            {
+                close();
+            }
         }
         #endregion
     }
