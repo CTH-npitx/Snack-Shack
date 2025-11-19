@@ -26,7 +26,6 @@ namespace snackShack
             openFileDialog1.InitialDirectory = imageFolder; //set default path
             readInvent();
         }
-
         private void readInvent() //readInvent
         {
             snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
@@ -42,33 +41,20 @@ namespace snackShack
 
         }
 
-        private void btn_appClose(object sender, EventArgs e) //close app system
+        private void frmMain_close(object sender, FormClosingEventArgs e)
         {
-            close();
+            closeSystem(true);
+            
         }
 
-        private void close()
+        private void btn_appClose(object sender, EventArgs e) //close app system
         {
-            bool confirm = false; //make confirm variable, default to false
-            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                confirm = true;
-            }
-            if (confirm == true)
-            {
-                saveInvent(); //autosave
-                Application.Exit(); //close app
-            }
-            else
-            {
-
-            }
+            closeSystem();
         }
 
         private void btn_addItem_Click(object sender, EventArgs e) //add item
         {
-           
+
         }
 
         private void picBox_icon_Click(object sender, EventArgs e) //click on image input
@@ -79,7 +65,37 @@ namespace snackShack
             {
                 imagePath = openFileDialog1.FileName; //set the path
             }
-            
+
         }
+
+        #region Close System
+        private void close()
+        {
+            bool confirm = false; //make confirm variable, default to false
+            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                confirm = true;
+            }
+            if (confirm == true)
+            {
+                Application.Exit(); //close app
+            }
+            else
+            {
+
+            }
+        }
+        private void closeSystem(bool viaMeneu = false)
+        {
+            if (viaMeneu)
+            {
+                saveInvent();
+            } else
+            {
+                close();
+            }
+        }
+        #endregion
     }
 }
