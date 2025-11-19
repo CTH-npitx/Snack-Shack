@@ -42,6 +42,7 @@ namespace snackShack
 
         }
 
+
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
             bool confirm = false; //make confirm variable, default to false
@@ -74,6 +75,11 @@ namespace snackShack
                 imagePath = openFileDialog1.FileName; //set the path
             }
             
+        }
+
+        private void frmMain_close(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }
