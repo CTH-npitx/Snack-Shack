@@ -196,6 +196,7 @@
             this.txt_nameInput.Name = "txt_nameInput";
             this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
             this.txt_nameInput.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txt_nameInput, "Name of Snack");
             // 
             // label3
             // 
