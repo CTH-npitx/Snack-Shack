@@ -167,6 +167,7 @@
             this.num_snackCost.Name = "num_snackCost";
             this.num_snackCost.Size = new System.Drawing.Size(75, 20);
             this.num_snackCost.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.num_snackCost, "Cost in dollars and cents");
             // 
             // picBox_icon
             // 
