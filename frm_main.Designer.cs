@@ -176,6 +176,7 @@
             this.picBox_icon.Size = new System.Drawing.Size(100, 50);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
+            this.toolTip1.SetToolTip(this.picBox_icon, "Icon for snack");
             // 
             // panel1
             // 
