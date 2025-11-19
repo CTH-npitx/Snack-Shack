@@ -227,7 +227,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
@@ -237,7 +236,6 @@
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Form";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_close);
             this.Load += new System.EventHandler(this.frmMain_load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).EndInit();
             this.menuStrip1.ResumeLayout(false);
