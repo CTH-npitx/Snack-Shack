@@ -171,9 +171,9 @@
             this.picBox_icon.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.picBox_icon.Image = ((System.Drawing.Image)(resources.GetObject("picBox_icon.Image")));
             this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
-            this.picBox_icon.Location = new System.Drawing.Point(644, 167);
+            this.picBox_icon.Location = new System.Drawing.Point(624, 167);
             this.picBox_icon.Name = "picBox_icon";
-            this.picBox_icon.Size = new System.Drawing.Size(100, 50);
+            this.picBox_icon.Size = new System.Drawing.Size(120, 126);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
             // 
