@@ -42,10 +42,14 @@ namespace snackShack
 
         }
 
+        private void closeSystem()
+        {
+
+        }
 
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
-            close();
+            closeSystem();
         }
 
         private void close()
@@ -86,11 +90,6 @@ namespace snackShack
         private void frmMain_close(object sender, FormClosingEventArgs e)
         {
             closeSystem();
-        }
-
-        private void closeSystem()
-        {
-
         }
     }
 }
