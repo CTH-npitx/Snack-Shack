@@ -168,10 +168,12 @@
             // 
             // picBox_icon
             // 
+            this.picBox_icon.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.picBox_icon.Image = ((System.Drawing.Image)(resources.GetObject("picBox_icon.Image")));
             this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
-            this.picBox_icon.Location = new System.Drawing.Point(171, 36);
+            this.picBox_icon.Location = new System.Drawing.Point(36, 32);
             this.picBox_icon.Name = "picBox_icon";
-            this.picBox_icon.Size = new System.Drawing.Size(100, 50);
+            this.picBox_icon.Size = new System.Drawing.Size(226, 219);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
             // 
