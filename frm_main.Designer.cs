@@ -171,7 +171,7 @@
             this.picBox_icon.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.picBox_icon.Image = ((System.Drawing.Image)(resources.GetObject("picBox_icon.Image")));
             this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
-            this.picBox_icon.Location = new System.Drawing.Point(518, 167);
+            this.picBox_icon.Location = new System.Drawing.Point(36, 32);
             this.picBox_icon.Name = "picBox_icon";
             this.picBox_icon.Size = new System.Drawing.Size(226, 219);
             this.picBox_icon.TabIndex = 5;
@@ -183,6 +183,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.num_snackCost);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.picBox_icon);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(526, 27);
             this.panel1.Name = "panel1";
@@ -233,7 +234,6 @@
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.picBox_icon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_main";
