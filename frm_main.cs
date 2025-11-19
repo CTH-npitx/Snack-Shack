@@ -43,12 +43,13 @@ namespace snackShack
 
         private void frmMain_close(object sender, FormClosingEventArgs e)
         {
-
+            closeSystem(true);
+            
         }
 
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
-            close();
+            closeSystem();
         }
 
         private void btn_addItem_Click(object sender, EventArgs e) //add item
@@ -78,16 +79,23 @@ namespace snackShack
             }
             if (confirm == true)
             {
-                saveInvent(); //autosave
                 Application.Exit(); //close app
             }
             else
             {
 
             }
-
-
-            #endregion
         }
+        private void closeSystem(bool viaMeneu = false)
+        {
+            if (viaMeneu)
+            {
+                saveInvent();
+            } else
+            {
+                close();
+            }
+        }
+        #endregion
     }
 }

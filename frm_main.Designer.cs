@@ -236,7 +236,6 @@
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Form";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_close);
             this.Load += new System.EventHandler(this.frmMain_load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).EndInit();
             this.menuStrip1.ResumeLayout(false);
