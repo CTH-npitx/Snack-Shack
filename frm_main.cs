@@ -44,17 +44,23 @@ namespace snackShack
 
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
+            close();
+        }
+
+        private void close()
+        {
             bool confirm = false; //make confirm variable, default to false
             DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 confirm = true;
             }
             if (confirm == true)
             {
+                save saveInvent(); //autosave
                 Application.Exit(); //close app
-                saveInvent(); //autosave
-            } else
+            }
+            else
             {
 
             }
