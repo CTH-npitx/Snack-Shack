@@ -62,6 +62,12 @@ namespace snackShack
             }
             
         }
+
+        private void frmMain_close(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
         #region Close System
         private void close()
         {
