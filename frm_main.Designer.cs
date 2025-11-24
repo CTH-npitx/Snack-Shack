@@ -170,7 +170,7 @@
             // 
             this.picBox_icon.Image = global::snackShack.Properties.Resources.VendingMachine;
             this.picBox_icon.InitialImage = global::snackShack.Properties.Resources.VendingMachine;
-            this.picBox_icon.Location = new System.Drawing.Point(529, 143);
+            this.picBox_icon.Location = new System.Drawing.Point(89, 93);
             this.picBox_icon.Name = "picBox_icon";
             this.picBox_icon.Size = new System.Drawing.Size(235, 229);
             this.picBox_icon.TabIndex = 5;
@@ -183,10 +183,11 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.num_snackCost);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.picBox_icon);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(526, 27);
+            this.panel1.Location = new System.Drawing.Point(464, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 113);
+            this.panel1.Size = new System.Drawing.Size(336, 398);
             this.panel1.TabIndex = 6;
             // 
             // txt_nameInput
@@ -232,7 +233,6 @@
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.picBox_icon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_main";
