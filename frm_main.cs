@@ -26,6 +26,7 @@ namespace snackShack
             InitializeComponent();
             openFileDialog1.InitialDirectory = imageFolder; //set default path
             readInvent();
+            removeClose();
         }
 
         //remove close (based on https://csharphelper.com/howtos/howto_remove_close_x.html )
