@@ -36,7 +36,6 @@
             this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.forceCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.forceCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
@@ -116,15 +115,6 @@
             this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.btn_appClose);
-            // 
-            // forceCloseToolStripMenuItem
-            // 
-            this.forceCloseToolStripMenuItem.Name = "forceCloseToolStripMenuItem";
-            this.forceCloseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.X)));
-            this.forceCloseToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.forceCloseToolStripMenuItem.Text = "Force Close";
-            this.forceCloseToolStripMenuItem.Visible = false;
             // 
             // manualSaveToolStripMenuItem
             // 
@@ -235,6 +225,15 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Cost";
             // 
+            // forceCloseToolStripMenuItem
+            // 
+            this.forceCloseToolStripMenuItem.Name = "forceCloseToolStripMenuItem";
+            this.forceCloseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.X)));
+            this.forceCloseToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.forceCloseToolStripMenuItem.Text = "Force Close";
+            this.forceCloseToolStripMenuItem.Visible = false;
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,7 +283,6 @@
         private System.Windows.Forms.TextBox txt_nameInput;
         private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem forceCloseToolStripMenuItem;
-        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 
