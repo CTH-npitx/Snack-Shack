@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,7 @@ namespace snackShack
             InitializeComponent();
             openFileDialog1.InitialDirectory = imageFolder; //set default path
             readInvent();
+            removeClose();
         }
         private void readInvent() //readInvent
         {
@@ -36,7 +38,38 @@ namespace snackShack
             snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); //this is a pre - setup function for writing files, to make auto - saveing easier
         }
 
-        private void frmMain_load(object sender, EventArgs e)
+        //remove close (based on https://csharphelper.com/howtos/howto_remove_close_x.html )
+        #region removeClose
+        // Declare User32 constants and methods.
+        private const int MF_BYPOSITION = 0x400;
+        [DllImport("User32")]
+        private static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
+
+        [DllImport("User32")]
+        private static extern int GetMenuItemCount(IntPtr hWnd);
+
+        [DllImport("User32")]
+        private static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
+        // Remove the X button.
+        void removeClose()
+        {
+            IntPtr hMenu = GetSystemMenu(this.Handle, false);
+            int num_menu_items = GetMenuItemCount(hMenu);
+            RemoveMenu(hMenu, num_menu_items - 1, MF_BYPOSITION); // Remove Close
+            RemoveMenu(hMenu, num_menu_items - 2, MF_BYPOSITION); // Remove Minimise
+        }
+        #endregion
+
+        private void saveInvent() {
+            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); 
+         }//save inventory
+        private void readInvent()
+        {
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min);
+        } //read inventory
+
+        private void frmMain_load(object sender, EventArgs e) //on load
+        private void saveInvent() //save inventory
         {
 
         }
@@ -54,7 +87,7 @@ namespace snackShack
 
         private void btn_addItem_Click(object sender, EventArgs e) //add item
         {
-
+           
         }
 
         private void picBox_icon_Click(object sender, EventArgs e) //click on image input
