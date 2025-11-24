@@ -31,10 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.dgv_invent = new System.Windows.Forms.DataGridView();
-            this.col_snaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -45,13 +41,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_nameInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
+            this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_snaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_invent = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -65,45 +66,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // dgv_invent
-            // 
-            this.dgv_invent.AllowUserToAddRows = false;
-            this.dgv_invent.AllowUserToDeleteRows = false;
-            this.dgv_invent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_invent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.col_snaName,
-            this.col_snaPri,
-            this.col_snaIcon});
-            this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dgv_invent.Location = new System.Drawing.Point(0, 24);
-            this.dgv_invent.MultiSelect = false;
-            this.dgv_invent.Name = "dgv_invent";
-            this.dgv_invent.ReadOnly = true;
-            this.dgv_invent.RowHeadersVisible = false;
-            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_invent.Size = new System.Drawing.Size(397, 404);
-            this.dgv_invent.TabIndex = 3;
-            // 
-            // col_snaName
-            // 
-            this.col_snaName.HeaderText = "Name of Snack";
-            this.col_snaName.Name = "col_snaName";
-            this.col_snaName.ReadOnly = true;
-            // 
-            // col_snaPri
-            // 
-            this.col_snaPri.HeaderText = "Price of Snack";
-            this.col_snaPri.Name = "col_snaPri";
-            this.col_snaPri.ReadOnly = true;
-            // 
-            // col_snaIcon
-            // 
-            this.col_snaIcon.HeaderText = "Icon of Snack";
-            this.col_snaIcon.Name = "col_snaIcon";
-            this.col_snaIcon.ReadOnly = true;
-            this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // closeToolStripMenuItem
             // 
@@ -170,7 +132,7 @@
             // 
             this.picBox_icon.Image = global::snackShack.Properties.Resources.VendingMachine;
             this.picBox_icon.InitialImage = global::snackShack.Properties.Resources.VendingMachine;
-            this.picBox_icon.Location = new System.Drawing.Point(89, 93);
+            this.picBox_icon.Location = new System.Drawing.Point(6, 19);
             this.picBox_icon.Name = "picBox_icon";
             this.picBox_icon.Size = new System.Drawing.Size(235, 229);
             this.picBox_icon.TabIndex = 5;
@@ -179,11 +141,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.txt_nameInput);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.num_snackCost);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.picBox_icon);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(464, 27);
             this.panel1.Name = "panel1";
@@ -206,15 +167,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Name";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(210, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Icon";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -223,6 +175,55 @@
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Cost";
+            // 
+            // col_snaIcon
+            // 
+            this.col_snaIcon.HeaderText = "Icon of Snack";
+            this.col_snaIcon.Name = "col_snaIcon";
+            this.col_snaIcon.ReadOnly = true;
+            this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // col_snaPri
+            // 
+            this.col_snaPri.HeaderText = "Price of Snack";
+            this.col_snaPri.Name = "col_snaPri";
+            this.col_snaPri.ReadOnly = true;
+            // 
+            // col_snaName
+            // 
+            this.col_snaName.HeaderText = "Name of Snack";
+            this.col_snaName.Name = "col_snaName";
+            this.col_snaName.ReadOnly = true;
+            // 
+            // dgv_invent
+            // 
+            this.dgv_invent.AllowUserToAddRows = false;
+            this.dgv_invent.AllowUserToDeleteRows = false;
+            this.dgv_invent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_invent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_snaName,
+            this.col_snaPri,
+            this.col_snaIcon});
+            this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgv_invent.Location = new System.Drawing.Point(0, 24);
+            this.dgv_invent.MultiSelect = false;
+            this.dgv_invent.Name = "dgv_invent";
+            this.dgv_invent.ReadOnly = true;
+            this.dgv_invent.RowHeadersVisible = false;
+            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_invent.Size = new System.Drawing.Size(397, 404);
+            this.dgv_invent.TabIndex = 3;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.picBox_icon);
+            this.groupBox1.Location = new System.Drawing.Point(79, 71);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(245, 259);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Snack Icon";
             // 
             // frm_main
             // 
@@ -240,13 +241,14 @@
             this.Text = "Main Form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_close);
             this.Load += new System.EventHandler(this.frmMain_load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,10 +258,6 @@
 
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.DataGridView dgv_invent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_snaName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_snaPri;
-        private System.Windows.Forms.DataGridViewImageColumn col_snaIcon;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manualSaveToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -268,10 +266,14 @@
         private System.Windows.Forms.PictureBox picBox_icon;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nameInput;
         private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewImageColumn col_snaIcon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_snaPri;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_snaName;
+        private System.Windows.Forms.DataGridView dgv_invent;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
