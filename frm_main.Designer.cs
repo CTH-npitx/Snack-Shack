@@ -48,7 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -168,17 +167,16 @@
             this.num_snackCost.Name = "num_snackCost";
             this.num_snackCost.Size = new System.Drawing.Size(75, 20);
             this.num_snackCost.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.num_snackCost, "Cost in dollars and cents");
             // 
             // picBox_icon
             // 
-            this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
-            this.picBox_icon.Location = new System.Drawing.Point(171, 36);
+            this.picBox_icon.Image = global::snackShack.Properties.Resources.VendingMachine;
+            this.picBox_icon.InitialImage = global::snackShack.Properties.Resources.VendingMachine;
+            this.picBox_icon.Location = new System.Drawing.Point(89, 93);
             this.picBox_icon.Name = "picBox_icon";
-            this.picBox_icon.Size = new System.Drawing.Size(100, 50);
+            this.picBox_icon.Size = new System.Drawing.Size(235, 229);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
-            this.toolTip1.SetToolTip(this.picBox_icon, "Icon for snack");
             this.picBox_icon.Click += new System.EventHandler(this.picBox_icon_Click);
             // 
             // panel1
@@ -189,9 +187,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.picBox_icon);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(526, 27);
+            this.panel1.Location = new System.Drawing.Point(464, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 103);
+            this.panel1.Size = new System.Drawing.Size(336, 398);
             this.panel1.TabIndex = 6;
             // 
             // txt_nameInput
@@ -200,7 +198,6 @@
             this.txt_nameInput.Name = "txt_nameInput";
             this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
             this.txt_nameInput.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.txt_nameInput, "Name of Snack");
             // 
             // label3
             // 
@@ -228,14 +225,6 @@
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Cost";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
             // 
             // frm_main
             // 
@@ -285,7 +274,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nameInput;
         private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ToolTip toolTip1;
     }
 }
