@@ -45,14 +45,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_nameInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -157,7 +156,7 @@
             0,
             0,
             131072});
-            this.num_snackCost.Location = new System.Drawing.Point(37, 36);
+            this.num_snackCost.Location = new System.Drawing.Point(55, 45);
             this.num_snackCost.Maximum = new decimal(new int[] {
             10,
             0,
@@ -169,31 +168,29 @@
             // 
             // picBox_icon
             // 
-            this.picBox_icon.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.picBox_icon.Image = ((System.Drawing.Image)(resources.GetObject("picBox_icon.Image")));
             this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
-            this.picBox_icon.Location = new System.Drawing.Point(0, 19);
+            this.picBox_icon.Location = new System.Drawing.Point(171, 36);
             this.picBox_icon.Name = "picBox_icon";
-            this.picBox_icon.Size = new System.Drawing.Size(226, 222);
+            this.picBox_icon.Size = new System.Drawing.Size(100, 50);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
-            this.picBox_icon.Click += new System.EventHandler(this.picBox_icon_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.txt_nameInput);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.num_snackCost);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.picBox_icon);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(430, 27);
+            this.panel1.Location = new System.Drawing.Point(526, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 248);
+            this.panel1.Size = new System.Drawing.Size(274, 103);
             this.panel1.TabIndex = 6;
             // 
             // txt_nameInput
             // 
-            this.txt_nameInput.Location = new System.Drawing.Point(37, 6);
+            this.txt_nameInput.Location = new System.Drawing.Point(44, 6);
             this.txt_nameInput.Name = "txt_nameInput";
             this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
             this.txt_nameInput.TabIndex = 7;
@@ -207,24 +204,23 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Name";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(210, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Icon";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 43);
+            this.label1.Location = new System.Drawing.Point(10, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Cost";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.picBox_icon);
-            this.groupBox1.Location = new System.Drawing.Point(143, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(227, 235);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Snack Icon";
             // 
             // frm_main
             // 
@@ -249,7 +245,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,10 +266,10 @@
         private System.Windows.Forms.PictureBox picBox_icon;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nameInput;
         private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
