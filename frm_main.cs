@@ -31,7 +31,7 @@ namespace snackShack
             snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
         }
 
-       private void saveInvent() //save inventory
+        private void saveInvent() //save inventory
         {
             snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); //this is a pre - setup function for writing files, to make auto - saveing easier
         }
@@ -90,7 +90,7 @@ namespace snackShack
         {
             if (viaMeneu)
             {
-                // saveInvent();
+                saveInvent();
             } else
             {
                 close();
