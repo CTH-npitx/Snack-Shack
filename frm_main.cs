@@ -50,44 +50,26 @@ namespace snackShack
         }
         #endregion
 
+        private void saveInvent() {
+            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); 
+         }//save inventory
+        private void readInvent()
+        {
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min);
+        } //read inventory
+
+        private void frmMain_load(object sender, EventArgs e) //on load
         private void saveInvent() //save inventory
         {
-            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); //this is a pre - setup function for writing files, to make auto - saveing easier
-        }
-
-        private void frmMain_load(object sender, EventArgs e)
-        {
 
         }
 
-        private void frmMain_close(object sender, FormClosingEventArgs e)
-        {
-            closeSystem(true);
-            
-        }
 
         private void btn_appClose(object sender, EventArgs e) //close app system
         {
-            closeSystem();
+            close();
         }
 
-        private void btn_addItem_Click(object sender, EventArgs e) //add item
-        {
-
-        }
-
-        private void picBox_icon_Click(object sender, EventArgs e) //click on image input
-        {
-            string imagePath; //the path
-            openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                imagePath = openFileDialog1.FileName; //set the path
-            }
-
-        }
-
-        #region Close System
         private void close()
         {
             bool confirm = false; //make confirm variable, default to false
@@ -98,6 +80,7 @@ namespace snackShack
             }
             if (confirm == true)
             {
+                saveInvent(); //autosave
                 Application.Exit(); //close app
             }
             else
@@ -105,16 +88,26 @@ namespace snackShack
 
             }
         }
-        private void closeSystem(bool viaMeneu = false)
+
+        private void btn_addItem_Click(object sender, EventArgs e) //add item
         {
-            if (viaMeneu)
-            {
-                saveInvent();
-            } else
-            {
-                close();
-            }
+           
         }
-        #endregion
+
+        private void picBox_icon_Click(object sender, EventArgs e) //click on image input
+        {
+            string imagePath; //the path
+            openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                imagePath = openFileDialog1.FileName; //set the path
+            }
+            
+        }
+
+        private void frmMain_close(object sender, FormClosingEventArgs e)
+        {
+            close();
+        }
     }
 }
