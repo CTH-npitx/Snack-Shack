@@ -26,6 +26,7 @@ namespace snackShack
             InitializeComponent();
             openFileDialog1.InitialDirectory = imageFolder; //set default path
             readInvent();
+            removeClose();
         }
 
         //remove close (based on https://csharphelper.com/howtos/howto_remove_close_x.html )
@@ -59,6 +60,7 @@ namespace snackShack
         } //read inventory
 
         private void frmMain_load(object sender, EventArgs e) //on load
+        private void saveInvent() //save inventory
         {
 
         }
