@@ -202,7 +202,10 @@
             // 
             this.dgv_invent.AllowUserToAddRows = false;
             this.dgv_invent.AllowUserToDeleteRows = false;
-            this.dgv_invent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_invent.AllowUserToResizeColumns = false;
+            this.dgv_invent.AllowUserToResizeRows = false;
+            this.dgv_invent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_invent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_invent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_snaName,
             this.col_snaPri,
@@ -215,7 +218,7 @@
             this.dgv_invent.RowHeadersVisible = false;
             this.dgv_invent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_invent.Size = new System.Drawing.Size(490, 404);
+            this.dgv_invent.Size = new System.Drawing.Size(434, 404);
             this.dgv_invent.TabIndex = 3;
             // 
             // col_snaName
@@ -223,14 +226,12 @@
             this.col_snaName.HeaderText = "Name of Snack";
             this.col_snaName.Name = "col_snaName";
             this.col_snaName.ReadOnly = true;
-            this.col_snaName.Width = 131;
             // 
             // col_snaPri
             // 
             this.col_snaPri.HeaderText = "Price of Snack";
             this.col_snaPri.Name = "col_snaPri";
             this.col_snaPri.ReadOnly = true;
-            this.col_snaPri.Width = 132;
             // 
             // col_snaIcon
             // 
@@ -240,7 +241,6 @@
             this.col_snaIcon.ReadOnly = true;
             this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.col_snaIcon.Width = 225;
             // 
             // frm_main
             // 
