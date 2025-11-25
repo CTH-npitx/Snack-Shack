@@ -21,9 +21,5 @@ namespace snackShack
         {
             return (decimal)minPrice;
         }
-        internal static Image initialImage()
-        {
-            Image = 
-        }
     }
 }
