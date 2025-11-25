@@ -101,13 +101,15 @@ namespace snackShack
         private void inpEnty_complete(object sender, EventArgs e)
         {
             string inputText = txt_nameInput.Text;
+            decimal price = num_snackCost.Value;
+            decimal minPrice = 0.05;
             bool valid = true;
             if(string.IsNullOrEmpty(inputText))
             {
                 valid = false;
-            }
+            } else if(price >= minPrice)
 
-            if(valid)
+            if (valid)
             {
 
             }
