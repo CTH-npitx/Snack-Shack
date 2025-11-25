@@ -107,7 +107,9 @@ namespace snackShack
             if(string.IsNullOrEmpty(inputText))
             {
                 valid = false;
-            } else if(price >= minPrice)
+            } else if(price < minPrice) { 
+                valid = false;
+            }
 
             if (valid)
             {
