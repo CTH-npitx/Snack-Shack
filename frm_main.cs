@@ -19,7 +19,7 @@ namespace snackShack
 
         string imageFolder = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + "presetImages" + constants.fileSepString();
         string inventoryFile = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + nameof(inventory) + ".csv";
-
+        Image baseIcon = null;
         public frm_main()
         {
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace snackShack
 
         private void frmMain_load(object sender, EventArgs e)
         {
-
+            baseIcon = picBox_icon.InitialImage;
         }
 
         private void frmMain_close(object sender, FormClosingEventArgs e)
@@ -109,7 +109,10 @@ namespace snackShack
                 valid = false;
             } else if(price < minPrice) { 
                 valid = false;
-            } else if(picBox_icon.Image != null ||
+            } else if (picBox_icon.Image == baseIcon)
+            {
+                valid = false;
+            }
 
             if (valid)
             {
