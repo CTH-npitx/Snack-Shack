@@ -97,5 +97,24 @@ namespace snackShack
             }
         }
         #endregion
+
+        private void inpEnty_complete(object sender, EventArgs e)
+        {
+            string inputText = txt_nameInput.Text;
+            decimal price = num_snackCost.Value;
+            decimal minPrice = constants.minimumPrice();
+            bool valid = true;
+            if(string.IsNullOrEmpty(inputText))
+            {
+                valid = false;
+            } else if(price < minPrice) { 
+                valid = false;
+            }
+
+            if (valid)
+            {
+
+            }
+        }
     }
 }
