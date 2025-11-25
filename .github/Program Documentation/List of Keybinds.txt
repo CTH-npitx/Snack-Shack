@@ -1,1 +1,1 @@
-close: ctrl + x
+close: ctrl + shift + x
