@@ -102,7 +102,7 @@ namespace snackShack
         {
             string inputText = txt_nameInput.Text;
             decimal price = num_snackCost.Value;
-            decimal minPrice = 0.05;
+            decimal minPrice = constants.minimumPrice();
             bool valid = true;
             if(string.IsNullOrEmpty(inputText))
             {
