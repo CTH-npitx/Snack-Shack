@@ -123,6 +123,7 @@
             this.num_snackCost.Name = "num_snackCost";
             this.num_snackCost.Size = new System.Drawing.Size(75, 20);
             this.num_snackCost.TabIndex = 4;
+            this.num_snackCost.ValueChanged += new System.EventHandler(this.inpEnty_complete);
             // 
             // picBox_icon
             // 
@@ -143,6 +144,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(291, 372);
             this.panel1.TabIndex = 6;
+            this.panel1.MouseLeave += new System.EventHandler(this.inpEnty_complete);
             // 
             // groupBox2
             // 
@@ -172,6 +174,7 @@
             this.txt_nameInput.Name = "txt_nameInput";
             this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
             this.txt_nameInput.TabIndex = 7;
+            this.txt_nameInput.TextChanged += new System.EventHandler(this.inpEnty_complete);
             // 
             // label1
             // 
