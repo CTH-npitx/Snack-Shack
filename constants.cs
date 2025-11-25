@@ -1,3 +1,5 @@
+using System.Drawing;
+
 namespace snackShack
 {
     internal static class constants //pre-defined constants
@@ -18,6 +20,10 @@ namespace snackShack
         internal static decimal minimumPrice()
         {
             return (decimal)minPrice;
+        }
+        internal static Image initialImage()
+        {
+            Image = 
         }
     }
 }
