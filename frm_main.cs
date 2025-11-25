@@ -109,6 +109,9 @@ namespace snackShack
                 valid = false;
             } else if(price < minPrice) { 
                 valid = false;
+            } else if (picBox_icon.Image == baseIcon)
+            {
+                valid = false;
             }
 
             if (valid)
