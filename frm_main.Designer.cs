@@ -163,6 +163,7 @@
             this.txt_nameInput.Name = "txt_nameInput";
             this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
             this.txt_nameInput.TabIndex = 7;
+            this.txt_nameInput.TextChanged += new System.EventHandler(this.inpEnty_complete);
             // 
             // label1
             // 

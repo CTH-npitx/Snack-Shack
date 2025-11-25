@@ -97,5 +97,20 @@ namespace snackShack
             }
         }
         #endregion
+
+        private void inpEnty_complete(object sender, EventArgs e)
+        {
+            string inputText = txt_nameInput.Text;
+            bool valid = true;
+            if(string.IsNullOrEmpty(inputText))
+            {
+                valid = false;
+            }
+
+            if(valid)
+            {
+
+            }
+        }
     }
 }
