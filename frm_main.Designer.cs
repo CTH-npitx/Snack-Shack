@@ -135,6 +135,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(291, 372);
             this.panel1.TabIndex = 6;
+            this.panel1.MouseLeave += new System.EventHandler(this.inpEnty_complete);
             // 
             // groupBox2
             // 
