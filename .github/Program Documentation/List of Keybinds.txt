@@ -1,2 +1,2 @@
-close: ctrl + shift + x
+close: ctrl + x
 add entry: ctrl + a
