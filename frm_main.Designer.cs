@@ -33,10 +33,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manualSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.num_snackCost = new System.Windows.Forms.NumericUpDown();
             this.picBox_icon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -79,20 +77,11 @@
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.btn_appClose);
             // 
-            // manualSaveToolStripMenuItem
-            // 
-            this.manualSaveToolStripMenuItem.Enabled = false;
-            this.manualSaveToolStripMenuItem.Name = "manualSaveToolStripMenuItem";
-            this.manualSaveToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.manualSaveToolStripMenuItem.Text = "Manual Save";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.closeToolStripMenuItem,
-            this.manualSaveToolStripMenuItem,
-            this.addToolStripMenuItem,
-            this.editModeToolStripMenuItem});
+            this.addToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -106,13 +95,6 @@
             this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
-            // 
-            // editModeToolStripMenuItem
-            // 
-            this.editModeToolStripMenuItem.Enabled = false;
-            this.editModeToolStripMenuItem.Name = "editModeToolStripMenuItem";
-            this.editModeToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.editModeToolStripMenuItem.Text = "Edit Mode";
             // 
             // num_snackCost
             // 
@@ -220,7 +202,7 @@
             this.dgv_invent.RowHeadersVisible = false;
             this.dgv_invent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_invent.Size = new System.Drawing.Size(434, 404);
+            this.dgv_invent.Size = new System.Drawing.Size(442, 404);
             this.dgv_invent.TabIndex = 3;
             // 
             // col_snaName
@@ -279,7 +261,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manualSaveToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown num_snackCost;
@@ -288,7 +269,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nameInput;
-        private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgv_invent;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
