@@ -69,6 +69,7 @@ namespace snackShack
                 return;
             }
             picBox_icon.ImageLocation = imagePath;
+            valid();
         }
 
         #region Close System
@@ -103,7 +104,7 @@ namespace snackShack
 
         private void inpEnty_complete(object sender, EventArgs e)
         {
-
+            valid();
         }
         private bool valid()
         {
