@@ -69,9 +69,9 @@ namespace snackShack
                 return;
             }
             picBox_icon.ImageLocation = imagePath;
-            valid();
+            bool status = valid();
+            toggleAdd(status);
         }
-
         #region Close System
         private void close()
         {
@@ -104,7 +104,19 @@ namespace snackShack
 
         private void inpEnty_complete(object sender, EventArgs e)
         {
-            valid();
+            bool status = valid();
+            toggleAdd(status);
+        }
+        private void toggleAdd(bool valid)
+        {
+            bool status = closeToolStripMenuItem.Enabled;
+            if (status == valid)
+            {
+                return;
+            } else
+            {
+                closeToolStripMenuItem.Enabled = valid;
+            }
         }
         private bool valid()
         {
@@ -124,7 +136,7 @@ namespace snackShack
             {
                 valid = false;
             }
-
+            
             return valid;
         }
     }
