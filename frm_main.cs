@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,25 +15,87 @@ namespace snackShack
 {
     public partial class frm_main : Form
     {
+        string rootPath = snackShack.coreCommands.path();
+
+        string imageFolder = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + "presetImages" + constants.fileSepString();
+        string inventoryFile = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + nameof(inventory) + ".csv";
+
         public frm_main()
         {
             InitializeComponent();
+            openFileDialog1.InitialDirectory = imageFolder; //set default path
+            readInvent();
         }
-        string rootPath = string.Empty;
-        string inventoryFile = string.Empty;
-        string imageFolder = string.Empty;
-        const char fileSepChar = '\\';
-        string fileSep = char.ToString(fileSepChar);
-        private void frmMain_load(object sender, EventArgs e)
+        private void readInvent() //readInvent
         {
-            rootPath = snackShack.coreCommands.path();
-            inventoryFile = rootPath + nameof(inventory) + ".csv";
-            imageFolder = rootPath + "presetImages" + fileSep;
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
         }
 
-        private void btn_appClose(object sender, EventArgs e)
+        private void saveInvent() //save inventory
         {
-            Application.Exit();
+            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); //this is a pre - setup function for writing files, to make auto - saveing easier
         }
+
+        private void frmMain_load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMain_close(object sender, FormClosingEventArgs e)
+        {
+            closeSystem(true);
+            
+        }
+
+        private void btn_appClose(object sender, EventArgs e) //close app system
+        {
+            closeSystem();
+        }
+
+        private void btn_addItem_Click(object sender, EventArgs e) //add item
+        {
+
+        }
+
+        private void picBox_icon_Click(object sender, EventArgs e) //click on image input
+        {
+            string imagePath; //the path
+            openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                imagePath = openFileDialog1.FileName; //set the path
+            }
+
+        }
+
+        #region Close System
+        private void close()
+        {
+            bool confirm = false; //make confirm variable, default to false
+            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                confirm = true;
+            }
+            if (confirm == true)
+            {
+                Application.Exit(); //close app
+            }
+            else
+            {
+
+            }
+        }
+        private void closeSystem(bool viaMeneu = false)
+        {
+            if (viaMeneu)
+            {
+                saveInvent();
+            } else
+            {
+                close();
+            }
+        }
+        #endregion
     }
 }
