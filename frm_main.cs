@@ -69,7 +69,6 @@ namespace snackShack
                 return;
             }
             picBox_icon.ImageLocation = imagePath;
-            inpEnty_complete();
         }
 
         #region Close System
