@@ -71,7 +71,13 @@ namespace snackShack
             picBox_icon.ImageLocation = imagePath;
             valid();
         }
+        private void toggleAdd(bool status)
+        {
+            if (status)
+            {
 
+            }
+        }
         #region Close System
         private void close()
         {
