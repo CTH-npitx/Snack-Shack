@@ -69,6 +69,7 @@ namespace snackShack
                 return;
             }
             picBox_icon.ImageLocation = imagePath;
+            valid();
         }
 
         #region Close System
@@ -103,24 +104,28 @@ namespace snackShack
 
         private void inpEnty_complete(object sender, EventArgs e)
         {
+            valid();
+        }
+        private bool valid()
+        {
             string inputText = txt_nameInput.Text;
             decimal price = num_snackCost.Value;
             decimal minPrice = constants.minimumPrice();
             bool valid = true;
-            if(string.IsNullOrEmpty(inputText))
+            if (string.IsNullOrEmpty(inputText))
             {
                 valid = false;
-            } else if(price < minPrice) { 
+            }
+            else if (price < minPrice)
+            {
                 valid = false;
-            } else if (picBox_icon.Image == baseIcon)
+            }
+            else if (picBox_icon.Image == baseIcon)
             {
                 valid = false;
             }
 
-            if (valid)
-            {
-
-            }
+            return valid;
         }
     }
 }
