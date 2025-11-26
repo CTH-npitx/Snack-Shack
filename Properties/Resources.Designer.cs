@@ -63,16 +63,6 @@ namespace snackShack.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap airheads {
-            get {
-                object obj = ResourceManager.GetObject("airheads", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap VendingMachine {
             get {
                 object obj = ResourceManager.GetObject("VendingMachine", resourceCulture);

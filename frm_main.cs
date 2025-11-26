@@ -68,7 +68,7 @@ namespace snackShack
             {
                 return;
             }
-            picBox_icon.Image.
+            picBox_icon.ImageLocation = imagePath;
         }
 
         #region Close System
