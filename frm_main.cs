@@ -64,8 +64,11 @@ namespace snackShack
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 imagePath = openFileDialog1.FileName; //set the path
+            } else
+            {
+                return;
             }
-
+            picBox_icon.Image.
         }
 
         #region Close System

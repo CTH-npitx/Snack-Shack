@@ -118,7 +118,7 @@
             // 
             // picBox_icon
             // 
-            this.picBox_icon.Image = global::snackShack.Properties.Resources.VendingMachine;
+            this.picBox_icon.Image = global::snackShack.Properties.Resources.airheads;
             this.picBox_icon.InitialImage = global::snackShack.Properties.Resources.VendingMachine;
             this.picBox_icon.Location = new System.Drawing.Point(6, 19);
             this.picBox_icon.Name = "picBox_icon";
