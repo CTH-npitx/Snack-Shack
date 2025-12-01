@@ -53,7 +53,7 @@ namespace snackShack
             removeClose();
         }
 
-        private void btn_appClose(object sender, EventArgs e)
+        private void tsb_close(object sender, EventArgs e)
         {
             Application.Exit();
         }
