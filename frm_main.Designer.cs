@@ -48,6 +48,7 @@
             this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).BeginInit();
@@ -90,6 +91,8 @@
             // 
             // addToolStripMenuItem
             // 
+            this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
             this.addToolStripMenuItem.Enabled = false;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
@@ -230,6 +233,13 @@
             this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Clear Input";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,6 +290,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaPri;
         private System.Windows.Forms.DataGridViewImageColumn col_snaIcon;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 
