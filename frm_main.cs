@@ -39,6 +39,7 @@ namespace snackShack
         private void frmMain_load(object sender, EventArgs e)
         {
             baseIcon = picBox_icon.InitialImage;
+            picBox_icon.Image = baseIcon;
         }
 
         private void frmMain_close(object sender, FormClosingEventArgs e)
@@ -109,13 +110,13 @@ namespace snackShack
         }
         private void toggleAdd(bool valid)
         {
-            bool status = closeToolStripMenuItem.Enabled;
+            bool status = addToolStripMenuItem.Enabled;
             if (status == valid)
             {
                 return;
             } else
             {
-                closeToolStripMenuItem.Enabled = valid;
+                addToolStripMenuItem.Enabled = valid;
             }
         }
         private bool valid()
