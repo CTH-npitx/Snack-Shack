@@ -139,5 +139,10 @@ namespace snackShack
             
             return valid;
         }
+
+        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
