@@ -203,7 +203,7 @@
             this.dgv_invent.RowHeadersVisible = false;
             this.dgv_invent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_invent.Size = new System.Drawing.Size(442, 404);
+            this.dgv_invent.Size = new System.Drawing.Size(503, 404);
             this.dgv_invent.TabIndex = 3;
             // 
             // col_snaName
