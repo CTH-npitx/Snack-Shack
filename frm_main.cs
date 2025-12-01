@@ -39,6 +39,7 @@ namespace snackShack
         private void frmMain_load(object sender, EventArgs e)
         {
             baseIcon = picBox_icon.InitialImage;
+            picBox_icon.Image = baseIcon;
         }
 
         private void frmMain_close(object sender, FormClosingEventArgs e)
