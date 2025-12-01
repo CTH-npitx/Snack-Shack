@@ -142,7 +142,9 @@ namespace snackShack
 
         private void resetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            picBox_icon.Image = baseIcon;
+            num_snackCost.Value = 0;
+            txt_nameInput.Text = string.Empty;
         }
     }
 }
