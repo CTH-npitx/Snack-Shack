@@ -35,7 +35,6 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearInputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.num_snackCost = new System.Windows.Forms.NumericUpDown();
             this.picBox_icon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,6 +48,7 @@
             this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.clearInputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).BeginInit();
@@ -62,7 +62,7 @@
             // 
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(830, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -86,7 +86,7 @@
             this.clearInputToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(830, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,13 +98,6 @@
             this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
-            // 
-            // clearInputToolStripMenuItem
-            // 
-            this.clearInputToolStripMenuItem.Name = "clearInputToolStripMenuItem";
-            this.clearInputToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.clearInputToolStripMenuItem.Text = "Clear Input";
-            this.clearInputToolStripMenuItem.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
             // 
             // num_snackCost
             // 
@@ -239,11 +232,18 @@
             this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // clearInputToolStripMenuItem
+            // 
+            this.clearInputToolStripMenuItem.Name = "clearInputToolStripMenuItem";
+            this.clearInputToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.clearInputToolStripMenuItem.Text = "Clear Input";
+            this.clearInputToolStripMenuItem.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
