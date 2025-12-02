@@ -1,13 +1,15 @@
-﻿using System;
+﻿
+using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+using System;
 
 namespace snackShack
 {
     internal static class files
     {
         #region I/O
-        internal static void Write(string filepath, char sep)
+        internal static void Write(string filepath, char sep) 
         {
             bool status = File.Exists(filepath); //check if the file exists
             if (status || Program.debug) //if file exists, or debug is active, run system
@@ -38,7 +40,7 @@ namespace snackShack
                 snackShack.coreCommands.error("File Not Found"); //show error
             }
         } //the write function
-
+        
         internal static void read(string path, char sep, int min) //the read function
         {
             bool status = File.Exists(path); //check if the file exists
@@ -61,7 +63,7 @@ namespace snackShack
                                     name = entry[0], //put the realevent input into the releavent field
                                     imagePath = entry[1], //same
                                     cost = Convert.ToInt32(entry[2]), //same
-                                    index = Convert.ToInt32(entry[3]) - 1 //any guesses?
+                                    index = Convert.ToInt32(entry[3]) -1 //any guesses?
                                 };
                                 Program.inventory.Add(c); //add to list
                             }
