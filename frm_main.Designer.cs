@@ -1,6 +1,6 @@
 ﻿namespace snackShack
 {
-    partial class frm_main
+    partial class frm_expirimentalCode
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_expirimentalCode));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsp_close = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsb_manuImport = new System.Windows.Forms.ToolStripButton();
-            this.tsb_manuSave = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.dgv_invent = new System.Windows.Forms.DataGridView();
+            this.col_snaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.num_snackCost = new System.Windows.Forms.NumericUpDown();
+            this.picBox_icon = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_nameInput = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -53,77 +66,185 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // dataGridView1
+            // dgv_invent
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(303, 113);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 1;
+            this.dgv_invent.AllowUserToAddRows = false;
+            this.dgv_invent.AllowUserToDeleteRows = false;
+            this.dgv_invent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_invent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_snaName,
+            this.col_snaPri,
+            this.col_snaIcon});
+            this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgv_invent.Location = new System.Drawing.Point(0, 24);
+            this.dgv_invent.MultiSelect = false;
+            this.dgv_invent.Name = "dgv_invent";
+            this.dgv_invent.ReadOnly = true;
+            this.dgv_invent.RowHeadersVisible = false;
+            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_invent.Size = new System.Drawing.Size(397, 404);
+            this.dgv_invent.TabIndex = 3;
             // 
-            // toolStrip1
+            // col_snaName
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsp_close,
-            this.toolStripSeparator1,
-            this.tsb_manuImport,
-            this.tsb_manuSave});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
+            this.col_snaName.HeaderText = "Name of Snack";
+            this.col_snaName.Name = "col_snaName";
+            this.col_snaName.ReadOnly = true;
             // 
-            // tsp_close
+            // col_snaPri
             // 
-            this.tsp_close.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsp_close.Image = ((System.Drawing.Image)(resources.GetObject("tsp_close.Image")));
-            this.tsp_close.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsp_close.Name = "tsp_close";
-            this.tsp_close.Size = new System.Drawing.Size(40, 22);
-            this.tsp_close.Text = "Close";
-            this.tsp_close.Click += new System.EventHandler(this.tsb_close);
+            this.col_snaPri.HeaderText = "Price of Snack";
+            this.col_snaPri.Name = "col_snaPri";
+            this.col_snaPri.ReadOnly = true;
             // 
-            // toolStripSeparator1
+            // col_snaIcon
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.col_snaIcon.HeaderText = "Icon of Snack";
+            this.col_snaIcon.Name = "col_snaIcon";
+            this.col_snaIcon.ReadOnly = true;
+            this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // tsb_manuImport
+            // closeToolStripMenuItem
             // 
-            this.tsb_manuImport.BackColor = System.Drawing.SystemColors.Control;
-            this.tsb_manuImport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tsb_manuImport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsb_manuImport.Image = ((System.Drawing.Image)(resources.GetObject("tsb_manuImport.Image")));
-            this.tsb_manuImport.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsb_manuImport.Name = "tsb_manuImport";
-            this.tsb_manuImport.Size = new System.Drawing.Size(47, 22);
-            this.tsb_manuImport.Text = "Import";
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.btn_appClose);
             // 
-            // tsb_manuSave
+            // manualSaveToolStripMenuItem
             // 
-            this.tsb_manuSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsb_manuSave.Image = ((System.Drawing.Image)(resources.GetObject("tsb_manuSave.Image")));
-            this.tsb_manuSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsb_manuSave.Name = "tsb_manuSave";
-            this.tsb_manuSave.Size = new System.Drawing.Size(78, 22);
-            this.tsb_manuSave.Text = "Manual Save";
+            this.manualSaveToolStripMenuItem.Enabled = false;
+            this.manualSaveToolStripMenuItem.Name = "manualSaveToolStripMenuItem";
+            this.manualSaveToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.manualSaveToolStripMenuItem.Text = "Manual Save";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.closeToolStripMenuItem,
+            this.manualSaveToolStripMenuItem,
+            this.addToolStripMenuItem,
+            this.editModeToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Enabled = false;
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
+            // 
+            // editModeToolStripMenuItem
+            // 
+            this.editModeToolStripMenuItem.Enabled = false;
+            this.editModeToolStripMenuItem.Name = "editModeToolStripMenuItem";
+            this.editModeToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.editModeToolStripMenuItem.Text = "Edit Mode";
+            // 
+            // num_snackCost
+            // 
+            this.num_snackCost.DecimalPlaces = 2;
+            this.num_snackCost.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.num_snackCost.Location = new System.Drawing.Point(55, 45);
+            this.num_snackCost.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.num_snackCost.Name = "num_snackCost";
+            this.num_snackCost.Size = new System.Drawing.Size(75, 20);
+            this.num_snackCost.TabIndex = 4;
+            // 
+            // picBox_icon
+            // 
+            this.picBox_icon.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBox_icon.InitialImage")));
+            this.picBox_icon.Location = new System.Drawing.Point(171, 36);
+            this.picBox_icon.Name = "picBox_icon";
+            this.picBox_icon.Size = new System.Drawing.Size(100, 50);
+            this.picBox_icon.TabIndex = 5;
+            this.picBox_icon.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txt_nameInput);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.num_snackCost);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.picBox_icon);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(526, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(274, 103);
+            this.panel1.TabIndex = 6;
+            // 
+            // txt_nameInput
+            // 
+            this.txt_nameInput.Location = new System.Drawing.Point(44, 6);
+            this.txt_nameInput.Name = "txt_nameInput";
+            this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
+            this.txt_nameInput.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(210, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Icon";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Cost";
             // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_close);
             this.Load += new System.EventHandler(this.frmMain_load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,12 +254,22 @@
 
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton tsb_manuImport;
-        private System.Windows.Forms.ToolStripButton tsb_manuSave;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton tsp_close;
+        private System.Windows.Forms.DataGridView dgv_invent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_snaName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_snaPri;
+        private System.Windows.Forms.DataGridViewImageColumn col_snaIcon;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manualSaveToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown num_snackCost;
+        private System.Windows.Forms.PictureBox picBox_icon;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_nameInput;
+        private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
     }
 }
 
