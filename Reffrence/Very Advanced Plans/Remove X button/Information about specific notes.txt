@@ -1,1 +1,2 @@
 Code Basis: this contains base information about the code used
+Detailed Notes: will contain detailed info
