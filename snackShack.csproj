@@ -46,16 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="inventory.cs" />
-    <Compile Include="fileCode.cs" />
     <Compile Include="frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="inventory.cs" />
+    <Compile Include="fileCode.cs" />
+    <Compile Include="expirmentalCode\frm_removeX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expirmentalCode\frm_removeX.Designer.cs">
+      <DependentUpon>frm_removeX.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="expirmentalCode\frm_removeX.resx">
+      <DependentUpon>frm_removeX.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,8 +119,6 @@
     <Content Include="Files\presetImages\utz.jpg" />
     <Content Include="Files\presetImages\VendingMachine.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="expirmentalCode\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
