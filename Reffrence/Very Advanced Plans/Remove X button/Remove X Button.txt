@@ -1,3 +1,0 @@
-as I don't fully understand this code, not useing it yet
-It's desired goal is to hide the "x" button (you can hide the minimize button. You can hide the maximize button. You can hide both of those. And you can hide all 3 buttons. But not the "x"?!)
-	alas this code only grays it out, but I suspect that's a limitation of the program itself...

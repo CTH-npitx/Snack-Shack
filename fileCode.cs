@@ -4,43 +4,42 @@ using System.IO;
 using System.Windows.Forms;
 using System;
 
-namespace snackShack
+namespace snackShack.files
 {
     internal static class files
     {
-        #region I/O
         internal static void Write(string filepath, char sep) 
         {
             bool status = File.Exists(filepath); //check if the file exists
-            if (status || Program.debug) //if file exists, or debug is active, run system
+            if (status || Program.debug)
             {
                 try
                 {
-                    using (StreamWriter sw = new StreamWriter(filepath)) //utilize the file path to find the file
+                    using (StreamWriter sw = new StreamWriter(filepath))
                     {
                         foreach (var c in Program.inventory) //the loop for createing the contents which will be saved
                         {
                             //csv - comma seperated values
-                            //name-imagepath-cost-index
-                            string ind = (c.index + 1).ToString(); //indux to string
-                            string cost = c.cost.ToString(); //cost to string
-                            string line = c.name + sep + c.imagePath + sep +  //combine string
+                            //firstname-lastname-email-phone-buisness-notes
+                            string ind = (c.index + 1).ToString();
+                            string cost = c.cost.ToString();
+                            string line = c.name + sep + c.imagePath + sep +  //first and last name
                                 cost + sep + ind;
                             sw.WriteLine(line); //write the information to the line
                         }
                     } //streamwriter
                 }
-                catch (Exception ex) //find if exception
+                catch (Exception ex)
                 {
-                    snackShack.coreCommands.error(constants.preMadeErrorMsg, ex, true); //show error
+                    snackShack.coreCommands.error(Program.preMadeErrorMsg, ex, true); //show error
                 }
             }
-            else //say if no file
+            else
             {
                 snackShack.coreCommands.error("File Not Found"); //show error
             }
         } //the write function
-        
+
         internal static void read(string path, char sep, int min) //the read function
         {
             bool status = File.Exists(path); //check if the file exists
@@ -70,7 +69,7 @@ namespace snackShack
                             else
                             {
 
-                                coreCommands.error("error: below Max Length"); //show error during read
+                                coreCommands.error("error: below Max Length");
                             }
                         }
                     }
@@ -87,6 +86,5 @@ namespace snackShack
 
             }
         }
-        #endregion
     } //the code for files
 }
