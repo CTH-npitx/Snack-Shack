@@ -46,15 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\fileCode.cs" />
     <Compile Include="Code\frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Code\frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Code\inventory.cs" />
-    <Compile Include="Code\Program.cs" />
     <Compile Include="constants.cs" />
     <Compile Include="inventory.cs" />
     <Compile Include="fileCode.cs" />
