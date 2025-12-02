@@ -46,6 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\fileCode.cs" />
+    <Compile Include="Code\frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\frm_main.Designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\inventory.cs" />
+    <Compile Include="Code\Program.cs" />
+    <Compile Include="constants.cs" />
     <Compile Include="inventory.cs" />
     <Compile Include="fileCode.cs" />
     <Compile Include="frm_main.cs">
@@ -56,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Code\frm_main.resx">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
@@ -68,6 +81,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include=".github\README.md" />
+    <None Include=".github\Shortcuts\Github Desktop- D Drive.lnk" />
+    <None Include=".github\Shortcuts\Github Desktop- E Drive.lnk" />
+    <None Include=".github\Shortcuts\Github Desktop- F Drive.lnk" />
+    <None Include=".github\Shortcuts\Github Desktop- V Drive.lnk" />
     <None Include="Files\inventory.csv" />
     <None Include="Files\presetImages\AD3_SupplyCloset.drawio" />
     <None Include="Files\presetImages\Thumbs.db" />
@@ -85,6 +103,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".github\Program Documentation\List of Keybinds.txt" />
     <Content Include="Files\presetImages\2fer.jpg" />
     <Content Include="Files\presetImages\airheads.jpg" />
     <Content Include="Files\presetImages\almondjoy.png" />
@@ -110,5 +129,6 @@
     <Content Include="Files\presetImages\utz.jpg" />
     <Content Include="Files\presetImages\VendingMachine.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
