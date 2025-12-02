@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frm_calc.cs" />
+    <Compile Include="frm_calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_calc.Designer.cs">
       <DependentUpon>frm_calc.cs</DependentUpon>
     </Compile>

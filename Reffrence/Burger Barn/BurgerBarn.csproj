@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BurgerBarn.cs" />
+    <Compile Include="BurgerBarn.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BurgerBarn.Designer.cs">
       <DependentUpon>BurgerBarn.cs</DependentUpon>
     </Compile>
