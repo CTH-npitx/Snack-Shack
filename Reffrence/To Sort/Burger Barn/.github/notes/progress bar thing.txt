@@ -1,9 +1,0 @@
-if I add in information about percent completed, remember
-it already exists
-it's a progress bar
-the name is prg_totalItems
-
-        ///it's a progress bar <summary>
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
