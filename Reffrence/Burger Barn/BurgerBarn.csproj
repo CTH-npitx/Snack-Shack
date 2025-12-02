@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1855EEDC-A659-4D31-B976-ACEF2B3918FE}</ProjectGuid>
+    <ProjectGuid>{B9A889F4-3CC0-4FFE-A516-0ECFDFF4DC6A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>snackShack</RootNamespace>
-    <AssemblyName>snackShack</AssemblyName>
+    <RootNamespace>BurgerBarn</RootNamespace>
+    <AssemblyName>BurgerBarn</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,19 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="constants.cs" />
-    <Compile Include="inventory.cs" />
-    <Compile Include="fileCode.cs" />
-    <Compile Include="frm_main.cs">
+    <Compile Include="BurgerBarn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_main.Designer.cs">
-      <DependentUpon>frm_main.cs</DependentUpon>
+    <Compile Include="BurgerBarn.Designer.cs">
+      <DependentUpon>BurgerBarn.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frm_main.resx">
-      <DependentUpon>frm_main.cs</DependentUpon>
+    <EmbeddedResource Include="BurgerBarn.resx">
+      <DependentUpon>BurgerBarn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,14 +66,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include=".github\README.md" />
-    <None Include=".github\Shortcuts\Github Desktop- D Drive.lnk" />
-    <None Include=".github\Shortcuts\Github Desktop- E Drive.lnk" />
-    <None Include=".github\Shortcuts\Github Desktop- F Drive.lnk" />
-    <None Include=".github\Shortcuts\Github Desktop- V Drive.lnk" />
-    <None Include="Files\inventory.csv" />
-    <None Include="Files\presetImages\AD3_SupplyCloset.drawio" />
-    <None Include="Files\presetImages\Thumbs.db" />
+    <None Include=".github\.notesForChange\repositoryEdits\gitignore versions\Github Preset\.gitignore" />
+    <None Include=".github\.notesForChange\repositoryEdits\gitignore versions\Visual Studio Version\.gitignore" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -86,37 +77,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include=".github\README.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".github\Program Documentation\List of Keybinds.txt" />
-    <Content Include="Files\presetImages\2fer.jpg" />
-    <Content Include="Files\presetImages\airheads.jpg" />
-    <Content Include="Files\presetImages\almondjoy.png" />
-    <Content Include="Files\presetImages\butterfinger.jpg" />
-    <Content Include="Files\presetImages\Cheetos.jpg" />
-    <Content Include="Files\presetImages\extragum.jpg" />
-    <Content Include="Files\presetImages\figbars.jpg" />
-    <Content Include="Files\presetImages\hubbabubba.jpg" />
-    <Content Include="Files\presetImages\icecubesgum.jpg" />
-    <Content Include="Files\presetImages\images.jpg" />
-    <Content Include="Files\presetImages\juicyfruit.jpg" />
-    <Content Include="Files\presetImages\kettlecookedruben.jpg" />
-    <Content Include="Files\presetImages\kitkat.jpg" />
-    <Content Include="Files\presetImages\laysbbq.jpg" />
-    <Content Include="Files\presetImages\MilkyWay.jpg" />
-    <Content Include="Files\presetImages\oatmealcremepies.jpg" />
-    <Content Include="Files\presetImages\potatoskins.jpg" />
-    <Content Include="Files\presetImages\pringles.jpg" />
-    <Content Include="Files\presetImages\raisinets.jpg" />
-    <Content Include="Files\presetImages\ricecrisps.jpg" />
-    <Content Include="Files\presetImages\ruffles.jpg" />
-    <Content Include="Files\presetImages\snickers.jpg" />
-    <Content Include="Files\presetImages\utz.jpg" />
-    <Content Include="Files\presetImages\VendingMachine.jpg" />
+    <Content Include=".github\.notesForChange\repositoryEdits\gitignore versions\Explanation.txt" />
+    <Content Include=".github\.notesForChange\repositoryEdits\Useage.txt" />
+    <Content Include=".github\notes\notes to self.txt" />
+    <Content Include=".github\notes\point of branch.txt" />
+    <Content Include=".github\notes\Reason.txt" />
+    <Content Include=".github\notes\Update Notes.txt" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
