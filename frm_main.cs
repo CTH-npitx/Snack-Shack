@@ -13,14 +13,14 @@ using System.Xml.Serialization.Configuration;
 
 namespace snackShack
 {
-    public partial class frm_main : Form
+    public partial class frm_expirimentalCode : Form
     {
         string rootPath = snackShack.coreCommands.path();
 
         string imageFolder = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + "presetImages" + constants.fileSepString();
         string inventoryFile = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + nameof(inventory) + ".csv";
 
-        public frm_main()
+        public frm_expirimentalCode()
         {
             InitializeComponent();
             openFileDialog1.InitialDirectory = imageFolder; //set default path

@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\frm_main.cs">
+    <Compile Include="ExpirimentalCode\frm_expirimentalCode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Code\frm_main.Designer.cs">
-      <DependentUpon>frm_main.cs</DependentUpon>
+    <Compile Include="ExpirimentalCode\frm_expirimentalCode.Designer.cs">
+      <DependentUpon>frm_expirimentalCode.cs</DependentUpon>
     </Compile>
     <Compile Include="constants.cs" />
     <Compile Include="inventory.cs" />
@@ -63,8 +63,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Code\frm_main.resx">
-      <DependentUpon>frm_main.cs</DependentUpon>
+    <EmbeddedResource Include="ExpirimentalCode\frm_expirimentalCode.resx">
+      <DependentUpon>frm_expirimentalCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
