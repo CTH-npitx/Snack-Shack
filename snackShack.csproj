@@ -110,5 +110,8 @@
     <Content Include="Files\presetImages\utz.jpg" />
     <Content Include="Files\presetImages\VendingMachine.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="expirmentalCode\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
