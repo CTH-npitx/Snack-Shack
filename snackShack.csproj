@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="constants.cs" />
+    <Compile Include="expirimentalCode\frm_expirmentalCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expirimentalCode\frm_expirmentalCode.Designer.cs">
+      <DependentUpon>frm_expirmentalCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="inventory.cs" />
     <Compile Include="fileCode.cs" />
     <Compile Include="frm_main.cs">
@@ -57,6 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="expirimentalCode\frm_expirmentalCode.resx">
+      <DependentUpon>frm_expirmentalCode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
