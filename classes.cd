@@ -37,9 +37,6 @@
   </Class>
   <Class Name="snackShack.frm_main">
     <Position X="9.25" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
     <TypeIdentifier>
       <HashCode>ASEMAIQhAWAAAJARoQSAQAACAACAAAAAAKCCkQEAAA0=</HashCode>
       <FileName>frm_main.cs</FileName>
