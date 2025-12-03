@@ -35,6 +35,7 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearInputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.num_snackCost = new System.Windows.Forms.NumericUpDown();
             this.picBox_icon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,7 +49,6 @@
             this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.clearInputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).BeginInit();
@@ -99,6 +99,13 @@
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
             // 
+            // clearInputToolStripMenuItem
+            // 
+            this.clearInputToolStripMenuItem.Name = "clearInputToolStripMenuItem";
+            this.clearInputToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.clearInputToolStripMenuItem.Text = "Clear Input";
+            this.clearInputToolStripMenuItem.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
+            // 
             // num_snackCost
             // 
             this.num_snackCost.DecimalPlaces = 2;
@@ -133,9 +140,9 @@
             // 
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(509, 27);
+            this.panel1.Location = new System.Drawing.Point(501, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 372);
+            this.panel1.Size = new System.Drawing.Size(299, 398);
             this.panel1.TabIndex = 6;
             this.panel1.MouseLeave += new System.EventHandler(this.inpEnty_complete);
             // 
@@ -231,13 +238,6 @@
             this.col_snaIcon.ReadOnly = true;
             this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // clearInputToolStripMenuItem
-            // 
-            this.clearInputToolStripMenuItem.Name = "clearInputToolStripMenuItem";
-            this.clearInputToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.clearInputToolStripMenuItem.Text = "Clear Input";
-            this.clearInputToolStripMenuItem.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
             // 
             // frm_main
             // 
