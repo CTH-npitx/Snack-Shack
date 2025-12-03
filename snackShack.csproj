@@ -74,7 +74,7 @@
     <None Include=".github\Shortcuts\Github Desktop- E Drive.lnk" />
     <None Include=".github\Shortcuts\Github Desktop- F Drive.lnk" />
     <None Include=".github\Shortcuts\Github Desktop- V Drive.lnk" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="classes.cd" />
     <None Include="Files\inventory.csv" />
     <None Include="Files\presetImages\AD3_SupplyCloset.drawio" />
     <None Include="Files\presetImages\Thumbs.db" />
