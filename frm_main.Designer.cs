@@ -35,7 +35,7 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearInputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.num_snackCost = new System.Windows.Forms.NumericUpDown();
             this.picBox_icon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -83,7 +83,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.closeToolStripMenuItem,
             this.addToolStripMenuItem,
-            this.editModeToolStripMenuItem});
+            this.clearInputToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -99,12 +99,12 @@
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
             // 
-            // editModeToolStripMenuItem
+            // clearInputToolStripMenuItem
             // 
-            this.editModeToolStripMenuItem.Enabled = false;
-            this.editModeToolStripMenuItem.Name = "editModeToolStripMenuItem";
-            this.editModeToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.editModeToolStripMenuItem.Text = "Edit Mode";
+            this.clearInputToolStripMenuItem.Name = "clearInputToolStripMenuItem";
+            this.clearInputToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.clearInputToolStripMenuItem.Text = "Clear Input";
+            this.clearInputToolStripMenuItem.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
             // 
             // num_snackCost
             // 
@@ -123,6 +123,7 @@
             this.num_snackCost.Name = "num_snackCost";
             this.num_snackCost.Size = new System.Drawing.Size(75, 20);
             this.num_snackCost.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.num_snackCost, "Input Price");
             this.num_snackCost.ValueChanged += new System.EventHandler(this.inpEnty_complete);
             // 
             // picBox_icon
@@ -134,15 +135,16 @@
             this.picBox_icon.Size = new System.Drawing.Size(235, 229);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
+            this.toolTip1.SetToolTip(this.picBox_icon, "Image Input");
             this.picBox_icon.Click += new System.EventHandler(this.picBox_icon_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(509, 27);
+            this.panel1.Location = new System.Drawing.Point(501, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 372);
+            this.panel1.Size = new System.Drawing.Size(299, 398);
             this.panel1.TabIndex = 6;
             this.panel1.MouseLeave += new System.EventHandler(this.inpEnty_complete);
             // 
@@ -174,6 +176,7 @@
             this.txt_nameInput.Name = "txt_nameInput";
             this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
             this.txt_nameInput.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txt_nameInput, "Input Name");
             this.txt_nameInput.TextChanged += new System.EventHandler(this.inpEnty_complete);
             // 
             // label1
@@ -215,8 +218,9 @@
             this.dgv_invent.RowHeadersVisible = false;
             this.dgv_invent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_invent.Size = new System.Drawing.Size(434, 404);
+            this.dgv_invent.Size = new System.Drawing.Size(503, 404);
             this.dgv_invent.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.dgv_invent, "Table");
             // 
             // col_snaName
             // 
@@ -282,7 +286,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_nameInput;
-        private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgv_invent;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -290,6 +293,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snaPri;
         private System.Windows.Forms.DataGridViewImageColumn col_snaIcon;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStripMenuItem clearInputToolStripMenuItem;
     }
 }
 

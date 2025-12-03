@@ -39,6 +39,7 @@ namespace snackShack
         private void frmMain_load(object sender, EventArgs e)
         {
             baseIcon = picBox_icon.InitialImage;
+            picBox_icon.Image = baseIcon;
         }
 
         private void frmMain_close(object sender, FormClosingEventArgs e)
@@ -64,10 +65,14 @@ namespace snackShack
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 imagePath = openFileDialog1.FileName; //set the path
+            } else
+            {
+                return;
             }
-
+            picBox_icon.ImageLocation = imagePath;
+            bool status = valid();
+            toggleAdd(status);
         }
-
         #region Close System
         private void close()
         {
@@ -100,24 +105,47 @@ namespace snackShack
 
         private void inpEnty_complete(object sender, EventArgs e)
         {
+            bool status = valid();
+            toggleAdd(status);
+        }
+        private void toggleAdd(bool valid)
+        {
+            bool status = addToolStripMenuItem.Enabled;
+            if (status == valid)
+            {
+                return;
+            } else
+            {
+                addToolStripMenuItem.Enabled = valid;
+            }
+        }
+        private bool valid()
+        {
             string inputText = txt_nameInput.Text;
             decimal price = num_snackCost.Value;
             decimal minPrice = constants.minimumPrice();
             bool valid = true;
-            if(string.IsNullOrEmpty(inputText))
-            {
-                valid = false;
-            } else if(price < minPrice) { 
-                valid = false;
-            } else if (picBox_icon.Image == baseIcon)
+            if (string.IsNullOrEmpty(inputText))
             {
                 valid = false;
             }
-
-            if (valid)
+            else if (price < minPrice)
             {
-
+                valid = false;
             }
+            else if (picBox_icon.Image == baseIcon)
+            {
+                valid = false;
+            }
+            
+            return valid;
+        }
+
+        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            picBox_icon.Image = baseIcon;
+            num_snackCost.Value = 0;
+            txt_nameInput.Text = string.Empty;
         }
     }
 }
