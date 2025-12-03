@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Comment CommentText="">
-    <Position X="5.5" Y="3.25" Height="0.75" Width="1.7" />
-  </Comment>
   <Class Name="snackShack.inventory">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
