@@ -13,4 +13,8 @@ namespace snackShack
         internal int cost; //cost of snack
         internal int index; //the index of the entry
     }
+
+    public interface Interface1
+    {
+    }
 }
