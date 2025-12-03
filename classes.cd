@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="">
+    <Position X="5.5" Y="3.25" Height="0.75" Width="1.7" />
+  </Comment>
   <Class Name="snackShack.inventory">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -14,7 +17,7 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="snackShack.coreCommands" Collapsed="true">
+  <Class Name="snackShack.coreCommands">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAECAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -28,15 +31,18 @@
       <FileName>fileCode.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="snackShack.constants" Collapsed="true">
+  <Class Name="snackShack.constants">
     <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIBQAAAAQAAAAAAAAAAAAAIIAAAAAAgAIAAAAAAA=</HashCode>
       <FileName>constants.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="snackShack.frm_main" Collapsed="true">
+  <Class Name="snackShack.frm_main">
     <Position X="9.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>ASEMAIQhAWAAAJARoQSAQAACAACAAAAAAKCCkQEAAA0=</HashCode>
       <FileName>frm_main.cs</FileName>
