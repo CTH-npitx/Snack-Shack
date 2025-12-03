@@ -135,7 +135,7 @@
             this.picBox_icon.Size = new System.Drawing.Size(235, 229);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
-            this.toolTip1.SetToolTip(this.picBox_icon, "Click on and select image");
+            this.toolTip1.SetToolTip(this.picBox_icon, "Image Input");
             this.picBox_icon.Click += new System.EventHandler(this.picBox_icon_Click);
             // 
             // panel1
@@ -220,6 +220,7 @@
             this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_invent.Size = new System.Drawing.Size(503, 404);
             this.dgv_invent.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.dgv_invent, "Table");
             // 
             // col_snaName
             // 
