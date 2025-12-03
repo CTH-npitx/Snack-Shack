@@ -35,5 +35,12 @@
       <FileName>constants.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="snackShack.frm_main" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASEMAIQhAWAAAJARoQSAQAACAACAAAAAAKCCkQEAAA0=</HashCode>
+      <FileName>frm_main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
