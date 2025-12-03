@@ -28,5 +28,12 @@
       <FileName>fileCode.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="snackShack.constants" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIBQAAAAQAAAAAAAAAAAAAIIAAAAAAgAIAAAAAAA=</HashCode>
+      <FileName>constants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
