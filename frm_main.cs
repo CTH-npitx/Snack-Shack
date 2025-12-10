@@ -27,7 +27,7 @@ namespace snackShack
             readInvent();
         }
 
-        int currentID = 1;
+        int currentID = 0;
         private int findID()
         {
             currentID++;
