@@ -26,6 +26,28 @@ namespace snackShack
             openFileDialog1.InitialDirectory = imageFolder; //set default path
             readInvent();
         }
+
+        int currentID = 1;
+        private int findID()
+        {
+            currentID++;
+            return currentID++;
+        }
+
+        private inventory makeEntry(string inName, string imigeID, decimal price, string index)
+        {
+            //int leng =
+            inventory i = new inventory(); //make next entry
+            {
+                i.name = inName;
+                i.imagePath = imigeID;
+                i.cost = price;
+                i.index = findID(); 
+                
+            }
+            return i;
+        }
+        
         private void readInvent() //readInvent
         {
             snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
