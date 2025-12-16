@@ -123,6 +123,7 @@
             this.num_snackCost.Name = "num_snackCost";
             this.num_snackCost.Size = new System.Drawing.Size(75, 20);
             this.num_snackCost.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.num_snackCost, "Input Price");
             this.num_snackCost.ValueChanged += new System.EventHandler(this.inpEnty_complete);
             // 
             // picBox_icon
@@ -134,15 +135,16 @@
             this.picBox_icon.Size = new System.Drawing.Size(235, 229);
             this.picBox_icon.TabIndex = 5;
             this.picBox_icon.TabStop = false;
+            this.toolTip1.SetToolTip(this.picBox_icon, "Click on and select image");
             this.picBox_icon.Click += new System.EventHandler(this.picBox_icon_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(509, 27);
+            this.panel1.Location = new System.Drawing.Point(501, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 372);
+            this.panel1.Size = new System.Drawing.Size(299, 398);
             this.panel1.TabIndex = 6;
             this.panel1.MouseLeave += new System.EventHandler(this.inpEnty_complete);
             // 
@@ -174,6 +176,7 @@
             this.txt_nameInput.Name = "txt_nameInput";
             this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
             this.txt_nameInput.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txt_nameInput, "Input Name");
             this.txt_nameInput.TextChanged += new System.EventHandler(this.inpEnty_complete);
             // 
             // label1
