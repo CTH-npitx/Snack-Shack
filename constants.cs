@@ -1,5 +1,3 @@
-using System.Drawing;
-
 namespace snackShack
 {
     internal static class constants //pre-defined constants
