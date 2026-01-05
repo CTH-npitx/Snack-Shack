@@ -221,6 +221,7 @@
             this.dgv_invent.Size = new System.Drawing.Size(503, 404);
             this.dgv_invent.TabIndex = 3;
             this.toolTip1.SetToolTip(this.dgv_invent, "Table");
+            this.dgv_invent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_invent_CellContentClick);
             // 
             // col_snaName
             // 
