@@ -97,7 +97,7 @@ namespace snackShack
         }
         private void updateTable()
         {
-            dgv_contacts.Rows.Add(value.firstname, value.lastname, value.email, value.phone, value.buisness, value.notes, value.index); //update the data grid view with the contents of the contact as a new row
+            dgv_invent.Rows.Add(); //update the data grid view with the contents of the contact as a new row
         }
         #region Close System
         private void close()
@@ -172,11 +172,6 @@ namespace snackShack
             picBox_icon.Image = baseIcon;
             num_snackCost.Value = 0;
             txt_nameInput.Text = string.Empty;
-        }
-
-        private void dgv_invent_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
