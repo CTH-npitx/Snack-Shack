@@ -50,5 +50,13 @@ namespace snackShack
             }
             return completeLoc; //output path
         } //derive the path of the base file
+
+        internal static class startupCode
+        {
+            internal static void checkFile()
+            {
+
+            }
+        }
     } //base commands to aid in everything
 }
