@@ -15,7 +15,6 @@ namespace snackShack
 {
     public partial class frm_main : Form
     {
-        coreCommands.startupCommands.
         string rootPath = snackShack.coreCommands.path();
 
         string imageFolder = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + "presetImages" + constants.fileSepString();
