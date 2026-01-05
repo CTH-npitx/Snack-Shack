@@ -15,7 +15,7 @@ namespace snackShack
 {
     public partial class frm_main : Form
     {
-        snackShack.coreCommands.startupCode.checkFile();
+        snackShack.startupCode.
         coreCommands.startupCommands.
         string rootPath = snackShack.coreCommands.path();
 
