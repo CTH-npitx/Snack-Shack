@@ -16,6 +16,8 @@ namespace snackShack
     public partial class frm_main : Form
     {
         string rootPath = snackShack.coreCommands.path();
+        // snackShack.startupCode.
+            //check if file exists, if not create
 
         string imageFolder = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + "presetImages" + constants.fileSepString();
         string inventoryFile = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + nameof(inventory) + ".csv";
