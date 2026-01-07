@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Calculator
+namespace LoginApplication
 {
     internal static class Program
     {
@@ -15,9 +13,11 @@ namespace Calculator
         static void Main()
         {
             Application.EnableVisualStyles();
-            // Application.SetCompatibleTextRenderingDefault(false);
-                // false is default, so it's not needed. Kept as a comment for refferences sake. Being true is actually a detriment
-            Application.Run(new frmCalc());
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new frmMain());        
         }
+        internal static List<user> users = new List<user>();
     }
+
+    
 }
