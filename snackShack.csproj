@@ -55,6 +55,7 @@
     <Compile Include="constants.cs" />
     <Compile Include="inventory.cs" />
     <Compile Include="fileCode.cs" />
+    <Compile Include="oldProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_main.resx">
