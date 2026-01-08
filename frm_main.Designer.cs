@@ -1,6 +1,6 @@
-﻿namespace BurgerBarn
+﻿namespace snackShack
 {
-    partial class frmBurgerBarn
+    partial class frm_main
     {
         /// <summary>
         /// Required designer variable.
@@ -28,346 +28,246 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBurgerBarn));
-            this.gbxBurgers = new System.Windows.Forms.GroupBox();
-            this.rdb_noBurg = new System.Windows.Forms.RadioButton();
-            this.rdb_baconBurg = new System.Windows.Forms.RadioButton();
-            this.rdb_vegBurg = new System.Windows.Forms.RadioButton();
-            this.rdb_cheeBurg = new System.Windows.Forms.RadioButton();
-            this.rdb_plainBurg = new System.Windows.Forms.RadioButton();
-            this.gbxDrinks = new System.Windows.Forms.GroupBox();
-            this.rdb_noDrink = new System.Windows.Forms.RadioButton();
-            this.rdb_drinkWater = new System.Windows.Forms.RadioButton();
-            this.rdb_drinkPunch = new System.Windows.Forms.RadioButton();
-            this.rdb_drinkCoala = new System.Windows.Forms.RadioButton();
-            this.rdb_drinkTea = new System.Windows.Forms.RadioButton();
-            this.gbxSides = new System.Windows.Forms.GroupBox();
-            this.rdb_noSide = new System.Windows.Forms.RadioButton();
-            this.rdb_sideChip = new System.Windows.Forms.RadioButton();
-            this.rdb_sideOnioRing = new System.Windows.Forms.RadioButton();
-            this.rdb_sideTatTot = new System.Windows.Forms.RadioButton();
-            this.rdb_sidesFries = new System.Windows.Forms.RadioButton();
-            this.lst_order = new System.Windows.Forms.ListBox();
-            this.lbl_subtotal = new System.Windows.Forms.Label();
-            this.lbl_tax = new System.Windows.Forms.Label();
-            this.lbl_total = new System.Windows.Forms.Label();
-            this.bttn_purchase = new System.Windows.Forms.Button();
-            this.bttn_close = new System.Windows.Forms.Button();
-            this.gbxBurgers.SuspendLayout();
-            this.gbxDrinks.SuspendLayout();
-            this.gbxSides.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.num_snackCost = new System.Windows.Forms.NumericUpDown();
+            this.picBox_icon = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_nameInput = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgv_invent = new System.Windows.Forms.DataGridView();
+            this.col_snaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_snaPri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_snaIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.clearInputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.SuspendLayout();
             // 
-            // gbxBurgers
+            // statusStrip1
             // 
-            this.gbxBurgers.Controls.Add(this.rdb_noBurg);
-            this.gbxBurgers.Controls.Add(this.rdb_baconBurg);
-            this.gbxBurgers.Controls.Add(this.rdb_vegBurg);
-            this.gbxBurgers.Controls.Add(this.rdb_cheeBurg);
-            this.gbxBurgers.Controls.Add(this.rdb_plainBurg);
-            this.gbxBurgers.Location = new System.Drawing.Point(12, 171);
-            this.gbxBurgers.Name = "gbxBurgers";
-            this.gbxBurgers.Size = new System.Drawing.Size(200, 134);
-            this.gbxBurgers.TabIndex = 0;
-            this.gbxBurgers.TabStop = false;
-            this.gbxBurgers.Text = "Burgers";
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
             // 
-            // rdb_noBurg
+            // openFileDialog1
             // 
-            this.rdb_noBurg.AutoSize = true;
-            this.rdb_noBurg.Checked = true;
-            this.rdb_noBurg.Location = new System.Drawing.Point(7, 107);
-            this.rdb_noBurg.Name = "rdb_noBurg";
-            this.rdb_noBurg.Size = new System.Drawing.Size(51, 17);
-            this.rdb_noBurg.TabIndex = 5;
-            this.rdb_noBurg.TabStop = true;
-            this.rdb_noBurg.Tag = "0";
-            this.rdb_noBurg.Text = "None";
-            this.rdb_noBurg.UseVisualStyleBackColor = true;
-            this.rdb_noBurg.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // rdb_baconBurg
+            // closeToolStripMenuItem
             // 
-            this.rdb_baconBurg.AutoSize = true;
-            this.rdb_baconBurg.Location = new System.Drawing.Point(6, 85);
-            this.rdb_baconBurg.Name = "rdb_baconBurg";
-            this.rdb_baconBurg.Size = new System.Drawing.Size(123, 17);
-            this.rdb_baconBurg.TabIndex = 4;
-            this.rdb_baconBurg.Tag = "7.49";
-            this.rdb_baconBurg.Text = "Bacon Burger: $7.49";
-            this.rdb_baconBurg.UseVisualStyleBackColor = true;
-            this.rdb_baconBurg.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.btn_appClose);
             // 
-            // rdb_vegBurg
+            // menuStrip1
             // 
-            this.rdb_vegBurg.AutoSize = true;
-            this.rdb_vegBurg.Location = new System.Drawing.Point(6, 63);
-            this.rdb_vegBurg.Name = "rdb_vegBurg";
-            this.rdb_vegBurg.Size = new System.Drawing.Size(119, 17);
-            this.rdb_vegBurg.TabIndex = 3;
-            this.rdb_vegBurg.Tag = "6.49";
-            this.rdb_vegBurg.Text = "Vegie Burger: $6.49";
-            this.rdb_vegBurg.UseVisualStyleBackColor = true;
-            this.rdb_vegBurg.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.closeToolStripMenuItem,
+            this.addToolStripMenuItem,
+            this.clearInputToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // rdb_cheeBurg
+            // addToolStripMenuItem
             // 
-            this.rdb_cheeBurg.AutoSize = true;
-            this.rdb_cheeBurg.Location = new System.Drawing.Point(6, 41);
-            this.rdb_cheeBurg.Name = "rdb_cheeBurg";
-            this.rdb_cheeBurg.Size = new System.Drawing.Size(124, 17);
-            this.rdb_cheeBurg.TabIndex = 2;
-            this.rdb_cheeBurg.Tag = "5.99";
-            this.rdb_cheeBurg.Text = "Cheeseburger: $5.99";
-            this.rdb_cheeBurg.UseVisualStyleBackColor = true;
-            this.rdb_cheeBurg.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.addToolStripMenuItem.Enabled = false;
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.btn_addItem_Click);
             // 
-            // rdb_plainBurg
+            // num_snackCost
             // 
-            this.rdb_plainBurg.AutoSize = true;
-            this.rdb_plainBurg.Location = new System.Drawing.Point(6, 19);
-            this.rdb_plainBurg.Name = "rdb_plainBurg";
-            this.rdb_plainBurg.Size = new System.Drawing.Size(115, 17);
-            this.rdb_plainBurg.TabIndex = 1;
-            this.rdb_plainBurg.Tag = "4.99";
-            this.rdb_plainBurg.Text = "Plain Burger: $4.99";
-            this.rdb_plainBurg.UseVisualStyleBackColor = true;
-            this.rdb_plainBurg.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.num_snackCost.DecimalPlaces = 2;
+            this.num_snackCost.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.num_snackCost.Location = new System.Drawing.Point(47, 66);
+            this.num_snackCost.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.num_snackCost.Name = "num_snackCost";
+            this.num_snackCost.Size = new System.Drawing.Size(75, 20);
+            this.num_snackCost.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.num_snackCost, "Input Price");
+            this.num_snackCost.ValueChanged += new System.EventHandler(this.inpEnty_complete);
             // 
-            // gbxDrinks
+            // picBox_icon
             // 
-            this.gbxDrinks.Controls.Add(this.rdb_noDrink);
-            this.gbxDrinks.Controls.Add(this.rdb_drinkWater);
-            this.gbxDrinks.Controls.Add(this.rdb_drinkPunch);
-            this.gbxDrinks.Controls.Add(this.rdb_drinkCoala);
-            this.gbxDrinks.Controls.Add(this.rdb_drinkTea);
-            this.gbxDrinks.Location = new System.Drawing.Point(252, 317);
-            this.gbxDrinks.Name = "gbxDrinks";
-            this.gbxDrinks.Size = new System.Drawing.Size(200, 127);
-            this.gbxDrinks.TabIndex = 1;
-            this.gbxDrinks.TabStop = false;
-            this.gbxDrinks.Text = "Drinks";
+            this.picBox_icon.Image = global::snackShack.Properties.Resources.VendingMachine;
+            this.picBox_icon.InitialImage = global::snackShack.Properties.Resources.VendingMachine;
+            this.picBox_icon.Location = new System.Drawing.Point(6, 19);
+            this.picBox_icon.Name = "picBox_icon";
+            this.picBox_icon.Size = new System.Drawing.Size(235, 229);
+            this.picBox_icon.TabIndex = 5;
+            this.picBox_icon.TabStop = false;
+            this.toolTip1.SetToolTip(this.picBox_icon, "Image Input");
+            this.picBox_icon.Click += new System.EventHandler(this.picBox_icon_Click);
             // 
-            // rdb_noDrink
+            // panel1
             // 
-            this.rdb_noDrink.AutoSize = true;
-            this.rdb_noDrink.Checked = true;
-            this.rdb_noDrink.Location = new System.Drawing.Point(6, 103);
-            this.rdb_noDrink.Name = "rdb_noDrink";
-            this.rdb_noDrink.Size = new System.Drawing.Size(51, 17);
-            this.rdb_noDrink.TabIndex = 15;
-            this.rdb_noDrink.TabStop = true;
-            this.rdb_noDrink.Tag = "0";
-            this.rdb_noDrink.Text = "None";
-            this.rdb_noDrink.UseVisualStyleBackColor = true;
-            this.rdb_noDrink.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Location = new System.Drawing.Point(501, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(299, 398);
+            this.panel1.TabIndex = 6;
+            this.panel1.MouseLeave += new System.EventHandler(this.inpEnty_complete);
             // 
-            // rdb_drinkWater
+            // groupBox2
             // 
-            this.rdb_drinkWater.AutoSize = true;
-            this.rdb_drinkWater.Location = new System.Drawing.Point(6, 82);
-            this.rdb_drinkWater.Name = "rdb_drinkWater";
-            this.rdb_drinkWater.Size = new System.Drawing.Size(87, 17);
-            this.rdb_drinkWater.TabIndex = 14;
-            this.rdb_drinkWater.Tag = "0.99";
-            this.rdb_drinkWater.Text = "Water: $0.99";
-            this.rdb_drinkWater.UseVisualStyleBackColor = true;
-            this.rdb_drinkWater.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.num_snackCost);
+            this.groupBox2.Controls.Add(this.txt_nameInput);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(151, 100);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Snack Information";
             // 
-            // rdb_drinkPunch
+            // label3
             // 
-            this.rdb_drinkPunch.AutoSize = true;
-            this.rdb_drinkPunch.Location = new System.Drawing.Point(6, 61);
-            this.rdb_drinkPunch.Name = "rdb_drinkPunch";
-            this.rdb_drinkPunch.Size = new System.Drawing.Size(112, 17);
-            this.rdb_drinkPunch.TabIndex = 13;
-            this.rdb_drinkPunch.Tag = "1.09";
-            this.rdb_drinkPunch.Text = "Fruit Punch: $1.09";
-            this.rdb_drinkPunch.UseVisualStyleBackColor = true;
-            this.rdb_drinkPunch.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Name";
             // 
-            // rdb_drinkCoala
+            // txt_nameInput
             // 
-            this.rdb_drinkCoala.AutoSize = true;
-            this.rdb_drinkCoala.Location = new System.Drawing.Point(6, 19);
-            this.rdb_drinkCoala.Name = "rdb_drinkCoala";
-            this.rdb_drinkCoala.Size = new System.Drawing.Size(85, 17);
-            this.rdb_drinkCoala.TabIndex = 11;
-            this.rdb_drinkCoala.Tag = "1.29";
-            this.rdb_drinkCoala.Text = "Coala: $1.29";
-            this.rdb_drinkCoala.UseVisualStyleBackColor = true;
-            this.rdb_drinkCoala.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.txt_nameInput.Location = new System.Drawing.Point(47, 35);
+            this.txt_nameInput.Name = "txt_nameInput";
+            this.txt_nameInput.Size = new System.Drawing.Size(100, 20);
+            this.txt_nameInput.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txt_nameInput, "Input Name");
+            this.txt_nameInput.TextChanged += new System.EventHandler(this.inpEnty_complete);
             // 
-            // rdb_drinkTea
+            // label1
             // 
-            this.rdb_drinkTea.AutoSize = true;
-            this.rdb_drinkTea.Location = new System.Drawing.Point(6, 40);
-            this.rdb_drinkTea.Name = "rdb_drinkTea";
-            this.rdb_drinkTea.Size = new System.Drawing.Size(77, 17);
-            this.rdb_drinkTea.TabIndex = 12;
-            this.rdb_drinkTea.Tag = "1.99";
-            this.rdb_drinkTea.Text = "Tea: $1.99";
-            this.rdb_drinkTea.UseVisualStyleBackColor = true;
-            this.rdb_drinkTea.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Cost";
             // 
-            // gbxSides
+            // groupBox1
             // 
-            this.gbxSides.Controls.Add(this.rdb_noSide);
-            this.gbxSides.Controls.Add(this.rdb_sideChip);
-            this.gbxSides.Controls.Add(this.rdb_sideOnioRing);
-            this.gbxSides.Controls.Add(this.rdb_sideTatTot);
-            this.gbxSides.Controls.Add(this.rdb_sidesFries);
-            this.gbxSides.Location = new System.Drawing.Point(12, 311);
-            this.gbxSides.Name = "gbxSides";
-            this.gbxSides.Size = new System.Drawing.Size(200, 134);
-            this.gbxSides.TabIndex = 2;
-            this.gbxSides.TabStop = false;
-            this.gbxSides.Text = "Sides";
+            this.groupBox1.Controls.Add(this.picBox_icon);
+            this.groupBox1.Location = new System.Drawing.Point(43, 109);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(245, 259);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Snack Icon";
             // 
-            // rdb_noSide
+            // dgv_invent
             // 
-            this.rdb_noSide.AutoSize = true;
-            this.rdb_noSide.Checked = true;
-            this.rdb_noSide.Location = new System.Drawing.Point(7, 116);
-            this.rdb_noSide.Name = "rdb_noSide";
-            this.rdb_noSide.Size = new System.Drawing.Size(51, 17);
-            this.rdb_noSide.TabIndex = 10;
-            this.rdb_noSide.TabStop = true;
-            this.rdb_noSide.Tag = "0";
-            this.rdb_noSide.Text = "None";
-            this.rdb_noSide.UseVisualStyleBackColor = true;
-            this.rdb_noSide.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.dgv_invent.AllowUserToAddRows = false;
+            this.dgv_invent.AllowUserToDeleteRows = false;
+            this.dgv_invent.AllowUserToResizeColumns = false;
+            this.dgv_invent.AllowUserToResizeRows = false;
+            this.dgv_invent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_invent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_invent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_snaName,
+            this.col_snaPri,
+            this.col_snaIcon});
+            this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgv_invent.Location = new System.Drawing.Point(0, 24);
+            this.dgv_invent.MultiSelect = false;
+            this.dgv_invent.Name = "dgv_invent";
+            this.dgv_invent.ReadOnly = true;
+            this.dgv_invent.RowHeadersVisible = false;
+            this.dgv_invent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_invent.Size = new System.Drawing.Size(503, 404);
+            this.dgv_invent.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.dgv_invent, "Table");
             // 
-            // rdb_sideChip
+            // col_snaName
             // 
-            this.rdb_sideChip.AutoSize = true;
-            this.rdb_sideChip.Location = new System.Drawing.Point(6, 92);
-            this.rdb_sideChip.Name = "rdb_sideChip";
-            this.rdb_sideChip.Size = new System.Drawing.Size(84, 17);
-            this.rdb_sideChip.TabIndex = 9;
-            this.rdb_sideChip.Tag = "0.99";
-            this.rdb_sideChip.Text = "Chips: $0.99";
-            this.rdb_sideChip.UseVisualStyleBackColor = true;
-            this.rdb_sideChip.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.col_snaName.HeaderText = "Name of Snack";
+            this.col_snaName.Name = "col_snaName";
+            this.col_snaName.ReadOnly = true;
             // 
-            // rdb_sideOnioRing
+            // col_snaPri
             // 
-            this.rdb_sideOnioRing.AutoSize = true;
-            this.rdb_sideOnioRing.Location = new System.Drawing.Point(6, 68);
-            this.rdb_sideOnioRing.Name = "rdb_sideOnioRing";
-            this.rdb_sideOnioRing.Size = new System.Drawing.Size(116, 17);
-            this.rdb_sideOnioRing.TabIndex = 8;
-            this.rdb_sideOnioRing.Tag = "0.99";
-            this.rdb_sideOnioRing.Text = "Onion Rings: $0.99";
-            this.rdb_sideOnioRing.UseVisualStyleBackColor = true;
-            this.rdb_sideOnioRing.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.col_snaPri.HeaderText = "Price of Snack";
+            this.col_snaPri.Name = "col_snaPri";
+            this.col_snaPri.ReadOnly = true;
             // 
-            // rdb_sideTatTot
+            // col_snaIcon
             // 
-            this.rdb_sideTatTot.AutoSize = true;
-            this.rdb_sideTatTot.Location = new System.Drawing.Point(6, 44);
-            this.rdb_sideTatTot.Name = "rdb_sideTatTot";
-            this.rdb_sideTatTot.Size = new System.Drawing.Size(107, 17);
-            this.rdb_sideTatTot.TabIndex = 7;
-            this.rdb_sideTatTot.Tag = "0.75";
-            this.rdb_sideTatTot.Text = "Tater Tots: $0.75";
-            this.rdb_sideTatTot.UseVisualStyleBackColor = true;
-            this.rdb_sideTatTot.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.col_snaIcon.HeaderText = "Icon of Snack";
+            this.col_snaIcon.MinimumWidth = 225;
+            this.col_snaIcon.Name = "col_snaIcon";
+            this.col_snaIcon.ReadOnly = true;
+            this.col_snaIcon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_snaIcon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // rdb_sidesFries
+            // clearInputToolStripMenuItem
             // 
-            this.rdb_sidesFries.AutoSize = true;
-            this.rdb_sidesFries.Location = new System.Drawing.Point(7, 20);
-            this.rdb_sidesFries.Name = "rdb_sidesFries";
-            this.rdb_sidesFries.Size = new System.Drawing.Size(80, 17);
-            this.rdb_sidesFries.TabIndex = 6;
-            this.rdb_sidesFries.Tag = "0.50";
-            this.rdb_sidesFries.Text = "Fries: $0.50";
-            this.rdb_sidesFries.UseVisualStyleBackColor = true;
-            this.rdb_sidesFries.CheckedChanged += new System.EventHandler(this.rdb_Selection);
+            this.clearInputToolStripMenuItem.Name = "clearInputToolStripMenuItem";
+            this.clearInputToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.clearInputToolStripMenuItem.Text = "Clear Input";
+            this.clearInputToolStripMenuItem.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
             // 
-            // lst_order
-            // 
-            this.lst_order.FormattingEnabled = true;
-            this.lst_order.Location = new System.Drawing.Point(664, 13);
-            this.lst_order.Name = "lst_order";
-            this.lst_order.Size = new System.Drawing.Size(120, 95);
-            this.lst_order.Sorted = true;
-            this.lst_order.TabIndex = 0;
-            this.lst_order.TabStop = false;
-            // 
-            // lbl_subtotal
-            // 
-            this.lbl_subtotal.AutoSize = true;
-            this.lbl_subtotal.Location = new System.Drawing.Point(476, 96);
-            this.lbl_subtotal.Name = "lbl_subtotal";
-            this.lbl_subtotal.Size = new System.Drawing.Size(79, 13);
-            this.lbl_subtotal.TabIndex = 0;
-            this.lbl_subtotal.Text = "Subtotal: $0.00";
-            // 
-            // lbl_tax
-            // 
-            this.lbl_tax.AutoSize = true;
-            this.lbl_tax.Location = new System.Drawing.Point(476, 118);
-            this.lbl_tax.Name = "lbl_tax";
-            this.lbl_tax.Size = new System.Drawing.Size(58, 13);
-            this.lbl_tax.TabIndex = 0;
-            this.lbl_tax.Text = "Tax: $0.00";
-            // 
-            // lbl_total
-            // 
-            this.lbl_total.AutoSize = true;
-            this.lbl_total.Location = new System.Drawing.Point(476, 142);
-            this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(64, 13);
-            this.lbl_total.TabIndex = 0;
-            this.lbl_total.Text = "Total: $0.00";
-            // 
-            // bttn_purchase
-            // 
-            this.bttn_purchase.Location = new System.Drawing.Point(479, 331);
-            this.bttn_purchase.Name = "bttn_purchase";
-            this.bttn_purchase.Size = new System.Drawing.Size(112, 46);
-            this.bttn_purchase.TabIndex = 3;
-            this.bttn_purchase.Text = "Purchase";
-            this.bttn_purchase.UseVisualStyleBackColor = true;
-            this.bttn_purchase.Click += new System.EventHandler(this.bttn_purchase_Click);
-            // 
-            // bttn_close
-            // 
-            this.bttn_close.Location = new System.Drawing.Point(622, 331);
-            this.bttn_close.Name = "bttn_close";
-            this.bttn_close.Size = new System.Drawing.Size(110, 46);
-            this.bttn_close.TabIndex = 4;
-            this.bttn_close.Text = "Exit";
-            this.bttn_close.UseVisualStyleBackColor = true;
-            this.bttn_close.Click += new System.EventHandler(this.bttn_close_Click);
-            // 
-            // frmBurgerBarn
+            // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.bttn_close);
-            this.Controls.Add(this.bttn_purchase);
-            this.Controls.Add(this.lbl_total);
-            this.Controls.Add(this.lbl_tax);
-            this.Controls.Add(this.lbl_subtotal);
-            this.Controls.Add(this.lst_order);
-            this.Controls.Add(this.gbxSides);
-            this.Controls.Add(this.gbxDrinks);
-            this.Controls.Add(this.gbxBurgers);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgv_invent);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmBurgerBarn";
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Burger Barn";
-            this.Load += new System.EventHandler(this.frmBurgerBarn_Load);
-            this.gbxBurgers.ResumeLayout(false);
-            this.gbxBurgers.PerformLayout();
-            this.gbxDrinks.ResumeLayout(false);
-            this.gbxDrinks.PerformLayout();
-            this.gbxSides.ResumeLayout(false);
-            this.gbxSides.PerformLayout();
+            this.Text = "Snack Shack";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_close);
+            this.Load += new System.EventHandler(this.frmMain_load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_snackCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_icon)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,30 +275,25 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbxBurgers;
-        private System.Windows.Forms.GroupBox gbxDrinks;
-        private System.Windows.Forms.GroupBox gbxSides;
-        private System.Windows.Forms.RadioButton rdb_baconBurg;
-        private System.Windows.Forms.RadioButton rdb_vegBurg;
-        private System.Windows.Forms.RadioButton rdb_cheeBurg;
-        private System.Windows.Forms.RadioButton rdb_plainBurg;
-        private System.Windows.Forms.RadioButton rdb_drinkWater;
-        private System.Windows.Forms.RadioButton rdb_drinkPunch;
-        private System.Windows.Forms.RadioButton rdb_drinkCoala;
-        private System.Windows.Forms.RadioButton rdb_drinkTea;
-        private System.Windows.Forms.RadioButton rdb_sideChip;
-        private System.Windows.Forms.RadioButton rdb_sideOnioRing;
-        private System.Windows.Forms.RadioButton rdb_sideTatTot;
-        private System.Windows.Forms.RadioButton rdb_sidesFries;
-        private System.Windows.Forms.RadioButton rdb_noBurg;
-        private System.Windows.Forms.RadioButton rdb_noSide;
-        private System.Windows.Forms.RadioButton rdb_noDrink;
-        private System.Windows.Forms.ListBox lst_order;
-        private System.Windows.Forms.Label lbl_subtotal;
-        private System.Windows.Forms.Label lbl_tax;
-        private System.Windows.Forms.Label lbl_total;
-        private System.Windows.Forms.Button bttn_purchase;
-        private System.Windows.Forms.Button bttn_close;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown num_snackCost;
+        private System.Windows.Forms.PictureBox picBox_icon;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_nameInput;
+        private System.Windows.Forms.DataGridView dgv_invent;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_snaName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_snaPri;
+        private System.Windows.Forms.DataGridViewImageColumn col_snaIcon;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStripMenuItem clearInputToolStripMenuItem;
     }
 }
 

@@ -1,68 +1,151 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics.Eventing.Reader;
+using System.Drawing;
+using System.Linq;
+using System.Security.Policy;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization.Configuration;
 
-namespace BurgerBarn
+namespace snackShack
 {
-    public partial class frmBurgerBarn : Form
+    public partial class frm_main : Form
     {
-        public frmBurgerBarn()
+        string rootPath = snackShack.coreCommands.path();
+
+        string imageFolder = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + "presetImages" + constants.fileSepString();
+        string inventoryFile = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + nameof(inventory) + ".csv";
+        Image baseIcon = null;
+        public frm_main()
         {
             InitializeComponent();
+            openFileDialog1.InitialDirectory = imageFolder; //set default path
+            readInvent();
+        }
+        private void readInvent() //readInvent
+        {
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
         }
 
-        #region globalVars
-        float total = 0; //the cost factoring in tax
-        float subtotal = 0; //the cost without tax
-        const float tax_rate = 0.0825f; //the percentage of tax
-        const float tax_fac = tax_rate + 1f; //the percentage with a 1 added to it, so multiplication can be used
-        #endregion
-        #region functions
-        private void updatePrice(object input) //this will take in any object, convert it to a radio button, then modify the price acordingly
+        private void saveInvent() //save inventory
         {
-            RadioButton button = input as RadioButton;
-            if (button.Checked == true) //checks if true
+            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); //this is a pre - setup function for writing files, to make auto - saveing easier
+        }
+
+        private void frmMain_load(object sender, EventArgs e)
+        {
+            baseIcon = picBox_icon.InitialImage;
+            picBox_icon.Image = baseIcon;
+        }
+
+        private void frmMain_close(object sender, FormClosingEventArgs e)
+        {
+            closeSystem(true);
+            
+        }
+
+        private void btn_appClose(object sender, EventArgs e) //close app system
+        {
+            closeSystem();
+        }
+
+        private void btn_addItem_Click(object sender, EventArgs e) //add item
+        {
+
+        }
+
+        private void picBox_icon_Click(object sender, EventArgs e) //click on image input
+        {
+            string imagePath; //the path
+            openFileDialog1.Filter = "All Files (*.*)|*.*|JPG (*.jpg*)|*.jpg"; //allow them to sort for a specific extension (the one utilized by this program), or any file
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                if (button.Text != "None") //if it's not none, and it's checked, it will proceed to add that buttons name to the list
-                {
-                    lst_order.Items.Add(button.Text);
-                } 
-                subtotal += float.Parse(button.Tag.ToString()); //adds the cost to the subtotal
-            } else { 
-                lst_order.Items.Remove(button.Text); //removes the item from the list if it's no longer selected
-                subtotal -= float.Parse(button.Tag.ToString()); //subtracts that price, which is replaced with the addition of the other one
+                imagePath = openFileDialog1.FileName; //set the path
+            } else
+            {
+                return;
             }
-            float tax = subtotal * tax_rate; //calculate the tax
-            total = subtotal + tax; //calculate the total
-            lbl_subtotal.Text = "Subtotal: " + subtotal.ToString("c2"); //put the subtotal (cost of all items without tax) into the label, useing 2 decimal places
-            lbl_tax.Text = "Tax: " + tax.ToString("c2"); //same as above, only for the tax
-            lbl_total.Text = "Total: " + total.ToString("c2"); //same as above, only for the sum of those 2
+            picBox_icon.ImageLocation = imagePath;
+            bool status = valid();
+            toggleAdd(status);
         }
-        #endregion
-        // this area can be consolidated more
-        #region ordering
-        private void rdb_Selection(object sender, EventArgs e) //this will call the function to update the price whenever the selected item changes
+        #region Close System
+        private void close()
         {
-            updatePrice(sender);
+            bool confirm = false; //make confirm variable, default to false
+            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                confirm = true;
+            }
+            if (confirm == true)
+            {
+                Application.Exit(); //close app
+            }
+            else
+            {
+
+            }
         }
-        #endregion
-        #region interface
-        //parts of the interface that are simpler, just simple buttons
-        private void bttn_purchase_Click(object sender, EventArgs e) //clear input and acknowledge purchase
+        private void closeSystem(bool viaMeneu = false)
         {
-            MessageBox.Show("Thank You for your purchase"); //thank you box
-            rdb_noBurg.Checked = true; //reset sellections
-            rdb_noDrink.Checked = true;
-            rdb_noSide.Checked = true;
-        }
-        private void bttn_close_Click(object sender, EventArgs e) //exit application
-        {
-            Application.Exit();
+            if (viaMeneu)
+            {
+                saveInvent();
+            } else
+            {
+                close();
+            }
         }
         #endregion
 
-        private void frmBurgerBarn_Load(object sender, EventArgs e)
+        private void inpEnty_complete(object sender, EventArgs e)
         {
+            bool status = valid();
+            toggleAdd(status);
+        }
+        private void toggleAdd(bool valid)
+        {
+            bool status = addToolStripMenuItem.Enabled;
+            if (status == valid)
+            {
+                return;
+            } else
+            {
+                addToolStripMenuItem.Enabled = valid;
+            }
+        }
+        private bool valid()
+        {
+            string inputText = txt_nameInput.Text;
+            decimal price = num_snackCost.Value;
+            decimal minPrice = constants.minimumPrice();
+            bool valid = true;
+            if (string.IsNullOrEmpty(inputText))
+            {
+                valid = false;
+            }
+            else if (price < minPrice)
+            {
+                valid = false;
+            }
+            else if (picBox_icon.Image == baseIcon)
+            {
+                valid = false;
+            }
+            
+            return valid;
+        }
 
+        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            picBox_icon.Image = baseIcon;
+            num_snackCost.Value = 0;
+            txt_nameInput.Text = string.Empty;
         }
     }
 }
