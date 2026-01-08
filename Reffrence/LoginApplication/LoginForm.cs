@@ -17,7 +17,7 @@ namespace LoginApplication
         //debug mode (one for active, anything else for inactive)
         const bool debugSystem = false;
 
-        private void frmMain_Load(object sender, EventArgs e)
+       // private void frmMain_Load(object sender, EventArgs e)
         {
             cmbSecQuest.Items.Insert(0, cmbPlaceholdText);
             cmbSecQuest.SelectedIndex = 0;
@@ -30,14 +30,14 @@ namespace LoginApplication
                 txt_debugInfo.Show();
                 lblCountSecQuest.Show();
             };
-        }
+       }
 
-        //close program
+        /*close program
         private void btnClose_Click(object sender, EventArgs e)
         {
             //exit
             Application.Exit();
-        }
+        } */
 
         private void txtUserID_TextChanged(object sender, EventArgs e)
         {
