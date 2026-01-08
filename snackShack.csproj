@@ -46,16 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="constants.cs" />
+    <Compile Include="inventory.cs" />
+    <Compile Include="fileCode.cs" />
     <Compile Include="frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="constants.cs" />
-    <Compile Include="inventory.cs" />
-    <Compile Include="fileCode.cs" />
-    <Compile Include="oldProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_main.resx">
