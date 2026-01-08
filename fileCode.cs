@@ -12,13 +12,13 @@ namespace snackShack
         internal static void Write(string filepath, char sep) 
         {
             bool status = File.Exists(filepath); //check if the file exists
-            if (status || Program.debug) //if file exists, or debug is active, run system
+            if (status || oldProgram.debug) //if file exists, or debug is active, run system
             {
                 try
                 {
                     using (StreamWriter sw = new StreamWriter(filepath)) //utilize the file path to find the file
                     {
-                        foreach (var c in Program.inventory) //the loop for createing the contents which will be saved
+                        foreach (var c in oldProgram.inventory) //the loop for createing the contents which will be saved
                         {
                             //csv - comma seperated values
                             //name-imagepath-cost-index
@@ -44,7 +44,7 @@ namespace snackShack
         internal static void read(string path, char sep, int min) //the read function
         {
             bool status = File.Exists(path); //check if the file exists
-            if (status || Program.debug) //check if there
+            if (status || oldProgram.debug) //check if there
             {
                 try
                 {
@@ -65,7 +65,7 @@ namespace snackShack
                                     cost = Convert.ToInt32(entry[2]), //same
                                     index = Convert.ToInt32(entry[3]) -1 //any guesses?
                                 };
-                                Program.inventory.Add(c); //add to list
+                                oldProgram.inventory.Add(c); //add to list
                             }
                             else
                             {
