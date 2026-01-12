@@ -29,9 +29,10 @@ namespace LoginApplication
             {
                 txt_debugInfo.Show();
                 lblCountSecQuest.Show();
-            };
+            }; */
         }
 
+        /*close program
         //close program
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -46,10 +47,10 @@ namespace LoginApplication
 
         private void txtPass_TextChanged(object sender, EventArgs e)
         {
-            if (debugSystem)
+            /* if (debugSystem)
             {
                 txtConfirmPass.Text = txtPass.Text;
-            }
+            } */
         }
 
         private void txtConfirmPass_TextChanged(object sender, EventArgs e)
@@ -76,7 +77,7 @@ namespace LoginApplication
         {
 
             //create debug system (use an empty string for a new line)
-            string addText(string inputText)
+            /* string addText(string inputText)
             {
                 if (inputText == "")
                 {
@@ -95,7 +96,7 @@ namespace LoginApplication
                     } //normally new line
                 } //add in text with lines in with input
                 return txt_debugInfo.Text;
-            };
+            }; */
 
             // vars
             var correct = 0;
@@ -191,7 +192,7 @@ namespace LoginApplication
                 correct++;
             } //question has vales;
 
-            if (debugSystem) //the debug system
+            /* if (debugSystem) //the debug system
             {
                 txt_debugInfo.Text = string.Empty; //reset box
 
@@ -204,7 +205,7 @@ namespace LoginApplication
                 addText(secQuest); //secuirty quest
                 addText(secAns); //security answer
                 correct = 5; //set correct to five to allow rapid testing
-            }
+            } */
 
             if (correct == 5)
             {
