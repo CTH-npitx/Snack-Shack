@@ -97,7 +97,7 @@ namespace snackShack
         }
         private void updateTable()
         {
-
+            dgv_invent.Rows.Add(); //update the data grid view with the contents of the contact as a new row
         }
         #region Close System
         private void close()
