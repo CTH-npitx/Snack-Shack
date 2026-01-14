@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace snackShack.Properties
+namespace AdressBook.Properties
 {
 
 
