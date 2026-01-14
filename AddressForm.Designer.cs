@@ -1,6 +1,6 @@
 ﻿namespace snackShack
 {
-    partial class Form1
+    partial class AddressForm
     {
         /// <summary>
         /// Required designer variable.
