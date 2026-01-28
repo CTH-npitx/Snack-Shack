@@ -10,7 +10,7 @@ namespace snackShack
     {
         internal string name; //name of snack
         internal string imagePath; //path of image
-        internal int cost; //cost of snack
+        internal decimal cost; //cost of snack
         internal int index; //the index of the entry
     }
 }
