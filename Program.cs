@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,7 +22,6 @@ namespace snackShack
         internal const bool debug = true; //global var to controll default for debugs
         internal static List<inventory> inventory = new List<inventory>(); //makes a collection that refferences the class that will store information
     }
-
     internal static class coreCommands
     {
         internal static void error(string message, Exception ex = null, bool revealException = false)
