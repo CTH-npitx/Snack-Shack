@@ -17,7 +17,7 @@ namespace snackShack
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_snackShack());
+            Application.Run(new frm_main());
         }
         internal const bool debug = true; //global var to controll default for debugs
         internal static List<inventory> inventory = new List<inventory>(); //makes a collection that refferences the class that will store information
