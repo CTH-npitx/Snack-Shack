@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1855EEDC-A659-4D31-B976-ACEF2B3918FE}</ProjectGuid>
+    <ProjectGuid>{C8659161-DF5C-4DD1-866C-BC2BDAF9D809}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>snackShack</RootNamespace>
     <AssemblyName>snackShack</AssemblyName>
