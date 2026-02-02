@@ -70,9 +70,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="classes.cd" />
-    <None Include="Files\inventory.csv" />
-    <None Include="Files\presetImages\AD3_SupplyCloset.drawio" />
-    <None Include="Files\presetImages\Thumbs.db" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -85,32 +82,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Files\presetImages\2fer.jpg" />
-    <Content Include="Files\presetImages\airheads.jpg" />
-    <Content Include="Files\presetImages\almondjoy.png" />
-    <Content Include="Files\presetImages\butterfinger.jpg" />
-    <Content Include="Files\presetImages\Cheetos.jpg" />
-    <Content Include="Files\presetImages\extragum.jpg" />
-    <Content Include="Files\presetImages\figbars.jpg" />
-    <Content Include="Files\presetImages\hubbabubba.jpg" />
-    <Content Include="Files\presetImages\icecubesgum.jpg" />
-    <Content Include="Files\presetImages\images.jpg" />
-    <Content Include="Files\presetImages\juicyfruit.jpg" />
-    <Content Include="Files\presetImages\kettlecookedruben.jpg" />
-    <Content Include="Files\presetImages\kitkat.jpg" />
-    <Content Include="Files\presetImages\laysbbq.jpg" />
-    <Content Include="Files\presetImages\MilkyWay.jpg" />
-    <Content Include="Files\presetImages\oatmealcremepies.jpg" />
-    <Content Include="Files\presetImages\potatoskins.jpg" />
-    <Content Include="Files\presetImages\pringles.jpg" />
-    <Content Include="Files\presetImages\raisinets.jpg" />
-    <Content Include="Files\presetImages\ricecrisps.jpg" />
-    <Content Include="Files\presetImages\ruffles.jpg" />
-    <Content Include="Files\presetImages\snickers.jpg" />
-    <Content Include="Files\presetImages\utz.jpg" />
-    <Content Include="Files\presetImages\VendingMachine.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
