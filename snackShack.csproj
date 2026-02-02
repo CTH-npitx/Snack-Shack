@@ -52,6 +52,7 @@
     <Compile Include="AddressForm.Designer.cs">
       <DependentUpon>AddressForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="constants.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="fileCode.cs" />
     <Compile Include="frm_main.cs">
