@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snackShack", "snackShack.csproj", "{1855EEDC-A659-4D31-B976-ACEF2B3918FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snackShack-exportFrom", "Snack Shack Code\snackShack-exportFrom.csproj", "{C8659161-DF5C-4DD1-866C-BC2BDAF9D809}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1855EEDC-A659-4D31-B976-ACEF2B3918FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1855EEDC-A659-4D31-B976-ACEF2B3918FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1855EEDC-A659-4D31-B976-ACEF2B3918FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8659161-DF5C-4DD1-866C-BC2BDAF9D809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8659161-DF5C-4DD1-866C-BC2BDAF9D809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8659161-DF5C-4DD1-866C-BC2BDAF9D809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8659161-DF5C-4DD1-866C-BC2BDAF9D809}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
