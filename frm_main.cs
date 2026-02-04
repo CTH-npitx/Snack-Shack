@@ -70,7 +70,7 @@ namespace snackShack
 
         }
 
-        private void btn_appClose(object sender, EventArgs e) //close app system
+        private void btn_appClose(object sender, EventArgs e) //system to close app
         {
             closeSystem();
         }
