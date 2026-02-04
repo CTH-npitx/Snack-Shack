@@ -28,6 +28,28 @@ namespace snackShack
             openFileDialog1.InitialDirectory = imageFolder; //set default path
             readInvent();
         }
+
+        int currentID = 0;
+        private int findID()
+        {
+            currentID++;
+            return currentID++;
+        }
+
+        private inventory makeEntry(string inName, string imigeID, decimal price, string index)
+        {
+            //int leng =
+            inventory i = new inventory(); //make next entry
+            {
+                i.name = inName;
+                i.imagePath = imigeID;
+                i.cost = price;
+                i.index = findID();
+
+            }
+            return i;
+        }
+
         private void readInvent() //readInvent
         {
             snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
@@ -47,7 +69,7 @@ namespace snackShack
         private void frmMain_close(object sender, FormClosingEventArgs e)
         {
             closeSystem(true);
-            
+
         }
 
         private void btn_appClose(object sender, EventArgs e) //system to close app
@@ -74,6 +96,10 @@ namespace snackShack
             picBox_icon.ImageLocation = imagePath;
             bool status = valid();
             toggleAdd(status);
+        }
+        private void updateTable()
+        {
+            dgv_invent.Rows.Add(); //update the data grid view with the contents of the contact as a new row
         }
         #region Close System
         private void close()
