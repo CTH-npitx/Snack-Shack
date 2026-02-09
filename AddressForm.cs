@@ -277,10 +277,10 @@ namespace AdressBook //major updates needed
             } //if it isn't edit
         } //add contact
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        /* private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit(); //close
-        } //exit system
+        } //exit system */
 
         private void btn_svAs_Click(object sender, EventArgs e)
         {
