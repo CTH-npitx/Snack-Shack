@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1855EEDC-A659-4D31-B976-ACEF2B3918FE}</ProjectGuid>
+    <ProjectGuid>{0B7C67A3-C011-4C1B-AAE5-E8233779010F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>snackShack</RootNamespace>
-    <AssemblyName>snackShack</AssemblyName>
+    <RootNamespace>AdressBook</RootNamespace>
+    <AssemblyName>AdressBook</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +47,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressForm.cs">
@@ -52,23 +58,12 @@
     <Compile Include="AddressForm.Designer.cs">
       <DependentUpon>AddressForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="constants.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="fileCode.cs" />
-    <Compile Include="frm_main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_main.Designer.cs">
-      <DependentUpon>frm_main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="inventory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddressForm.resx">
       <DependentUpon>AddressForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_main.resx">
-      <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,9 +74,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Files\inventory.csv" />
-    <None Include="Files\presetImages\AD3_SupplyCloset.drawio" />
-    <None Include="Files\presetImages\Thumbs.db" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,32 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Files\presetImages\2fer.jpg" />
-    <Content Include="Files\presetImages\airheads.jpg" />
-    <Content Include="Files\presetImages\almondjoy.png" />
-    <Content Include="Files\presetImages\butterfinger.jpg" />
-    <Content Include="Files\presetImages\Cheetos.jpg" />
-    <Content Include="Files\presetImages\extragum.jpg" />
-    <Content Include="Files\presetImages\figbars.jpg" />
-    <Content Include="Files\presetImages\hubbabubba.jpg" />
-    <Content Include="Files\presetImages\icecubesgum.jpg" />
-    <Content Include="Files\presetImages\images.jpg" />
-    <Content Include="Files\presetImages\juicyfruit.jpg" />
-    <Content Include="Files\presetImages\kettlecookedruben.jpg" />
-    <Content Include="Files\presetImages\kitkat.jpg" />
-    <Content Include="Files\presetImages\laysbbq.jpg" />
-    <Content Include="Files\presetImages\MilkyWay.jpg" />
-    <Content Include="Files\presetImages\oatmealcremepies.jpg" />
-    <Content Include="Files\presetImages\potatoskins.jpg" />
-    <Content Include="Files\presetImages\pringles.jpg" />
-    <Content Include="Files\presetImages\raisinets.jpg" />
-    <Content Include="Files\presetImages\ricecrisps.jpg" />
-    <Content Include="Files\presetImages\ruffles.jpg" />
-    <Content Include="Files\presetImages\snickers.jpg" />
-    <Content Include="Files\presetImages\utz.jpg" />
-    <Content Include="Files\presetImages\VendingMachine.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
