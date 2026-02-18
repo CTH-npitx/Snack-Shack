@@ -391,5 +391,10 @@ namespace AdressBook //major updates needed
             editInd = 0; //set edit index to 0
             btn_add.Text = btnAddTex; //set button back to original text
         } //clear entry
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
