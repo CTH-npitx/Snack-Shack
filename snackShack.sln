@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snackShack", "snackShack.csproj", "{1855EEDC-A659-4D31-B976-ACEF2B3918FE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdressBook", "Reffrence\Adress Book\AdressBook.csproj", "{0B7C67A3-C011-4C1B-AAE5-E8233779010F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snackShack", "snackShack.csproj", "{0B7C67A3-C011-4C1B-AAE5-E8233779010F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1855EEDC-A659-4D31-B976-ACEF2B3918FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1855EEDC-A659-4D31-B976-ACEF2B3918FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1855EEDC-A659-4D31-B976-ACEF2B3918FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1855EEDC-A659-4D31-B976-ACEF2B3918FE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0B7C67A3-C011-4C1B-AAE5-E8233779010F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0B7C67A3-C011-4C1B-AAE5-E8233779010F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B7C67A3-C011-4C1B-AAE5-E8233779010F}.Release|Any CPU.ActiveCfg = Release|Any CPU
