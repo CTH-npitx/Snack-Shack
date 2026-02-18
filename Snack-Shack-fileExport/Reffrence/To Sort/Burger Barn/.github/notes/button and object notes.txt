@@ -1,2 +1,0 @@
-when useing an object, but needing a button, do "Button btn = sender as Button", and
-modify as needed for other object types

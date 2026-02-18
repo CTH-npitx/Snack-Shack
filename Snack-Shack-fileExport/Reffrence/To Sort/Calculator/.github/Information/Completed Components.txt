@@ -1,4 +1,0 @@
-Currently implemnted components of the plan is:
-4-function
-5-function (added modulus)
-Memory
