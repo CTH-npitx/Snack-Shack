@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdressBook.files; //this is the namespace for the files that are in the project. This is where the classes are stored
 
-namespace snackShack
+namespace AdressBook
 {
     internal static class Program
     {
@@ -16,10 +18,12 @@ namespace snackShack
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frm_addressForm());
         }
+        internal const bool debug = true; //global var to controll default for debugs
+        internal static List<Contact> contacts = new List<Contact>(); //makes a collection that refferences the class that will store information
+        internal const string preMadeErrorMsg = "I'm sorry dave, I'm afraid I can't do that";
     }
-
     internal static class coreCommands
     {
         internal static void error(string message, Exception ex = null, bool revealException = false)
