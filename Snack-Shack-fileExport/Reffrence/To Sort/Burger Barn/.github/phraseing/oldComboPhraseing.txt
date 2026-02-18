@@ -1,0 +1,12 @@
+1. #1 Combo: $5.99
+	1. Plain Burger
+	1. Fries
+	1. Cola
+1. #2 Combo: $6.49
+	1. Cheese Burger
+	1. Tea
+	1. Onion Rings
+1. #3 Combo: $8.99
+	1. Bacon Burger
+	1. Chips
+	1. Cola
