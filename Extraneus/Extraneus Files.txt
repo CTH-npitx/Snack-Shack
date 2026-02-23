@@ -1,1 +1,3 @@
-Contact.cs	Snack-Shack\bin\Debug\contactsstore.con
+Contact.cs
+store.con
+	Snack-Shack\bin\Debug\contacts
