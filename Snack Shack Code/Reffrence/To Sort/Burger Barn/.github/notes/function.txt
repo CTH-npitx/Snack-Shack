@@ -1,0 +1,26 @@
+note: the following is the main function, but back when it used a radiobutton as an input, not just an object
+
+
+ private void updatePrice(RadioButton button)
+ {
+     if (button.Checked == true) //checks if true
+     {
+         if (button.Text != "None") //if it's not none, and it's checked, it will proceed to add that buttons name to the list
+         {
+             lst_order.Items.Add(button.Text);
+         }
+         subtotal += float.Parse(button.Tag.ToString()); //adds the cost to the subtotal
+
+     }
+     else
+     {
+         lst_order.Items.Remove(button.Text); //removes the item from the list if it's no longer selected
+         subtotal -= float.Parse(button.Tag.ToString()); //subtracts that price, which is replaced with the addition of the other one
+     }
+
+     float tax = subtotal * tax_rate; //calculate the tax
+     total = subtotal + tax; //calculate the total
+     lbl_subtotal.Text = "Subtotal: " + subtotal.ToString("c2"); //put the subtotal (cost of all items without tax) into the label, useing 2 decimal places
+     lbl_tax.Text = "Tax: " + tax.ToString("c2"); //same as above, only for the tax
+     lbl_total.Text = "Total: " + total.ToString("c2"); //same as above, only for the sum of those 2
+ }
