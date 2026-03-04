@@ -60,13 +60,10 @@ namespace snackShack.files
                             {
                                 Contact c = new Contact //make new constact
                                 {
-                                    firstname = cont[0], //put the realevent input into the releavent field
-                                    lastname = cont[1], //same
-                                    phone = cont[2], //same
-                                    email = cont[3], //same
-                                    buisness = Convert.ToBoolean(cont[4]), //same
-                                    notes = cont[5], //same
-                                    index = Convert.ToInt32(cont[6]) - 1 //more of the same             
+                                    name = entry[0], //put the realevent input into the releavent field
+                                    imagePath = entry[1], //same
+                                    cost = Convert.ToInt32(entry[2]), //same
+                                    index = Convert.ToInt32(entry[3]) -1 //any guesses?
                                 };
                                 Program.inventory.Add(c); //add to list
                             }
