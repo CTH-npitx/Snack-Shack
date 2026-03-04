@@ -68,12 +68,12 @@ namespace snackShack.files
                                     notes = cont[5], //same
                                     index = Convert.ToInt32(cont[6]) - 1 //more of the same             
                                 };
-                                Program.contacts.Add(c); //add to list
+                                Program.inventory.Add(c); //add to list
                             }
                             else
                             {
-                             
-                                AdressBook.coreCommands.error("error: below Max Length");
+
+                                coreCommands.error("error: below Max Length"); //show error during read
                             }
                         }
                     }
