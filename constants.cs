@@ -1,5 +1,7 @@
 using System.IO;
 
+namespace snackShack.constants
+{
     internal static class constants //pre-defined constants
     {
         internal const char fileSepChar_con = '\\'; //seperater in file paths
@@ -20,3 +22,4 @@ using System.IO;
             return (decimal)minPrice;
         }
     }
+}
