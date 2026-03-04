@@ -58,7 +58,7 @@ namespace snackShack.files
                             var cont = contact.Split(sep); //splits it by the seperator
                             if (cont.Length >= min)
                             {
-                                Contact c = new Contact //make new constact
+                                inventory c = new inventory //make new constact
                                 {
                                     name = entry[0], //put the realevent input into the releavent field
                                     imagePath = entry[1], //same
