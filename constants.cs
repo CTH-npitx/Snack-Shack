@@ -1,3 +1,5 @@
+using System.IO;
+
 namespace snackShack
 {
     internal static class constants //pre-defined constants

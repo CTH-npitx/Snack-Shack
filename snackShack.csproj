@@ -52,6 +52,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="constants.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="fileCode.cs" />
     <Compile Include="frm_main.cs">
