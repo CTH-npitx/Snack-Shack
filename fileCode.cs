@@ -9,7 +9,7 @@ namespace snackShack.files
 {
     internal static class files
     {
-        internal static void Write(string filepath, char sep) 
+        internal static void Write(string filepath, char sep = snackShack.constants.constants.fileSepChar_con) 
         {
             bool status = File.Exists(filepath); //check if the file exists
             if (status || Program.debug)
