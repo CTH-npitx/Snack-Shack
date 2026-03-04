@@ -8,7 +8,6 @@ namespace snackShack.files
 {
     internal static class files
     {
-        #region I/O
         internal static void Write(string filepath, char sep) 
         {
             bool status = File.Exists(filepath); //check if the file exists
@@ -87,6 +86,5 @@ namespace snackShack.files
 
             }
         }
-        #endregion
     } //the code for files
 }
