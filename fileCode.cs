@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 using System;
+using snackShack.constants;
 
 namespace snackShack.files
 {
@@ -32,7 +33,7 @@ namespace snackShack.files
                 }
                 catch (Exception ex) //find if exception
                 {
-                    snackShack.coreCommands.error(constants.preMadeErrorMsg, ex, true); //show error
+                    snackShack.coreCommands.error(constants.constants.preMadeErrorMsg, ex, true); //show error
                 }
             }
             else //say if no file
@@ -51,7 +52,6 @@ namespace snackShack.files
                     using (StreamReader sr = new StreamReader(path)) //make stringreader
                     {
                         //csv - comma seperated values 
-                        //firstname-lastname-email-phone-buisness-notes
                         while (!sr.EndOfStream) //add each line to it one by one
                         {
                             string item = sr.ReadLine(); //gets the next line of text from the file
