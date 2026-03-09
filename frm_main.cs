@@ -15,12 +15,9 @@ namespace snackShack
 {
     public partial class frm_main : Form
     {
-        string rootPath = snackShack.coreCommands.path();
-
-        string imageFolder = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + "presetImages" + constants.fileSepString();
-        string inventoryFile = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + nameof(inventory) + ".csv";
-        Image baseIcon = null;
-        public frm_main()
+        const bool debug = Program.debug; //this sets the debug system to the global debug variable
+        const char sep = '~'; //seperation character
+        public frm_addressForm()
         {
             InitializeComponent();
             openFileDialog1.InitialDirectory = imageFolder; //set default path
@@ -48,10 +45,9 @@ namespace snackShack
             return i;
         }
 
-        private void readInvent() //readInvent
+        private string CreatePath(string root, string path, string name, string extension)
         {
-            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
-        }
+            string finalPath = root + path + @"/" + name + "." + extension; //create the final path
 
         private void saveInvent() //save inventory
         {
