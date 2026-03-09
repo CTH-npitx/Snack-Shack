@@ -3,12 +3,13 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 using System;
+using snackShack.constants; 
 
-namespace AdressBook.files
+namespace snackShack.files
 {
     internal static class files
     {
-        internal static void Write(string filepath, char sep) 
+        internal static void Write(string filepath, char sep = snackShack.constants.constants.fileSepChar_con) 
         {
             bool status = File.Exists(filepath); //check if the file exists
             if (status || Program.debug)
@@ -31,12 +32,12 @@ namespace AdressBook.files
                 }
                 catch (Exception ex)
                 {
-                    AdressBook.coreCommands.error(Program.preMadeErrorMsg, ex, true); //show error
+                    snackShack.coreCommands.error(Program.preMadeErrorMsg, ex, true); //show error
                 }
             }
             else
             {
-                AdressBook.coreCommands.error("File Not Found"); //show error
+                snackShack.coreCommands.error("File Not Found"); //show error
             }
         } //the write function
 
@@ -72,7 +73,7 @@ namespace AdressBook.files
                             else
                             {
                              
-                                AdressBook.coreCommands.error("error: below Max Length");
+                                snackShack.coreCommands.error("error: below Max Length");
                             }
                         }
                     }
