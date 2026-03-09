@@ -3,13 +3,13 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 using System;
-using snackShack.constants; 
 
 namespace snackShack.files
 {
     internal static class files
     {
-        internal static void Write(string filepath, char sep = snackShack.constants.constants.fileSepChar_con) 
+        #region I/O
+        internal static void Write(string filepath, char sep) 
         {
             bool status = File.Exists(filepath); //check if the file exists
             if (status || Program.debug)
@@ -32,12 +32,12 @@ namespace snackShack.files
                 }
                 catch (Exception ex)
                 {
-                    snackShack.coreCommands.error(Program.preMadeErrorMsg, ex, true); //show error
+                    AdressBook.coreCommands.error(Program.preMadeErrorMsg, ex, true); //show error
                 }
             }
             else
             {
-                snackShack.coreCommands.error("File Not Found"); //show error
+                AdressBook.coreCommands.error("File Not Found"); //show error
             }
         } //the write function
 
@@ -58,22 +58,19 @@ namespace snackShack.files
                             var cont = contact.Split(sep); //splits it by the seperator
                             if (cont.Length >= min)
                             {
-                                Contact c = new Contact //make new constact
+                                inventory c = new inventory //make new constact
                                 {
-                                    firstname = cont[0], //put the realevent input into the releavent field
-                                    lastname = cont[1], //same
-                                    phone = cont[2], //same
-                                    email = cont[3], //same
-                                    buisness = Convert.ToBoolean(cont[4]), //same
-                                    notes = cont[5], //same
-                                    index = Convert.ToInt32(cont[6]) - 1 //more of the same             
+                                    name = entry[0], //put the realevent input into the releavent field
+                                    imagePath = entry[1], //same
+                                    cost = Convert.ToInt32(entry[2]), //same
+                                    index = Convert.ToInt32(entry[3]) -1 //any guesses?
                                 };
-                                Program.contacts.Add(c); //add to list
+                                Program.inventory.Add(c); //add to list
                             }
                             else
                             {
-                             
-                                snackShack.coreCommands.error("error: below Max Length");
+
+                                coreCommands.error("error: below Max Length"); //show error during read
                             }
                         }
                     }
@@ -90,5 +87,6 @@ namespace snackShack.files
 
             }
         }
+        #endregion
     } //the code for files
 }

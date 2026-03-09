@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace snackShack //major updates needed
+namespace AdressBook //major updates needed
 {
     public partial class frm_addressForm : Form
     {
@@ -25,7 +25,7 @@ namespace snackShack //major updates needed
 
         private void error(string message, Exception ex = null, bool revealException = false)
         {
-            snackShack.coreCommands.error(message, ex, revealException); // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
+            AdressBook.coreCommands.error(message, ex, revealException); // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
 
         } //error system
 

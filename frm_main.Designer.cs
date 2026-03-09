@@ -1,4 +1,4 @@
-﻿namespace snackShack
+﻿namespace AdressBook
 {
     partial class frm_addressForm
     {

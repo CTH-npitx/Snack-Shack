@@ -4,9 +4,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using snackShack.files; //this is the namespace for the files that are in the project. This is where the classes are stored
+using AdressBook.files; //this is the namespace for the files that are in the project. This is where the classes are stored
 
-namespace snackShack
+namespace AdressBook
 {
     internal static class Program
     {
