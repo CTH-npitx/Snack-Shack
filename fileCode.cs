@@ -4,11 +4,10 @@ using System.IO;
 using System.Windows.Forms;
 using System;
 
-namespace snackShack.files
+namespace AdressBook.files
 {
     internal static class files
     {
-        #region I/O
         internal static void Write(string filepath, char sep) 
         {
             bool status = File.Exists(filepath); //check if the file exists
@@ -58,19 +57,22 @@ namespace snackShack.files
                             var cont = contact.Split(sep); //splits it by the seperator
                             if (cont.Length >= min)
                             {
-                                inventory c = new inventory //make new constact
+                                Contact c = new Contact //make new constact
                                 {
-                                    name = entry[0], //put the realevent input into the releavent field
-                                    imagePath = entry[1], //same
-                                    cost = Convert.ToInt32(entry[2]), //same
-                                    index = Convert.ToInt32(entry[3]) -1 //any guesses?
+                                    firstname = cont[0], //put the realevent input into the releavent field
+                                    lastname = cont[1], //same
+                                    phone = cont[2], //same
+                                    email = cont[3], //same
+                                    buisness = Convert.ToBoolean(cont[4]), //same
+                                    notes = cont[5], //same
+                                    index = Convert.ToInt32(cont[6]) - 1 //more of the same             
                                 };
-                                Program.inventory.Add(c); //add to list
+                                Program.contacts.Add(c); //add to list
                             }
                             else
                             {
-
-                                coreCommands.error("error: below Max Length"); //show error during read
+                             
+                                AdressBook.coreCommands.error("error: below Max Length");
                             }
                         }
                     }
@@ -87,6 +89,5 @@ namespace snackShack.files
 
             }
         }
-        #endregion
     } //the code for files
 }
