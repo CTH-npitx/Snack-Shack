@@ -4,7 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using System;
 
-namespace snackShack
+namespace snackShack.files
 {
     internal static class files
     {
