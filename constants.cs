@@ -1,4 +1,4 @@
-namespace snackShack.constants
+namespace snackShack
 {
     internal static class constants //pre-defined constants
     {
