@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using System;
 using snackShack.constants;
 
-namespace snackShack.files
+namespace snackShack
 {
     internal static class files
     {
