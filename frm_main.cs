@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization.Configuration;
+using snackShack;
 
 namespace snackShack
 {
@@ -17,8 +18,8 @@ namespace snackShack
     {
         string rootPath = snackShack.coreCommands.path();
 
-        string imageFolder = snackShack.coreCommands.path() + "Files" + constants.constants.fileSepString() + "presetImages" + constants.constants.fileSepString();
-        string inventoryFile = snackShack.coreCommands.path() + "Files" + constants.constants.fileSepString() + nameof(inventory) + ".csv";
+        string imageFolder = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + "presetImages" + constants.fileSepString();
+        string inventoryFile = snackShack.coreCommands.path() + "Files" + constants.fileSepString() + nameof(inventory) + ".csv";
         Image baseIcon = null;
         public frm_main()
         {
@@ -50,12 +51,12 @@ namespace snackShack
 
         private void readInvent() //readInvent
         {
-            snackShack.files.files.read(inventoryFile, constants.constants.entrySep, constants.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
+            snackShack.files.read(inventoryFile, snackShack.constants.entrySep, snackShack.constants.min); //this is a pre-setup read inventory function. That way reffernecing it is easier
         }
 
         private void saveInvent() //save inventory
         {
-            snackShack.files.files.Write(inventoryFile, constants.constants.entrySep); //this is a pre - setup function for writing files, to make auto - saveing easier
+            snackShack.files.Write(inventoryFile, snackShack.constants.entrySep); //this is a pre - setup function for writing files, to make auto - saveing easier
         }
 
         private void frmMain_load(object sender, EventArgs e)
@@ -149,7 +150,7 @@ namespace snackShack
         {
             string inputText = txt_nameInput.Text;
             decimal price = num_snackCost.Value;
-            decimal minPrice = constants.constants.minimumPrice();
+            decimal minPrice = constants.minimumPrice();
             bool valid = true;
             if (string.IsNullOrEmpty(inputText))
             {
