@@ -1,10 +1,11 @@
-using System.IO;
+using snackShack;
+using System;
 
-namespace snackShack.constants
+namespace snackShack
 {
     internal static class constants //pre-defined constants
     {
-        internal const char fileSepChar_con = '\\'; //seperater in file paths
+        const char fileSepChar_con = '\\'; //seperater in file paths
         internal const int min = 4; //length of entries
         internal const char entrySep = ','; //seperation character
         internal const string preMadeErrorMsg = "I'm sorry dave, I'm afraid I can't do that"; //pre-made error message
@@ -20,6 +21,17 @@ namespace snackShack.constants
         internal static decimal minimumPrice()
         {
             return (decimal)minPrice;
+        }
+        internal static string getDomain()
+        {
+            return AppDomain.CurrentDomain.BaseDirectory;
+        }
+    }
+    internal static class baseValues
+    {
+        internal static string path()
+        {
+            return snackShack.coreCommands.createPath(AppDomain.CurrentDomain.BaseDirectory, "Inventory", "inventory");
         }
     }
 }
