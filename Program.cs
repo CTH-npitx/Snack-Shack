@@ -38,9 +38,10 @@ namespace snackShack
           // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
           
         
-        internal static string path()
+        internal static string path(string root, string path, string name, string extension)
         {
-
+            string finalPath = root + path + @"/" + name + "." + extension; //create the final path
+            return finalPath;
         } //a simpler version of the "path" code
        /* internal static string path()
         {
@@ -60,19 +61,3 @@ namespace snackShack
     } //base commands to aid in everything
 
 }
-
-
-private void error(string message, Exception ex = null, bool revealException = false)
-{
-    AdressBook.coreCommands.error(message, ex, revealException); // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
-
-} //error system
-filepath = CreatePath(AppDomain.CurrentDomain.BaseDirectory, "contacts", name1, exten1)
-
-
-            private string CreatePath(string root, string path, string name, string extension)
-{
-    string finalPath = root + path + @"/" + name + "." + extension; //create the final path
-
-    return finalPath; //output said path
-} //create the final directory path
