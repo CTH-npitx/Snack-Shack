@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace snackShack
 {
@@ -35,7 +36,9 @@ namespace snackShack
         } //this is for error messages. the text is mandatory, but the
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
           // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
-          internal static string path()
+          
+        
+        internal static string path()
         {
 
         } //a simpler version of the "path" code
@@ -57,3 +60,19 @@ namespace snackShack
     } //base commands to aid in everything
 
 }
+
+
+private void error(string message, Exception ex = null, bool revealException = false)
+{
+    AdressBook.coreCommands.error(message, ex, revealException); // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
+
+} //error system
+filepath = CreatePath(AppDomain.CurrentDomain.BaseDirectory, "contacts", name1, exten1)
+
+
+            private string CreatePath(string root, string path, string name, string extension)
+{
+    string finalPath = root + path + @"/" + name + "." + extension; //create the final path
+
+    return finalPath; //output said path
+} //create the final directory path
