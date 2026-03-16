@@ -37,8 +37,7 @@ namespace snackShack
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
           // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
           
-        
-        internal static string path(string root, string path, string name, string extension)
+        internal static string createPath(string root, string path = "folder", string name = "file", string extension = "csv")
         {
             string finalPath = root + path + @"/" + name + "." + extension; //create the final path
             return finalPath;
