@@ -16,8 +16,7 @@ namespace snackShack
     public partial class frm_main : Form
     {
 
-        //string imageFolder = coreCommands.createPath(AppDomain.CurrentDomain.BaseDirectory, "images");
-            //move images
+        string imageFolder = coreCommands.createPath(AppDomain.CurrentDomain.BaseDirectory, "presetImages");
         string inventoryFile = baseValues.path();
         Image baseIcon = null;
         public frm_main()
