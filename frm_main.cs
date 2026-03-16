@@ -16,7 +16,7 @@ namespace snackShack
     public partial class frm_main : Form
     {
 
-        string imageFolder = coreCommands.createPath(AppDomain.CurrentDomain.BaseDirectory, "presetImages",string.Empty,string.Empty); 
+        string imageFolder = coreCommands.createPath(AppDomain.CurrentDomain.BaseDirectory, "presetImages",string.Empty,string.Empty); //get the subfolder for preset images, but not its contents
         string inventoryFile = baseValues.path();
         Image baseIcon = null;
         public frm_main()
