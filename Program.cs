@@ -43,6 +43,7 @@ namespace snackShack
             string finalPath = root + path + @"/" + name + "." + extension; //create the final path
             return finalPath;
         } //a simpler version of the "path" code
+
        /* internal static string path()
         {
             var pathSpliter = '\\'; //part between paths
