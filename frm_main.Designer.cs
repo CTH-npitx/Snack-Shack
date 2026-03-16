@@ -128,6 +128,7 @@
             // 
             // picBox_icon
             // 
+            this.picBox_icon.InitialImage = null;
             this.picBox_icon.Location = new System.Drawing.Point(6, 19);
             this.picBox_icon.Name = "picBox_icon";
             this.picBox_icon.Size = new System.Drawing.Size(235, 229);
