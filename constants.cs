@@ -1,3 +1,6 @@
+using snackShack;
+using System;
+
 namespace snackShack
 {
     internal static class constants //pre-defined constants
@@ -18,6 +21,17 @@ namespace snackShack
         internal static decimal minimumPrice()
         {
             return (decimal)minPrice;
+        }
+        internal static string getDomain()
+        {
+            return AppDomain.CurrentDomain.BaseDirectory;
+        }
+    }
+    internal static class baseValues
+    {
+        internal static string path()
+        {
+            return snackShack.coreCommands.createPath(AppDomain.CurrentDomain.BaseDirectory, "Inventory", "inventory");
         }
     }
 }
