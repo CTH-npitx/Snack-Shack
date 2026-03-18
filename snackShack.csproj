@@ -52,6 +52,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="constants.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="fileCode.cs" />
     <Compile Include="frm_main.cs">
@@ -60,6 +61,7 @@
     <Compile Include="frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="inventory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_main.resx">
