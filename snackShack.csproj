@@ -88,16 +88,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include=".github\Notes\data grids.txt" />
-    <Content Include=".github\Notes\file manipulation.txt" />
-    <Content Include=".github\Notes\methods to write to disck.txt" />
-    <Content Include=".github\Notes\New Text Document.txt" />
-    <Content Include=".github\Notes\Programming Notes.txt" />
-    <Content Include=".github\Notes\to find program.txt" />
-    <Content Include=".github\Program Documentation\Program Documentation.txt" />
-    <Content Include="Files\presetImages\VendingMachine.jpg" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
