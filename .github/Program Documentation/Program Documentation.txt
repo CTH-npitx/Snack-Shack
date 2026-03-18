@@ -1,1 +1,1 @@
-Information about the program (such as notes on keybinds)
+documentation about the program
