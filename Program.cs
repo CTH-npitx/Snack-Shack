@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AdressBook.files; //this is the namespace for the files that are in the project. This is where the classes are stored
+using System.Xml.Linq;
 
 namespace AdressBook
 {
@@ -37,5 +37,28 @@ namespace AdressBook
         } //this is for error messages. the text is mandatory, but the
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
           // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
-    }
+          
+        internal static string createPath(string root, string path = "folder", string name = "file", string extension = "csv")
+        {
+            string finalPath = root + path + @"/" + name + "." + extension; //create the final path
+            return finalPath;
+        } //a simpler version of the "path" code
+
+       /* internal static string path()
+        {
+            var pathSpliter = '\\'; //part between paths
+            var loc = AppDomain.CurrentDomain.BaseDirectory; //get the current domain
+            var comps = loc.Split('\\'); //array of path after being split
+            var len = comps.Length; //length of path
+            var completeLoc = string.Empty; //blank variable for path
+            for (var i = 0; i < len-3; i++) //repeat by the length minus 2, which will lead to it excluding the 2 folders that are unwanted
+            {
+                var comp = comps[i];
+                completeLoc = completeLoc + comp + char.ToString(pathSpliter); //add next part to path
+            }
+            return completeLoc; //output path
+        } //derive the path of the base file */
+
+    } //base commands to aid in everything
+
 }
