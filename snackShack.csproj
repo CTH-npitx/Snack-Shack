@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="snackInvent.cs" />
     <EmbeddedResource Include="frm_snackInvent.resx">
       <DependentUpon>frm_snackInvent.cs</DependentUpon>
     </EmbeddedResource>
