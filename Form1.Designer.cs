@@ -32,7 +32,10 @@
             this.txt_snackName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.nud_snackPrice = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.nud_snackQuantity = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,11 +77,30 @@
             this.nud_snackPrice.TabIndex = 3;
             this.nud_snackPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1, 59);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Quantity";
+            // 
+            // nud_snackQuantity
+            // 
+            this.nud_snackQuantity.Location = new System.Drawing.Point(76, 61);
+            this.nud_snackQuantity.Name = "nud_snackQuantity";
+            this.nud_snackQuantity.Size = new System.Drawing.Size(120, 20);
+            this.nud_snackQuantity.TabIndex = 5;
+            this.nud_snackQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nud_snackQuantity);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.nud_snackPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_snackName);
@@ -86,6 +108,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,6 +120,8 @@
         private System.Windows.Forms.TextBox txt_snackName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown nud_snackPrice;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown nud_snackQuantity;
     }
 }
 
