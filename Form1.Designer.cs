@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1, 15);
+            this.label1.Location = new System.Drawing.Point(1, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // txt_snackName
             // 
-            this.txt_snackName.Location = new System.Drawing.Point(76, 12);
+            this.txt_snackName.Location = new System.Drawing.Point(76, 67);
             this.txt_snackName.Name = "txt_snackName";
             this.txt_snackName.Size = new System.Drawing.Size(100, 20);
             this.txt_snackName.TabIndex = 1;
@@ -57,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1, 37);
+            this.label2.Location = new System.Drawing.Point(1, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 2;
@@ -71,7 +71,7 @@
             0,
             0,
             131072});
-            this.nud_snackPrice.Location = new System.Drawing.Point(76, 35);
+            this.nud_snackPrice.Location = new System.Drawing.Point(76, 90);
             this.nud_snackPrice.Name = "nud_snackPrice";
             this.nud_snackPrice.Size = new System.Drawing.Size(120, 20);
             this.nud_snackPrice.TabIndex = 3;
@@ -80,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1, 59);
+            this.label3.Location = new System.Drawing.Point(1, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 4;
@@ -88,7 +88,7 @@
             // 
             // nud_snackQuantity
             // 
-            this.nud_snackQuantity.Location = new System.Drawing.Point(76, 61);
+            this.nud_snackQuantity.Location = new System.Drawing.Point(76, 116);
             this.nud_snackQuantity.Name = "nud_snackQuantity";
             this.nud_snackQuantity.Size = new System.Drawing.Size(120, 20);
             this.nud_snackQuantity.TabIndex = 5;
