@@ -196,7 +196,7 @@
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // frm_snackInvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,9 +213,9 @@
             this.Controls.Add(this.txt_snackName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "frm_snackInvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Snack Shack Inventory";
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).EndInit();
