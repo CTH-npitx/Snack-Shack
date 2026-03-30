@@ -40,6 +40,11 @@
             this.pb_snackIcon = new System.Windows.Forms.PictureBox();
             this.dgv_invent = new System.Windows.Forms.DataGridView();
             this.btn_add = new System.Windows.Forms.Button();
+            this.col_snackName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_snackPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_snackQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_iconPath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_snackIcon = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).BeginInit();
@@ -135,6 +140,12 @@
             // dgv_invent
             // 
             this.dgv_invent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_invent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_snackName,
+            this.col_snackPrice,
+            this.col_snackQuantity,
+            this.col_iconPath,
+            this.col_snackIcon});
             this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_invent.Location = new System.Drawing.Point(0, 233);
             this.dgv_invent.Name = "dgv_invent";
@@ -149,6 +160,32 @@
             this.btn_add.TabIndex = 10;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = true;
+            // 
+            // col_snackName
+            // 
+            this.col_snackName.HeaderText = "Snack Name";
+            this.col_snackName.Name = "col_snackName";
+            // 
+            // col_snackPrice
+            // 
+            this.col_snackPrice.HeaderText = "Snack Price";
+            this.col_snackPrice.Name = "col_snackPrice";
+            // 
+            // col_snackQuantity
+            // 
+            this.col_snackQuantity.HeaderText = "Snack Quantity";
+            this.col_snackQuantity.Name = "col_snackQuantity";
+            // 
+            // col_iconPath
+            // 
+            this.col_iconPath.HeaderText = "path for icon";
+            this.col_iconPath.Name = "col_iconPath";
+            this.col_iconPath.Visible = false;
+            // 
+            // col_snackIcon
+            // 
+            this.col_snackIcon.HeaderText = "Icon";
+            this.col_snackIcon.Name = "col_snackIcon";
             // 
             // Form1
             // 
@@ -192,6 +229,11 @@
         private System.Windows.Forms.PictureBox pb_snackIcon;
         private System.Windows.Forms.DataGridView dgv_invent;
         private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_snackName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_snackPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_snackQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_iconPath;
+        private System.Windows.Forms.DataGridViewImageColumn col_snackIcon;
     }
 }
 
