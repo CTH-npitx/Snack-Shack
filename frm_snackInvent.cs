@@ -16,5 +16,14 @@ namespace snackShack
         {
             InitializeComponent();
         }
+
+        private void bttn_snackImage_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image Files(*.jpg;*.jpeg;*.png;*.gif;*bmp)|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            if(openFileDialog1.ShowDialog() == DialogResult.OK) { 
+                txt_imagePath.Text = openFileDialog1.FileName;
+                pb_snackIcon.ImageLocation = openFileDialog1.FileName;
+            }
+        }
     }
 }
