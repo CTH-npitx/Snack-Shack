@@ -39,6 +39,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pb_snackIcon = new System.Windows.Forms.PictureBox();
             this.dgv_invent = new System.Windows.Forms.DataGridView();
+            this.btn_add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).BeginInit();
@@ -140,11 +141,21 @@
             this.dgv_invent.Size = new System.Drawing.Size(800, 217);
             this.dgv_invent.TabIndex = 9;
             // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(4, 179);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 10;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.pb_snackIcon);
             this.Controls.Add(this.txt_imagePath);
@@ -180,6 +191,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pb_snackIcon;
         private System.Windows.Forms.DataGridView dgv_invent;
+        private System.Windows.Forms.Button btn_add;
     }
 }
 
