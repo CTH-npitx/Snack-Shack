@@ -38,9 +38,11 @@
             this.txt_imagePath = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pb_snackIcon = new System.Windows.Forms.PictureBox();
+            this.dgv_invent = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -129,11 +131,21 @@
             this.pb_snackIcon.TabIndex = 8;
             this.pb_snackIcon.TabStop = false;
             // 
+            // dgv_invent
+            // 
+            this.dgv_invent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgv_invent.Location = new System.Drawing.Point(0, 233);
+            this.dgv_invent.Name = "dgv_invent";
+            this.dgv_invent.Size = new System.Drawing.Size(800, 217);
+            this.dgv_invent.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.pb_snackIcon);
             this.Controls.Add(this.txt_imagePath);
             this.Controls.Add(this.bttn_snackImage);
@@ -149,6 +161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +179,7 @@
         private System.Windows.Forms.TextBox txt_imagePath;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pb_snackIcon;
+        private System.Windows.Forms.DataGridView dgv_invent;
     }
 }
 
