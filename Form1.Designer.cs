@@ -39,12 +39,12 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pb_snackIcon = new System.Windows.Forms.PictureBox();
             this.dgv_invent = new System.Windows.Forms.DataGridView();
-            this.btn_add = new System.Windows.Forms.Button();
             this.col_snackName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snackPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snackQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_iconPath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snackIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btn_add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).BeginInit();
@@ -149,17 +149,9 @@
             this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_invent.Location = new System.Drawing.Point(0, 233);
             this.dgv_invent.Name = "dgv_invent";
+            this.dgv_invent.RowHeadersVisible = false;
             this.dgv_invent.Size = new System.Drawing.Size(800, 217);
             this.dgv_invent.TabIndex = 9;
-            // 
-            // btn_add
-            // 
-            this.btn_add.Location = new System.Drawing.Point(4, 179);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(75, 23);
-            this.btn_add.TabIndex = 10;
-            this.btn_add.Text = "Add";
-            this.btn_add.UseVisualStyleBackColor = true;
             // 
             // col_snackName
             // 
@@ -186,6 +178,15 @@
             // 
             this.col_snackIcon.HeaderText = "Icon";
             this.col_snackIcon.Name = "col_snackIcon";
+            // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(4, 179);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 10;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
