@@ -25,5 +25,10 @@ namespace snackShack
                 pb_snackIcon.ImageLocation = openFileDialog1.FileName;
             }
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
