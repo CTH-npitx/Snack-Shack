@@ -31,7 +31,12 @@ namespace snackShack
         {
             if(File.Exists(txt_imagePath.Text))
             {
-
+                MessageBox.Show("Please Select an image");
+                bttn_snackImage.Focus();
+            } else if(txt_snackName.Text.Length == 0)
+            {
+                MessageBox.Show("Please Input a name");
+                txt
             }
         }
     }
