@@ -56,7 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1, 70);
+            this.label1.Location = new System.Drawing.Point(9, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
@@ -64,7 +64,7 @@
             // 
             // txt_snackName
             // 
-            this.txt_snackName.Location = new System.Drawing.Point(76, 67);
+            this.txt_snackName.Location = new System.Drawing.Point(84, 27);
             this.txt_snackName.Name = "txt_snackName";
             this.txt_snackName.Size = new System.Drawing.Size(100, 20);
             this.txt_snackName.TabIndex = 1;
@@ -202,6 +202,8 @@
             // 
             this.panel1.Controls.Add(this.bttn_snackImage);
             this.panel1.Controls.Add(this.txt_imagePath);
+            this.panel1.Controls.Add(this.txt_snackName);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(241, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
@@ -220,8 +222,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nud_snackPrice);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_snackName);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frm_snackInvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
