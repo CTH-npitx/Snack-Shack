@@ -36,8 +36,11 @@
             this.nud_snackQuantity = new System.Windows.Forms.NumericUpDown();
             this.bttn_snackImage = new System.Windows.Forms.Button();
             this.txt_imagePath = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pb_snackIcon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -112,11 +115,26 @@
             this.txt_imagePath.Size = new System.Drawing.Size(100, 20);
             this.txt_imagePath.TabIndex = 7;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // pb_snackIcon
+            // 
+            this.pb_snackIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pb_snackIcon.Location = new System.Drawing.Point(300, 12);
+            this.pb_snackIcon.Name = "pb_snackIcon";
+            this.pb_snackIcon.Size = new System.Drawing.Size(307, 204);
+            this.pb_snackIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_snackIcon.TabIndex = 8;
+            this.pb_snackIcon.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pb_snackIcon);
             this.Controls.Add(this.txt_imagePath);
             this.Controls.Add(this.bttn_snackImage);
             this.Controls.Add(this.nud_snackQuantity);
@@ -130,6 +148,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +164,8 @@
         private System.Windows.Forms.NumericUpDown nud_snackQuantity;
         private System.Windows.Forms.Button bttn_snackImage;
         private System.Windows.Forms.TextBox txt_imagePath;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox pb_snackIcon;
     }
 }
 
