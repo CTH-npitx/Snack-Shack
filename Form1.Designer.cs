@@ -139,6 +139,8 @@
             // 
             // dgv_invent
             // 
+            this.dgv_invent.AllowUserToAddRows = false;
+            this.dgv_invent.AllowUserToDeleteRows = false;
             this.dgv_invent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_invent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_snackName,
@@ -149,6 +151,8 @@
             this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_invent.Location = new System.Drawing.Point(0, 233);
             this.dgv_invent.Name = "dgv_invent";
+            this.dgv_invent.ReadOnly = true;
+            this.dgv_invent.RowHeadersVisible = false;
             this.dgv_invent.Size = new System.Drawing.Size(800, 217);
             this.dgv_invent.TabIndex = 9;
             // 
@@ -156,27 +160,32 @@
             // 
             this.col_snackName.HeaderText = "Snack Name";
             this.col_snackName.Name = "col_snackName";
+            this.col_snackName.ReadOnly = true;
             // 
             // col_snackPrice
             // 
             this.col_snackPrice.HeaderText = "Snack Price";
             this.col_snackPrice.Name = "col_snackPrice";
+            this.col_snackPrice.ReadOnly = true;
             // 
             // col_snackQuantity
             // 
             this.col_snackQuantity.HeaderText = "Snack Quantity";
             this.col_snackQuantity.Name = "col_snackQuantity";
+            this.col_snackQuantity.ReadOnly = true;
             // 
             // col_iconPath
             // 
             this.col_iconPath.HeaderText = "path for icon";
             this.col_iconPath.Name = "col_iconPath";
+            this.col_iconPath.ReadOnly = true;
             this.col_iconPath.Visible = false;
             // 
             // col_snackIcon
             // 
             this.col_snackIcon.HeaderText = "Icon";
             this.col_snackIcon.Name = "col_snackIcon";
+            this.col_snackIcon.ReadOnly = true;
             // 
             // btn_add
             // 
