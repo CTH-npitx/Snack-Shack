@@ -34,6 +34,8 @@
             this.nud_snackPrice = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.nud_snackQuantity = new System.Windows.Forms.NumericUpDown();
+            this.bttn_snackImage = new System.Windows.Forms.Button();
+            this.txt_ = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             this.SuspendLayout();
@@ -94,11 +96,29 @@
             this.nud_snackQuantity.TabIndex = 5;
             this.nud_snackQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // bttn_snackImage
+            // 
+            this.bttn_snackImage.Location = new System.Drawing.Point(12, 12);
+            this.bttn_snackImage.Name = "bttn_snackImage";
+            this.bttn_snackImage.Size = new System.Drawing.Size(75, 23);
+            this.bttn_snackImage.TabIndex = 6;
+            this.bttn_snackImage.Text = "Image";
+            this.bttn_snackImage.UseVisualStyleBackColor = true;
+            // 
+            // txt_
+            // 
+            this.txt_.Location = new System.Drawing.Point(94, 12);
+            this.txt_.Name = "txt_";
+            this.txt_.Size = new System.Drawing.Size(100, 20);
+            this.txt_.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txt_);
+            this.Controls.Add(this.bttn_snackImage);
             this.Controls.Add(this.nud_snackQuantity);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nud_snackPrice);
@@ -122,6 +142,8 @@
         private System.Windows.Forms.NumericUpDown nud_snackPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nud_snackQuantity;
+        private System.Windows.Forms.Button bttn_snackImage;
+        private System.Windows.Forms.TextBox txt_;
     }
 }
 
