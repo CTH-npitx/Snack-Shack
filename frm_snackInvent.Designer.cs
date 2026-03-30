@@ -64,7 +64,7 @@
             // 
             // txt_snackName
             // 
-            this.txt_snackName.Location = new System.Drawing.Point(84, 27);
+            this.txt_snackName.Location = new System.Drawing.Point(77, 33);
             this.txt_snackName.Name = "txt_snackName";
             this.txt_snackName.Size = new System.Drawing.Size(100, 20);
             this.txt_snackName.TabIndex = 1;
@@ -120,7 +120,7 @@
             // 
             // txt_imagePath
             // 
-            this.txt_imagePath.Location = new System.Drawing.Point(84, 3);
+            this.txt_imagePath.Location = new System.Drawing.Point(84, 2);
             this.txt_imagePath.Name = "txt_imagePath";
             this.txt_imagePath.Size = new System.Drawing.Size(100, 20);
             this.txt_imagePath.TabIndex = 7;
@@ -208,7 +208,7 @@
             this.panel1.Controls.Add(this.nud_snackQuantity);
             this.panel1.Controls.Add(this.nud_snackPrice);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(241, 36);
+            this.panel1.Location = new System.Drawing.Point(4, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 0;
