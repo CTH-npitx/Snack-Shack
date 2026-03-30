@@ -117,7 +117,7 @@
             this.bttn_snackImage.TabIndex = 6;
             this.bttn_snackImage.Text = "Image";
             this.bttn_snackImage.UseVisualStyleBackColor = true;
-            this.bttn_snackImage.Click += new System.EventHandler(this.bttn_snackImage_Click_1);
+            this.bttn_snackImage.Click += new System.EventHandler(this.bttn_snackImage_Click);
             // 
             // txt_imagePath
             // 
