@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace snackShack
 {
@@ -28,7 +29,10 @@ namespace snackShack
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            if(File.Exists(txt_imagePath.Text))
+            {
 
+            }
         }
     }
 }
