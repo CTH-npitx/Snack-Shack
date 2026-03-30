@@ -95,7 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1, 114);
+            this.label3.Location = new System.Drawing.Point(9, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 4;
@@ -103,7 +103,7 @@
             // 
             // nud_snackQuantity
             // 
-            this.nud_snackQuantity.Location = new System.Drawing.Point(76, 116);
+            this.nud_snackQuantity.Location = new System.Drawing.Point(77, 80);
             this.nud_snackQuantity.Name = "nud_snackQuantity";
             this.nud_snackQuantity.Size = new System.Drawing.Size(120, 20);
             this.nud_snackQuantity.TabIndex = 5;
@@ -204,6 +204,8 @@
             this.panel1.Controls.Add(this.txt_imagePath);
             this.panel1.Controls.Add(this.txt_snackName);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.nud_snackQuantity);
             this.panel1.Controls.Add(this.nud_snackPrice);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(241, 36);
@@ -220,8 +222,6 @@
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.pb_snackIcon);
-            this.Controls.Add(this.nud_snackQuantity);
-            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frm_snackInvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -233,7 +233,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
