@@ -62,10 +62,17 @@
             // 
             // nud_snackPrice
             // 
+            this.nud_snackPrice.DecimalPlaces = 2;
+            this.nud_snackPrice.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
             this.nud_snackPrice.Location = new System.Drawing.Point(76, 35);
             this.nud_snackPrice.Name = "nud_snackPrice";
             this.nud_snackPrice.Size = new System.Drawing.Size(120, 20);
             this.nud_snackPrice.TabIndex = 3;
+            this.nud_snackPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
