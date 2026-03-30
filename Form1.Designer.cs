@@ -115,6 +115,7 @@
             this.bttn_snackImage.TabIndex = 6;
             this.bttn_snackImage.Text = "Image";
             this.bttn_snackImage.UseVisualStyleBackColor = true;
+            this.bttn_snackImage.Click += new System.EventHandler(this.bttn_snackImage_Click_1);
             // 
             // txt_imagePath
             // 
@@ -160,27 +161,32 @@
             // 
             this.col_snackName.HeaderText = "Snack Name";
             this.col_snackName.Name = "col_snackName";
+            this.col_snackName.ReadOnly = true;
             // 
             // col_snackPrice
             // 
             this.col_snackPrice.HeaderText = "Snack Price";
             this.col_snackPrice.Name = "col_snackPrice";
+            this.col_snackPrice.ReadOnly = true;
             // 
             // col_snackQuantity
             // 
             this.col_snackQuantity.HeaderText = "Snack Quantity";
             this.col_snackQuantity.Name = "col_snackQuantity";
+            this.col_snackQuantity.ReadOnly = true;
             // 
             // col_iconPath
             // 
             this.col_iconPath.HeaderText = "path for icon";
             this.col_iconPath.Name = "col_iconPath";
+            this.col_iconPath.ReadOnly = true;
             this.col_iconPath.Visible = false;
             // 
             // col_snackIcon
             // 
             this.col_snackIcon.HeaderText = "Icon";
             this.col_snackIcon.Name = "col_snackIcon";
+            this.col_snackIcon.ReadOnly = true;
             // 
             // btn_add
             // 
