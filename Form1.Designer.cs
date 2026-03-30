@@ -152,7 +152,6 @@
             this.dgv_invent.Location = new System.Drawing.Point(0, 233);
             this.dgv_invent.Name = "dgv_invent";
             this.dgv_invent.ReadOnly = true;
-            this.dgv_invent.RowHeadersVisible = false;
             this.dgv_invent.Size = new System.Drawing.Size(800, 217);
             this.dgv_invent.TabIndex = 9;
             // 
