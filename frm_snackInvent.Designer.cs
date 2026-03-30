@@ -144,6 +144,7 @@
             // 
             this.dgv_invent.AllowUserToAddRows = false;
             this.dgv_invent.AllowUserToDeleteRows = false;
+            this.dgv_invent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_invent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_invent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_snackName,
