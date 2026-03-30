@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txt_snackName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nud_snackPrice = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,15 +51,34 @@
             this.txt_snackName.Size = new System.Drawing.Size(100, 20);
             this.txt_snackName.TabIndex = 1;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Snack Price";
+            // 
+            // nud_snackPrice
+            // 
+            this.nud_snackPrice.Location = new System.Drawing.Point(76, 35);
+            this.nud_snackPrice.Name = "nud_snackPrice";
+            this.nud_snackPrice.Size = new System.Drawing.Size(120, 20);
+            this.nud_snackPrice.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nud_snackPrice);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_snackName);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -66,6 +88,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_snackName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown nud_snackPrice;
     }
 }
 
