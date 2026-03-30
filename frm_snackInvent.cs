@@ -36,7 +36,11 @@ namespace snackShack
             } else if(txt_snackName.Text.Length == 0)
             {
                 MessageBox.Show("Please Input a name");
-                txt
+                txt_snackName.Focus();
+            } else if(nud_snackPrice.Value == 0)
+            {
+                MessageBox.Show("Please enter a price that is more than 0");
+                nud_snackPrice.Focus();
             }
         }
     }
