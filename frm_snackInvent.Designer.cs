@@ -45,10 +45,12 @@
             this.col_iconPath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snackIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.btn_add = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -109,7 +111,7 @@
             // 
             // bttn_snackImage
             // 
-            this.bttn_snackImage.Location = new System.Drawing.Point(12, 12);
+            this.bttn_snackImage.Location = new System.Drawing.Point(3, 0);
             this.bttn_snackImage.Name = "bttn_snackImage";
             this.bttn_snackImage.Size = new System.Drawing.Size(75, 23);
             this.bttn_snackImage.TabIndex = 6;
@@ -118,7 +120,7 @@
             // 
             // txt_imagePath
             // 
-            this.txt_imagePath.Location = new System.Drawing.Point(94, 12);
+            this.txt_imagePath.Location = new System.Drawing.Point(84, 3);
             this.txt_imagePath.Name = "txt_imagePath";
             this.txt_imagePath.Size = new System.Drawing.Size(100, 20);
             this.txt_imagePath.TabIndex = 7;
@@ -196,16 +198,24 @@
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.bttn_snackImage);
+            this.panel1.Controls.Add(this.txt_imagePath);
+            this.panel1.Location = new System.Drawing.Point(241, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 0;
+            // 
             // frm_snackInvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.pb_snackIcon);
-            this.Controls.Add(this.txt_imagePath);
-            this.Controls.Add(this.bttn_snackImage);
             this.Controls.Add(this.nud_snackQuantity);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nud_snackPrice);
@@ -220,6 +230,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invent)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,6 +256,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snackQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_iconPath;
         private System.Windows.Forms.DataGridViewImageColumn col_snackIcon;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
