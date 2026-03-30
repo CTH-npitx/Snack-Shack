@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.nud_snackQuantity = new System.Windows.Forms.NumericUpDown();
             this.bttn_snackImage = new System.Windows.Forms.Button();
-            this.txt_ = new System.Windows.Forms.TextBox();
+            this.txt_imagePath = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             this.SuspendLayout();
@@ -105,19 +105,19 @@
             this.bttn_snackImage.Text = "Image";
             this.bttn_snackImage.UseVisualStyleBackColor = true;
             // 
-            // txt_
+            // txt_imagePath
             // 
-            this.txt_.Location = new System.Drawing.Point(94, 12);
-            this.txt_.Name = "txt_";
-            this.txt_.Size = new System.Drawing.Size(100, 20);
-            this.txt_.TabIndex = 7;
+            this.txt_imagePath.Location = new System.Drawing.Point(94, 12);
+            this.txt_imagePath.Name = "txt_imagePath";
+            this.txt_imagePath.Size = new System.Drawing.Size(100, 20);
+            this.txt_imagePath.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txt_);
+            this.Controls.Add(this.txt_imagePath);
             this.Controls.Add(this.bttn_snackImage);
             this.Controls.Add(this.nud_snackQuantity);
             this.Controls.Add(this.label3);
@@ -144,7 +144,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nud_snackQuantity;
         private System.Windows.Forms.Button bttn_snackImage;
-        private System.Windows.Forms.TextBox txt_;
+        private System.Windows.Forms.TextBox txt_imagePath;
     }
 }
 
