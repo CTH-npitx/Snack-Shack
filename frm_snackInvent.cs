@@ -43,5 +43,10 @@ namespace snackShack
                 nud_snackPrice.Focus();
             }
         }
+
+        private void nud_snackQuantity_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
