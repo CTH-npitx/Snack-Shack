@@ -46,6 +46,7 @@
             this.col_snackIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.btn_add = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).BeginInit();
@@ -133,7 +134,7 @@
             // pb_snackIcon
             // 
             this.pb_snackIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_snackIcon.Location = new System.Drawing.Point(300, 12);
+            this.pb_snackIcon.Location = new System.Drawing.Point(296, 1);
             this.pb_snackIcon.Name = "pb_snackIcon";
             this.pb_snackIcon.Size = new System.Drawing.Size(307, 204);
             this.pb_snackIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,7 +154,7 @@
             this.col_iconPath,
             this.col_snackIcon});
             this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_invent.Location = new System.Drawing.Point(0, 233);
+            this.dgv_invent.Location = new System.Drawing.Point(0, 211);
             this.dgv_invent.Name = "dgv_invent";
             this.dgv_invent.ReadOnly = true;
             this.dgv_invent.RowHeadersVisible = false;
@@ -216,14 +217,23 @@
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 0;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.TabIndex = 11;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // frm_snackInvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgv_invent);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.pb_snackIcon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frm_snackInvent";
@@ -236,6 +246,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -259,6 +270,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_iconPath;
         private System.Windows.Forms.DataGridViewImageColumn col_snackIcon;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
 
