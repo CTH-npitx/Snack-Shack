@@ -16,6 +16,7 @@ namespace snackShack
         public frm_snackInvent()
         {
             InitializeComponent();
+            toolStripStatusLabel1.Text = "";
         }
 
         private void bttn_snackImage_Click(object sender, EventArgs e)
@@ -29,7 +30,7 @@ namespace snackShack
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            if(File.Exists(txt_imagePath.Text))
+            if(!File.Exists(txt_imagePath.Text))
             {
                 MessageBox.Show("Please Select an image");
                 bttn_snackImage.Focus();
