@@ -1,0 +1,31 @@
+{
+  "id": 13505091,
+  "name": "Coding Base",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "CTH-npitx/Snack-Shack",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "refs/heads/coding-base"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "required_linear_history"
+    },
+    {
+      "type": "creation"
+    }
+  ],
+  "bypass_actors": []
+}
