@@ -108,7 +108,6 @@
             this.nud_snackQuantity.Size = new System.Drawing.Size(120, 20);
             this.nud_snackQuantity.TabIndex = 5;
             this.nud_snackQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nud_snackQuantity.ValueChanged += new System.EventHandler(this.nud_snackQuantity_ValueChanged);
             // 
             // bttn_snackImage
             // 
