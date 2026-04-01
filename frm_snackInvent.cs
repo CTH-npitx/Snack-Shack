@@ -48,6 +48,8 @@ namespace snackShack
                 snack.price = Convert.ToDouble(nud_snackPrice.Value);
                 snack.amount = Convert.ToInt32(nud_snackQuantity.Value);
                 snack.imagepath = txt_imagePath.Text;
+
+                dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath);
             }
         }
     }
