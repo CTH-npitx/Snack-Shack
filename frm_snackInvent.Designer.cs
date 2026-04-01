@@ -224,9 +224,12 @@
             // 
             // col_snackIcon
             // 
+            this.col_snackIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.col_snackIcon.HeaderText = "Icon";
+            this.col_snackIcon.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.col_snackIcon.Name = "col_snackIcon";
             this.col_snackIcon.ReadOnly = true;
+            this.col_snackIcon.Width = 199;
             // 
             // col_iconPath
             // 
