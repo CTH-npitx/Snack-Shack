@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using snackShack;
 
 namespace snackShack
 {
@@ -36,7 +37,7 @@ namespace snackShack
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
           // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
 
-        internal static string path()
+       /* internal static string path()
         {
             var pathSpliter = '\\'; //part between paths
             var loc = AppDomain.CurrentDomain.BaseDirectory; //get the current domain
@@ -49,6 +50,8 @@ namespace snackShack
                 completeLoc = completeLoc + comp + char.ToString(pathSpliter); //add next part to path
             }
             return completeLoc; //output path
-        } //derive the path of the base file
+        } //derive the path of the base file */
+
     } //base commands to aid in everything
+
 }
