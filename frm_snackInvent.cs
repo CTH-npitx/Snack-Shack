@@ -51,6 +51,13 @@ namespace snackShack
                 Program.snacks.Add(snack);
 
                 dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath);
+
+
+                //reset
+                txt_imagePath.Text = "";
+                txt_snackName.Text = "";
+                nud_snackPrice.Value = 0;
+                nud_snackQuantity.Value = 0;
             }
         }
     }
