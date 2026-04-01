@@ -25,6 +25,10 @@ namespace AdressBook.files
                             string line = c.firstname + sep + c.lastname + sep +  //first and last name
                                 c.phone + sep + c.email + sep + c.buisness + sep + //contact information
                                 c.notes + sep + ind; //notes
+=======
+                            string line = c.firstname + sep + c.lastname + sep +  //first and last name
+                                c.phone + sep + c.email + sep + c.buisness + sep + //contact information
+                                c.notes + sep + ind; //notes
                             sw.WriteLine(line); //write the information to the line
                         }
                     } //streamwriter
