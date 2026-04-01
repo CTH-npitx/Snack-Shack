@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace snackShack
 {
@@ -19,10 +21,8 @@ namespace snackShack
             Application.Run(new frm_main());
         }
         internal const bool debug = true; //global var to controll default for debugs
-        internal const string preMadeErrorMsg = "I'm sorry dave, I'm afraid I can't do that"; //pre-made error message
         internal static List<inventory> inventory = new List<inventory>(); //makes a collection that refferences the class that will store information
     }
-
     internal static class coreCommands
     {
         internal static void error(string message, Exception ex = null, bool revealException = false)
@@ -36,6 +36,12 @@ namespace snackShack
         } //this is for error messages. the text is mandatory, but the
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
           // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
+          
+        internal static string createPath(string root, string path = "folder", string name = "file", string extension = "csv")
+        {
+            string finalPath = root + path + @"/" + name + "." + extension; //create the final path
+            return finalPath;
+        } //a simpler version of the "path" code
 
         internal static string path()
         {
@@ -47,9 +53,9 @@ namespace snackShack
             for (var i = 0; i < len-3; i++) //repeat by the length minus 2, which will lead to it excluding the 2 folders that are unwanted
             {
                 var comp = comps[i];
-                completeLoc = completeLoc + comp + char.ToString(pathSpliter);
+                completeLoc = completeLoc + comp + char.ToString(pathSpliter); //add next part to path
             }
             return completeLoc; //output path
-        }
-    }
+        } //derive the path of the base file
+    } //base commands to aid in everything
 }
