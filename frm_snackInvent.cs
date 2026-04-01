@@ -41,6 +41,13 @@ namespace snackShack
             {
                 MessageBox.Show("Please enter a price that is more than 0");
                 nud_snackPrice.Focus();
+            } else
+            {
+                snackInvent snack = new snackInvent();
+                snack.name = txt_snackName.Text;
+                snack.price = Convert.ToDouble(nud_snackPrice.Value);
+                snack.amount = Convert.ToInt32(nud_snackQuantity.Value);
+                snack.imagepath = txt_imagePath.Text;
             }
         }
     }
