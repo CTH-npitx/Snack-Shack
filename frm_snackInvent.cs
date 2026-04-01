@@ -16,6 +16,7 @@ namespace snackShack
         public frm_snackInvent()
         {
             InitializeComponent();
+            toolStripStatusLabel1.Text = "";
         }
 
         private void bttn_snackImage_Click(object sender, EventArgs e)
