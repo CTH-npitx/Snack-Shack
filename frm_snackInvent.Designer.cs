@@ -253,6 +253,7 @@
             this.Name = "frm_snackInvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Snack Shack Inventory";
+            this.Load += new System.EventHandler(this.frm_snackInvent_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_snackInvent_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).EndInit();
