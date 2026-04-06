@@ -111,6 +111,7 @@
             this.nud_snackQuantity.Size = new System.Drawing.Size(120, 20);
             this.nud_snackQuantity.TabIndex = 5;
             this.nud_snackQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nud_snackQuantity.ValueChanged += new System.EventHandler(this.nud_snackQuantity_ValueChanged);
             // 
             // bttn_snackImage
             // 
@@ -253,6 +254,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Snack Shack Inventory";
             this.Load += new System.EventHandler(this.frm_snackInvent_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_snackInvent_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).EndInit();

@@ -68,5 +68,28 @@ namespace snackShack
                 pb_snackIcon.Image = null;
             }
         }
+
+        private void nud_snackQuantity_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_snackInvent_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                using (StreamWriter sw = new StreamWriter("snacks.csv")) { 
+                    foreach(var snack in Program.snacks)
+                    {
+                        //snack name, price, quantity, imagepath
+                        sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
