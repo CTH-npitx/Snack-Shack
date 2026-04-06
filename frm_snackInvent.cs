@@ -29,11 +29,6 @@ namespace snackShack
             }
         }
 
-        private void frm_snackInvent_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_add_Click(object sender, EventArgs e)
         {
             if(!File.Exists(txt_imagePath.Text))
@@ -90,6 +85,11 @@ namespace snackShack
             {
                 MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+=======
+        private void frm_snackInvent_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
