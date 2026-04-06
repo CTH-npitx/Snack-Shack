@@ -97,6 +97,7 @@ namespace snackShack
                 {
                     using (StreamReader sr = new StreamReader("snacks.csv"))
                     {
+                        int count = 0;
                         while(!sr.EndOfStream)
                         {
                             snackInvent snack = new snackInvent();
@@ -108,10 +109,11 @@ namespace snackShack
                             snack.amount = Int32.Parse(arr[2]);
                             snack.imagepath = arr[3];
 
+                            count++;
                             Program.snacks.Add(snack);
                             dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath);
                             toolStripStatusLabel1.Text =
-                                String.Format("Loaded {0} snacks from file", Program.snacks.Count);
+                                String.Format("Loaded {0} snacks from file", count);
                         }
                     }
                 }
