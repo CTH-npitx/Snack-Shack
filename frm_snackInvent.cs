@@ -78,8 +78,8 @@ namespace snackShack
                 }
             }
             catch (Exception ex)
-            { 
-                MessageBox.Show("Error during file write",MessageBoxButtons.OK,MessageBoxIcon.Error)
+            {
+                MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
