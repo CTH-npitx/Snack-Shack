@@ -13,7 +13,6 @@ namespace snackShack
 {
     public partial class frm_snackInvent : Form
     {
-        
         public frm_snackInvent()
         {
             InitializeComponent();
@@ -86,7 +85,6 @@ namespace snackShack
                 MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-=======
         private void frm_snackInvent_Load(object sender, EventArgs e)
         {
 
