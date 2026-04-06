@@ -79,6 +79,7 @@ namespace snackShack
                         sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
                     }
                 }
+                String.Format("Wrote {0} snacks to file", Program.snacks.Count);
             }
             catch (Exception ex)
             {
