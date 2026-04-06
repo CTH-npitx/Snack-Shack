@@ -13,6 +13,7 @@ namespace snackShack
 {
     public partial class frm_snackInvent : Form
     {
+        
         public frm_snackInvent()
         {
             InitializeComponent();
@@ -26,6 +27,11 @@ namespace snackShack
                 txt_imagePath.Text = openFileDialog1.FileName;
                 pb_snackIcon.ImageLocation = openFileDialog1.FileName;
             }
+        }
+
+        private void frm_snackInvent_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -61,11 +67,6 @@ namespace snackShack
                 nud_snackQuantity.Value = 0;
                 pb_snackIcon.Image = null;
             }
-        }
-
-        private void frm_snackInvent_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
