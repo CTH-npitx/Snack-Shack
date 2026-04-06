@@ -76,6 +76,7 @@ namespace snackShack
                     foreach(var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
+                        sw.WriteLine(snack.name);
                     }
                 }
             }
