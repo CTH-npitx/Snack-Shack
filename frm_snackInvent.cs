@@ -73,8 +73,10 @@ namespace snackShack
             try
             {
                 using (StreamWriter sw = new StreamWriter("snacks.csv")) { 
-                
+                    foreach(var snack in Program.snacks)
+                    {
                         //snack name, price, quantity, imagepath
+                    }
                 }
             }
             catch (Exception ex)
