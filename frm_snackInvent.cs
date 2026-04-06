@@ -99,6 +99,10 @@ namespace snackShack
                             //snackname, price, quantity, imagepath
                             string line = sr.ReadLine();
                             string[] arr = line.Split(',');
+                            snack.name = arr[0];
+                            snack.price = double.Parse(arr[1]);
+                            snack.amount = Int32.Parse(arr[2]);
+                            snack.imagepath = arr[3];
                         }
                     }
                 }
