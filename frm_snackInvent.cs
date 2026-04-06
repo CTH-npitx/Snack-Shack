@@ -103,6 +103,7 @@ namespace snackShack
                             snack.price = double.Parse(arr[1]);
                             snack.amount = Int32.Parse(arr[2]);
                             snack.imagepath = arr[3];
+
                         }
                     }
                 }
