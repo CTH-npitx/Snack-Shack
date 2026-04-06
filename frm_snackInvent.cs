@@ -72,11 +72,13 @@ namespace snackShack
         {
             try
             {
-
+                using (StreamWriter sw = new StreamWriter("snacks.csv")) { 
+                
+                }
             }
             catch (Exception ex)
             { 
-            
+                
             }
         }
     }
