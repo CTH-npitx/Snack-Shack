@@ -79,7 +79,7 @@ namespace snackShack
                         sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
                     }
                 }
-                String.Format("Wrote {0} snacks to file", Program.snacks.Count);
+                toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", Program.snacks.Count);
             }
             catch (Exception ex)
             {
@@ -107,11 +107,12 @@ namespace snackShack
 
                             Program.snacks.Add(snack);
                             dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath);
+                            toolStripStatusLabel1.Text =
+                                String.Format("Loaded {0} snacks from file", Program.snacks.Count);
                         }
                     }
                 }
-                toolStripStatusLabel1.Text =
-                    String.Format("Loaded {0} snacks from file", Program.snacks.Count);
+
             } catch (Exception ex)
             {
                 MessageBox.Show("Error during file read", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
