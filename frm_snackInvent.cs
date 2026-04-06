@@ -97,6 +97,8 @@ namespace snackShack
                         {
                             snackInvent snack = new snackInvent();
                             //snackname, price, quantity, imagepath
+                            string line = sr.ReadLine();
+                            string[] arr = line.Split(',');
                         }
                     }
                 }
