@@ -77,9 +77,9 @@ namespace snackShack
                     {
                         //snack name, price, quantity, imagepath
                         sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
+                        toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", Program.snacks.Count);
                     }
                 }
-                toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", Program.snacks.Count);
             }
             catch (Exception ex)
             {
