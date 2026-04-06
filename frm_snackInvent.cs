@@ -95,8 +95,8 @@ namespace snackShack
                     {
                         while(!sr.EndOfStream)
                         {
-                            
                             snackInvent snack = new snackInvent();
+                            //snackname, price, quantity, imagepath
                         }
                     }
                 }
