@@ -72,14 +72,17 @@ namespace snackShack
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter("snacks.csv")) { 
+                using (StreamWriter sw = new StreamWriter("snacks.csv")) {
+                    int count = 0;
                     foreach(var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
                         sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
+
+                        count++;
+                        toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count);
                     }
                 }
-                String.Format("Wrote {0} snacks to file", Program.snacks.Count);
             }
             catch (Exception ex)
             {
@@ -94,6 +97,7 @@ namespace snackShack
                 {
                     using (StreamReader sr = new StreamReader("snacks.csv"))
                     {
+                        int count = 0;
                         while(!sr.EndOfStream)
                         {
                             snackInvent snack = new snackInvent();
@@ -105,13 +109,15 @@ namespace snackShack
                             snack.amount = Int32.Parse(arr[2]);
                             snack.imagepath = arr[3];
 
+                            count++;
                             Program.snacks.Add(snack);
                             dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath);
+                            toolStripStatusLabel1.Text =
+                                String.Format("Loaded {0} snacks from file", count);
                         }
                     }
                 }
-                toolStripStatusLabel1.Text =
-                    String.Format("Loaded {0} snacks from file", Program.snacks.Count);
+
             } catch (Exception ex)
             {
                 MessageBox.Show("Error during file read", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
