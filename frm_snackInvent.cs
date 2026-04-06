@@ -87,7 +87,19 @@ namespace snackShack
         }
         private void frm_snackInvent_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                if(File.Exists("snacks.csv"))
+                {
+                    using (StreamReader sr = new StreamReader("snacks.csv"))
+                    {
+                        while(!sr.EndOfStream)
+                        {
+                            
+                        }
+                    }
+                }
+            }
         }
     }
 }
