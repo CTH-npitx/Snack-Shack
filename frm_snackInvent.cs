@@ -62,5 +62,10 @@ namespace snackShack
                 pb_snackIcon.Image = null;
             }
         }
+
+        private void frm_snackInvent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
