@@ -109,6 +109,9 @@ namespace snackShack
                         }
                     }
                 }
+            } catch (Exception ex)
+            {
+
             }
         }
     }
