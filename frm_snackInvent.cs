@@ -74,6 +74,7 @@ namespace snackShack
             {
                 using (StreamWriter sw = new StreamWriter("snacks.csv")) { 
                 
+                        //snack name, price, quantity, imagepath
                 }
             }
             catch (Exception ex)
