@@ -62,5 +62,22 @@ namespace snackShack
                 pb_snackIcon.Image = null;
             }
         }
+
+        private void nud_snackQuantity_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_snackInvent_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            { 
+            
+            }
+        }
     }
 }
