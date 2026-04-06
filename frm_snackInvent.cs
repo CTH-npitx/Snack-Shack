@@ -110,13 +110,13 @@ namespace snackShack
                         }
                     }
                 }
+                toolStripStatusLabel1.Text =
+                    String.Format("Loaded {0} snacks from file", Program.snacks.Count);
             } catch (Exception ex)
             {
                 MessageBox.Show("Error during file read", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            toolStripStatusLabel1.Text = 
-                String.Format("Loaded {0} snacks from file",Program.snacks.Count);
         }
     }
 }
