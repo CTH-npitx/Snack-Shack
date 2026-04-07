@@ -8,9 +8,9 @@ namespace snackShack
 {
     internal class snackInvent
     {
-        internal double price;
         internal int amount;
         internal string imagepath;
         internal string name; //name of snack
+        internal double price; //cost of snack
     }
 }
