@@ -45,7 +45,6 @@ namespace snackShack.files
                             snack.imagepath = arr[3];
 
                             Program.snacks.Add(snack);
-                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath);
                         }
                     }
                 }
