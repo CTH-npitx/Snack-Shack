@@ -70,20 +70,7 @@ namespace snackShack
 
         private void frm_snackInvent_FormClosing(object sender, FormClosingEventArgs e)
         {
-            try
-            {
-                using (StreamWriter sw = new StreamWriter("snacks.csv")) { 
-                    foreach(var snack in Program.snacks)
-                    {
-                        //snack name, price, quantity, imagepath
-                        sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            snackShack.files.files.write();
         }
         private void frm_snackInvent_Load(object sender, EventArgs e)
         {
