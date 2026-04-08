@@ -101,7 +101,7 @@ namespace snackShack
                 if(File.Exists("snacks.csv"))
                 {
                     toolStripStatusLabel1.Text =
-                        String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong...
+                        String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong... It means that it failed before it loaded something
                     using (StreamReader sr = new StreamReader("snacks.csv"))
                     {
                         int count = 0;
@@ -121,7 +121,7 @@ namespace snackShack
 
                             count++;
                             toolStripStatusLabel1.Text =
-                                String.Format("Loaded {0} snacks from file", count);
+                                String.Format("Loaded {0} snacks from file", count); //show how many snacks loaded at this point
                             Program.snacks.Add(snack); //add class into list
                             dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add class to table
                         }
