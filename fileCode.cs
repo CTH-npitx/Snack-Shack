@@ -9,23 +9,24 @@ namespace snackShack.files
     internal static class files
     {
         internal static void write() {
-            try
             {
-                using (StreamWriter sw = new StreamWriter("snacks.csv"))
+                try
                 {
-                    foreach (var snack in Program.snacks)
+                    using (StreamWriter sw = new StreamWriter("snacks.csv"))
                     {
-                        //snack name, price, quantity, imagepath
-                        sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
+                        foreach (var snack in Program.snacks)
+                        {
+                            //snack name, price, quantity, imagepath
+                            sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath); //write in csv format
+                        }
                     }
                 }
+                catch (Exception ex) //catch exception
+                {
+                    MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        internal static void read()
+            internal static void read()
         {
             try
             {
@@ -35,25 +36,27 @@ namespace snackShack.files
                     {
                         while (!sr.EndOfStream)
                         {
-                            snackInvent snack = new snackInvent();
-                            //snackname, price, quantity, imagepath
-                            string line = sr.ReadLine();
-                            string[] arr = line.Split(',');
+                            snackInvent snack = new snackInvent(); //make new class
+                                                                   //order is: snackname, price, quantity, imagepath
+
+                            string line = sr.ReadLine(); //read line
+                            string[] arr = line.Split(','); //split into an array based on the csv format
+
+                            //populate class based on the contents of the file
                             snack.name = arr[0];
                             snack.price = double.Parse(arr[1]);
                             snack.amount = Int32.Parse(arr[2]);
                             snack.imagepath = arr[3];
 
-                            Program.snacks.Add(snack);
+                            Program.snacks.Add(snack); //add class into list
+                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add class to table
                         }
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) //catch exception
             {
                 MessageBox.Show("Error during file read", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-        }
-    } //the code for files
+        } //the code for files
 }
