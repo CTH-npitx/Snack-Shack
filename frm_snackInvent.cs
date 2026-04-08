@@ -16,13 +16,17 @@ namespace snackShack
         public frm_snackInvent()
         {
             InitializeComponent();
-            toolStripStatusLabel1.Text = "";
+            toolStripStatusLabel1.Text = ""; // Wipe the status strip of all text
         }
 
         private void bttn_snackImage_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Image Files(*.jpg;*.jpeg;*.png;*.gif;*bmp)|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
-            if(openFileDialog1.ShowDialog() == DialogResult.OK) { 
+                // Set the open file dialog filter to allow for only image files, and configure it
+
+            // Show the open file dialog and check if the user selected a file
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) //set the text and image box to the selected image and file
+            {
                 txt_imagePath.Text = openFileDialog1.FileName;
                 pb_snackIcon.ImageLocation = openFileDialog1.FileName;
             }
@@ -32,26 +36,30 @@ namespace snackShack
         {
             if(!File.Exists(txt_imagePath.Text))
             {
-                MessageBox.Show("Please Select an image");
-                bttn_snackImage.Focus();
-            } else if(txt_snackName.Text.Length == 0)
+                MessageBox.Show("Please Select an image"); //error
+                bttn_snackImage.Focus(); //focus on requesit controll
+            } 
+            else if(txt_snackName.Text.Length == 0)
             {
                 MessageBox.Show("Please Input a name");
                 txt_snackName.Focus();
-            } else if(nud_snackPrice.Value == 0)
+            } 
+            else if(nud_snackPrice.Value == 0)
             {
                 MessageBox.Show("Please enter a price that is more than 0");
                 nud_snackPrice.Focus();
-            } else
+            } 
+            else
             {
-                snackInvent snack = new snackInvent();
+                snackInvent snack = new snackInvent(); //make and set up class
                 snack.name = txt_snackName.Text;
                 snack.price = Convert.ToDouble(nud_snackPrice.Value);
                 snack.amount = Convert.ToInt32(nud_snackQuantity.Value);
                 snack.imagepath = txt_imagePath.Text;
-                Program.snacks.Add(snack);
 
-                dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath);
+                Program.snacks.Add(snack); //add to list
+
+                dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add into table
 
 
                 //reset
@@ -63,11 +71,6 @@ namespace snackShack
             }
         }
 
-        private void nud_snackQuantity_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void frm_snackInvent_FormClosing(object sender, FormClosingEventArgs e)
         {
             try
@@ -76,11 +79,11 @@ namespace snackShack
                     foreach(var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
-                        sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
+                        sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath); //write in csv format
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) //catch exception
             {
                 MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -95,21 +98,24 @@ namespace snackShack
                     {
                         while(!sr.EndOfStream)
                         {
-                            snackInvent snack = new snackInvent();
-                            //snackname, price, quantity, imagepath
-                            string line = sr.ReadLine();
-                            string[] arr = line.Split(',');
+                            snackInvent snack = new snackInvent(); //make new class
+                                //order is: snackname, price, quantity, imagepath
+
+                            string line = sr.ReadLine(); //read line
+                            string[] arr = line.Split(','); //split into an array based on the csv format
+
+                            //populate class based on the contents of the file
                             snack.name = arr[0];
                             snack.price = double.Parse(arr[1]);
                             snack.amount = Int32.Parse(arr[2]);
                             snack.imagepath = arr[3];
 
-                            Program.snacks.Add(snack);
-                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath);
+                            Program.snacks.Add(snack); //add class into list
+                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add class to table
                         }
                     }
                 }
-            } catch (Exception ex)
+            } catch (Exception ex) //catch exception
             {
                 MessageBox.Show("Error during file read", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
