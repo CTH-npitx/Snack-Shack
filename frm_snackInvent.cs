@@ -15,7 +15,7 @@ namespace snackShack
     {
         public frm_snackInvent()
         {
-            InitializeComponent();
+            InitializeComponent(); // Initializes the form components
             toolStripStatusLabel1.Text = ""; // Wipe the status strip of all text
         }
 
