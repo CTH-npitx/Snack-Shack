@@ -75,15 +75,7 @@ namespace snackShack
 
         private void frm_snackInvent_FormClosing(object sender, FormClosingEventArgs e)
         {
-            try
-            {
-                using (StreamWriter sw = new StreamWriter("snacks.csv")) {
-                    int count = 0;
-                    toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count); //show current number of entries, which is 0.
-                                                                                                    //If this is what you see when done, something went wrong
-                    foreach (var snack in Program.snacks)
-                    {
-                        //snack name, price, quantity, imagepath
+            snackShack.files.files.write();
                         sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath); //write in csv format
 
                         count++; //increment count
@@ -91,20 +83,21 @@ namespace snackShack
                     }
                 }
             }
-            catch (Exception ex) //catch exception
-            {
-                MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void frm_snackInvent_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                if(File.Exists("snacks.csv"))
-                {
                     toolStripStatusLabel1.Text =
                         String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong...
                                                                                 //It means that it failed before it loaded something
+            }
+            snackShack.files.files.write();
+                        int count = 0;
+        private void frm_snackInvent_Load(object sender, EventArgs e)
+        {
+                            snackInvent snack = new snackInvent(); //make new class
+                                //order is: snackname, price, quantity, imagepath
+
+                            string line = sr.ReadLine(); //read line
+                            string[] arr = line.Split(','); //split into an array based on the csv format
+
+                            //populate class based on the contents of the file
                     using (StreamReader sr = new StreamReader("snacks.csv"))
                     {
                         int count = 0;
