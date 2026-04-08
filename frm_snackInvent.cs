@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace snackShack
 {
@@ -61,6 +62,7 @@ namespace snackShack
 
                 dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add into table
 
+                toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
 
                 //reset
                 txt_imagePath.Text = "";
@@ -75,11 +77,17 @@ namespace snackShack
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter("snacks.csv")) { 
-                    foreach(var snack in Program.snacks)
+                using (StreamWriter sw = new StreamWriter("snacks.csv")) {
+                    int count = 0;
+                    toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count); //show current number of entries, which is 0.
+                                                                                                    //If this is what you see when done, something went wrong
+                    foreach (var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
                         sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath); //write in csv format
+
+                        count++; //increment count
+                        toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count); //show how many entries have been written so far
                     }
                 }
             }
@@ -94,8 +102,12 @@ namespace snackShack
             {
                 if(File.Exists("snacks.csv"))
                 {
+                    toolStripStatusLabel1.Text =
+                        String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong...
+                                                                                //It means that it failed before it loaded something
                     using (StreamReader sr = new StreamReader("snacks.csv"))
                     {
+                        int count = 0;
                         while(!sr.EndOfStream)
                         {
                             snackInvent snack = new snackInvent(); //make new class
@@ -110,6 +122,9 @@ namespace snackShack
                             snack.amount = Int32.Parse(arr[2]);
                             snack.imagepath = arr[3];
 
+                            count++;
+                            toolStripStatusLabel1.Text =
+                                String.Format("Loaded {0} snacks from file", count); //show how many snacks loaded at this point
                             Program.snacks.Add(snack); //add class into list
                             dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add class to table
                         }
