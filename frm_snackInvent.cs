@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace snackShack
 {
@@ -75,11 +76,16 @@ namespace snackShack
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter("snacks.csv")) { 
-                    foreach(var snack in Program.snacks)
+                using (StreamWriter sw = new StreamWriter("snacks.csv")) {
+                    int count = 0;
+                    toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count);
+                    foreach (var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
                         sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath); //write in csv format
+
+                        count++;
+                        toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count);
                     }
                 }
             }
@@ -94,8 +100,11 @@ namespace snackShack
             {
                 if(File.Exists("snacks.csv"))
                 {
+                    toolStripStatusLabel1.Text =
+                        String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong...
                     using (StreamReader sr = new StreamReader("snacks.csv"))
                     {
+                        int count = 0;
                         while(!sr.EndOfStream)
                         {
                             snackInvent snack = new snackInvent(); //make new class
@@ -110,8 +119,11 @@ namespace snackShack
                             snack.amount = Int32.Parse(arr[2]);
                             snack.imagepath = arr[3];
 
-                            Program.snacks.Add(snack); //add class into list
-                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add class to table
+                            count++;
+                            Program.snacks.Add(snack);
+                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath);
+                            toolStripStatusLabel1.Text =
+                                String.Format("Loaded {0} snacks from file", count);
                         }
                     }
                 }
