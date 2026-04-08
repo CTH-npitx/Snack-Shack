@@ -36,26 +36,30 @@ namespace snackShack
         {
             if(!File.Exists(txt_imagePath.Text))
             {
-                MessageBox.Show("Please Select an image");
-                bttn_snackImage.Focus();
-            } else if(txt_snackName.Text.Length == 0)
+                MessageBox.Show("Please Select an image"); //error
+                bttn_snackImage.Focus(); //focus on requesit controll
+            } 
+            else if(txt_snackName.Text.Length == 0)
             {
                 MessageBox.Show("Please Input a name");
                 txt_snackName.Focus();
-            } else if(nud_snackPrice.Value == 0)
+            } 
+            else if(nud_snackPrice.Value == 0)
             {
                 MessageBox.Show("Please enter a price that is more than 0");
                 nud_snackPrice.Focus();
-            } else
+            } 
+            else
             {
-                snackInvent snack = new snackInvent();
+                snackInvent snack = new snackInvent(); //make and set up class
                 snack.name = txt_snackName.Text;
                 snack.price = Convert.ToDouble(nud_snackPrice.Value);
                 snack.amount = Convert.ToInt32(nud_snackQuantity.Value);
                 snack.imagepath = txt_imagePath.Text;
-                Program.snacks.Add(snack);
 
-                dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath);
+                Program.snacks.Add(snack); //add to list
+
+                dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add into table
 
 
                 //reset
