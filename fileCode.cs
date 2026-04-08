@@ -35,25 +35,26 @@ namespace snackShack.files
                     {
                         while (!sr.EndOfStream)
                         {
-                            snackInvent snack = new snackInvent();
-                            //snackname, price, quantity, imagepath
-                            string line = sr.ReadLine();
-                            string[] arr = line.Split(',');
+                            snackInvent snack = new snackInvent(); //make new class
+                                                                   //order is: snackname, price, quantity, imagepath
+
+                            string line = sr.ReadLine(); //read line
+                            string[] arr = line.Split(','); //split into an array based on the csv format
+
+                            //populate class based on the contents of the file
                             snack.name = arr[0];
                             snack.price = double.Parse(arr[1]);
                             snack.amount = Int32.Parse(arr[2]);
                             snack.imagepath = arr[3];
 
-                            Program.snacks.Add(snack);
+                            Program.snacks.Add(snack); //add class into list
                         }
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) //catch exception
             {
                 MessageBox.Show("Error during file read", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-        }
-    } //the code for files
+        } //the code for files
 }
