@@ -62,6 +62,7 @@ namespace snackShack
 
                 dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add into table
 
+                toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
 
                 //reset
                 txt_imagePath.Text = "";
