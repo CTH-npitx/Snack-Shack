@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace snackShack
 {
@@ -75,7 +76,8 @@ namespace snackShack
             {
                 using (StreamWriter sw = new StreamWriter("snacks.csv")) {
                     int count = 0;
-                    foreach(var snack in Program.snacks)
+                    toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count);
+                    foreach (var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
                         sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
@@ -96,6 +98,8 @@ namespace snackShack
             {
                 if(File.Exists("snacks.csv"))
                 {
+                    toolStripStatusLabel1.Text =
+                        String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong...
                     using (StreamReader sr = new StreamReader("snacks.csv"))
                     {
                         int count = 0;
