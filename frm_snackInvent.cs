@@ -15,14 +15,18 @@ namespace snackShack
     {
         public frm_snackInvent()
         {
-            InitializeComponent(); // Initializes the form components
+            InitializeComponent();
             toolStripStatusLabel1.Text = ""; // Wipe the status strip of all text
         }
 
         private void bttn_snackImage_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Image Files(*.jpg;*.jpeg;*.png;*.gif;*bmp)|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
-            if(openFileDialog1.ShowDialog() == DialogResult.OK) { 
+                // Set the open file dialog filter to allow for only image files, and configure it
+
+            // Show the open file dialog and check if the user selected a file
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) //set the text and image box to the selected image and file
+            {
                 txt_imagePath.Text = openFileDialog1.FileName;
                 pb_snackIcon.ImageLocation = openFileDialog1.FileName;
             }
