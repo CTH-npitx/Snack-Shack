@@ -101,7 +101,8 @@ namespace snackShack
                 if(File.Exists("snacks.csv"))
                 {
                     toolStripStatusLabel1.Text =
-                        String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong... It means that it failed before it loaded something
+                        String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong...
+                                                                                //It means that it failed before it loaded something
                     using (StreamReader sr = new StreamReader("snacks.csv"))
                     {
                         int count = 0;
