@@ -74,7 +74,8 @@ namespace snackShack
             {
                 using (StreamWriter sw = new StreamWriter("snacks.csv")) {
                     int count = 0;
-                    foreach(var snack in Program.snacks)
+                    toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count);
+                    foreach (var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
                         sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
