@@ -16,7 +16,7 @@ namespace snackShack
         public frm_snackInvent()
         {
             InitializeComponent();
-            toolStripStatusLabel1.Text = "";
+            toolStripStatusLabel1.Text = ""; //wipe the status strip of all text
         }
 
         private void bttn_snackImage_Click(object sender, EventArgs e)
