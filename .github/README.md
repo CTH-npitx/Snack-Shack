@@ -11,3 +11,5 @@ Use the FormClosing event to trigger writing the data to disk.
 	Detailed? Simple Warning Thing?
 Use the StatusStrip to display the number of records read/written and any error messages that arise.
 	??
+
+ideas
