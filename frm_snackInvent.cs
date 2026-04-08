@@ -78,7 +78,8 @@ namespace snackShack
             {
                 using (StreamWriter sw = new StreamWriter("snacks.csv")) {
                     int count = 0;
-                    toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count); //show current number of entries, which is 0. If this is what you see when done, something went wrong
+                    toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count); //show current number of entries, which is 0.
+                                                                                                    //If this is what you see when done, something went wrong
                     foreach (var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
