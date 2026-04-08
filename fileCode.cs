@@ -9,23 +9,24 @@ namespace snackShack.files
     internal static class files
     {
         internal static void write() {
-            try
             {
-                using (StreamWriter sw = new StreamWriter("snacks.csv"))
+                try
                 {
-                    foreach (var snack in Program.snacks)
+                    using (StreamWriter sw = new StreamWriter("snacks.csv"))
                     {
-                        //snack name, price, quantity, imagepath
-                        sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
+                        foreach (var snack in Program.snacks)
+                        {
+                            //snack name, price, quantity, imagepath
+                            sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath); //write in csv format
+                        }
                     }
                 }
+                catch (Exception ex) //catch exception
+                {
+                    MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        internal static void read()
+            internal static void read()
         {
             try
             {
@@ -48,6 +49,7 @@ namespace snackShack.files
                             snack.imagepath = arr[3];
 
                             Program.snacks.Add(snack); //add class into list
+                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add class to table
                         }
                     }
                 }
