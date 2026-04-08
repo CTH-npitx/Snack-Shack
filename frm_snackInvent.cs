@@ -120,10 +120,10 @@ namespace snackShack
                             snack.imagepath = arr[3];
 
                             count++;
-                            Program.snacks.Add(snack);
-                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath);
                             toolStripStatusLabel1.Text =
                                 String.Format("Loaded {0} snacks from file", count);
+                            Program.snacks.Add(snack); //add class into list
+                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add class to table
                         }
                     }
                 }
