@@ -19,7 +19,9 @@ namespace snackShack
         */
         internal static decimal minimumPrice()
         {
-            return (decimal)minPrice;
+            double min = minPrice;
+            decimal decimalMin = ((decimal)min);
+            return decimalMin;
         }
     }
 }
