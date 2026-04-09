@@ -1,5 +1,0 @@
-Code Basis: this contains base information about the code used
-Detailed Notes: will contain detailed info (currently n/a)
-General Notes: general information about this stuff
-
-Notes Overview: a list of what notes there are, and what they are
