@@ -85,7 +85,7 @@ namespace snackShack
                     foreach (var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
-                        sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath); //write in csv format
+                        sw.WriteLine(snack.name + constants.entrySep + snack.price + constants.entrySep + snack.amount + constants.entrySep + snack.imagepath); //write in csv format
 
                         count++; //increment count
                         toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count); //show how many entries have been written so far
@@ -115,7 +115,7 @@ namespace snackShack
                                 //order is: snackname, price, quantity, imagepath
 
                             string line = sr.ReadLine(); //read line
-                            string[] arr = line.Split(','); //split into an array based on the csv format
+                            string[] arr = line.Split(constants.entrySep); //split into an array based on the csv format
 
                             //populate class based on the contents of the file
                             snack.name = arr[0];
