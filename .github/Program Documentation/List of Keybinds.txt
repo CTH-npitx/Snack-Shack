@@ -1,2 +1,0 @@
-close: ctrl + x
-add entry: ctrl + a
