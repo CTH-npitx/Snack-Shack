@@ -23,7 +23,7 @@ namespace snackShack
     }
     internal static class coreCommands
     {
-        internal static void error(string message, Exception ex = null, bool revealException = false)
+        internal static void error(string message = constants.preMadeErrorMsg, Exception ex = null, bool revealException = false)
         {
             string msg = message; //what message to display
             if (revealException) //put the toggle
