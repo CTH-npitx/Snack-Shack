@@ -7,10 +7,6 @@ namespace snackShack
         internal const char entrySep = ','; //seperation character
         internal const string preMadeErrorMsg = "I'm sorry dave, I'm afraid I can't do that"; //pre-made error message
         internal const double minPrice = 0.05;
-        internal static string enrySepString() //give the seperation character as a string
-        {
-            return char.ToString(entrySep);
-        }
         /*internal static string fileSepString() //give the seperation character as a string
         {
             char.ToString(fileSepChar_con);
