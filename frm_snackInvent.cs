@@ -94,7 +94,7 @@ namespace snackShack
             }
             catch (Exception ex) //catch exception
             {
-                MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                coreCommands.error("Error during file write", ex, true); //show error with exception message
             }
         }
         private void frm_snackInvent_Load(object sender, EventArgs e)
@@ -133,8 +133,7 @@ namespace snackShack
                 }
             } catch (Exception ex) //catch exception
             {
-                MessageBox.Show("Error during file read", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                coreCommands.error("Error during file read", ex, true); //show error with exception message
             }
         }
     }
