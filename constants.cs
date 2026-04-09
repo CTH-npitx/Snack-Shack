@@ -6,7 +6,7 @@ namespace snackShack
         //internal const int min = 4; //length of entries
         internal const char entrySep = ','; //seperation character
         internal const string preMadeErrorMsg = "I'm sorry dave, I'm afraid I can't do that"; //pre-made error message
-        internal const double minPrice = 0.05;
+        internal const decimal minPrice = 0.05M;
         /*internal static string fileSepString() //give the seperation character as a string
         {
             char.ToString(fileSepChar_con);
@@ -17,9 +17,5 @@ namespace snackShack
              return fileSepChar_con;
          }
         */
-        internal static decimal minimumPrice()
-        {
-            return (decimal)minPrice;
-        }
     }
 }
