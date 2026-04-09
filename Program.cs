@@ -19,7 +19,7 @@ namespace snackShack
             Application.Run(new frm_snackInvent());
         }
         internal const bool debug = true; //global var to controll default for debugs
-        internal static List<inventory> inventory = new List<inventory>(); //makes a collection that refferences the class that will store information
+        internal static List<snackInvent> snacks = new List<snackInvent>();
     }
     internal static class coreCommands
     {
