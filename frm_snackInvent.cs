@@ -18,6 +18,7 @@ namespace snackShack
         {
             InitializeComponent();
             toolStripStatusLabel1.Text = ""; // Wipe the status strip of all text
+            nud_snackPrice.Minimum = constants.minPrice; // Set the minimum price to the constant defined in constants.cs
         }
 
         private void bttn_snackImage_Click(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace snackShack
                 MessageBox.Show("Please Input a name");
                 txt_snackName.Focus();
             } 
-            else if(nud_snackPrice.Value == 0)
+            else if(nud_snackPrice.Value < constants.minPrice) //check if price is above minimum price defined in constants.cs
             {
                 MessageBox.Show("Please enter a price that is more than 0");
                 nud_snackPrice.Focus();
@@ -67,7 +68,7 @@ namespace snackShack
                 //reset
                 txt_imagePath.Text = "";
                 txt_snackName.Text = "";
-                nud_snackPrice.Value = 0;
+                nud_snackPrice.Value = constants.minPrice;
                 nud_snackQuantity.Value = 0;
                 pb_snackIcon.Image = null;
             }
@@ -84,7 +85,7 @@ namespace snackShack
                     foreach (var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
-                        sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath); //write in csv format
+                        sw.WriteLine(snack.name + constants.entrySep + snack.price + constants.entrySep + snack.amount + constants.entrySep + snack.imagepath); //write in csv format
 
                         count++; //increment count
                         toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count); //show how many entries have been written so far
@@ -114,7 +115,7 @@ namespace snackShack
                                 //order is: snackname, price, quantity, imagepath
 
                             string line = sr.ReadLine(); //read line
-                            string[] arr = line.Split(','); //split into an array based on the csv format
+                            string[] arr = line.Split(constants.entrySep); //split into an array based on the csv format
 
                             //populate class based on the contents of the file
                             snack.name = arr[0];
