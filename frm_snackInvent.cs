@@ -132,7 +132,7 @@ namespace snackShack
                 }
             } catch (Exception ex) //catch exception
             {
-                MessageBox.Show("Error during file read", constants.preMadeErrorMsg, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error during file read", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
