@@ -46,7 +46,7 @@ namespace snackShack
                 MessageBox.Show("Please Input a name");
                 txt_snackName.Focus();
             } 
-            else if(nud_snackPrice.Value >= constants.minPrice) //check if price is above minimum price defined in constants.cs
+            else if(nud_snackPrice.Value < constants.minPrice) //check if price is above minimum price defined in constants.cs
             {
                 MessageBox.Show("Please enter a price that is more than 0");
                 nud_snackPrice.Focus();
