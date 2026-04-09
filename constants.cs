@@ -15,9 +15,9 @@ namespace snackShack
         {
             return fileSepChar_con;
         }
-        internal static double minimumPrice()
+        internal static decimal minimumPrice()
         {
-            return (double)minPrice;
+            return (decimal)minPrice;
         }
     }
 }
