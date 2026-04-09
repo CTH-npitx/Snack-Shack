@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,7 +16,7 @@ namespace snackShack
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_main());
+            Application.Run(new frm_snackInvent());
         }
         internal const bool debug = true; //global var to controll default for debugs
         internal static List<inventory> inventory = new List<inventory>(); //makes a collection that refferences the class that will store information
