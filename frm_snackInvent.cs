@@ -18,7 +18,7 @@ namespace snackShack
         {
             InitializeComponent();
             toolStripStatusLabel1.Text = ""; // Wipe the status strip of all text
-            nud_snackPrice.Minimum = constants.minimumPrice(); // Set the minimum price to the constant defined in constants.cs
+            nud_snackPrice.Minimum = constants.minPrice; // Set the minimum price to the constant defined in constants.cs
         }
 
         private void bttn_snackImage_Click(object sender, EventArgs e)
