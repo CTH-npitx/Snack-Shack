@@ -4,59 +4,89 @@ using System.IO;
 using System.Windows.Forms;
 using System;
 
-namespace snackShack.files
+namespace snackShack
 {
     internal static class files
     {
-        internal static void write() {
+        #region I/O
+        internal static void Write(string filepath, char sep) 
+        {
+            bool status = File.Exists(filepath); //check if the file exists
+            if (status || Program.debug) //if file exists, or debug is active, run system
             {
                 try
                 {
-                    using (StreamWriter sw = new StreamWriter("snacks.csv"))
+                    using (StreamWriter sw = new StreamWriter(filepath)) //utilize the file path to find the file
                     {
-                        foreach (var snack in Program.snacks)
+                        foreach (var c in Program.inventory) //the loop for createing the contents which will be saved
                         {
-                            //snack name, price, quantity, imagepath
-                            sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath); //write in csv format
+                            //csv - comma seperated values
+                            //name-imagepath-cost-index
+                            string ind = (c.index + 1).ToString(); //indux to string
+                            string cost = c.cost.ToString(); //cost to string
+                            string line = c.name + sep + c.imagePath + sep +  //combine string
+                                cost + sep + ind;
+                            sw.WriteLine(line); //write the information to the line
                         }
-                    }
+                    } //streamwriter
                 }
-                catch (Exception ex) //catch exception
+                catch (Exception ex) //find if exception
                 {
-                    MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    snackShack.coreCommands.error(constants.preMadeErrorMsg, ex, true); //show error
                 }
             }
-            internal static void read()
+            else //say if no file
+            {
+                snackShack.coreCommands.error("File Not Found"); //show error
+            }
+        } //the write function
+        
+        internal static void read(string path, char sep, int min) //the read function
         {
-            try
+            bool status = File.Exists(path); //check if the file exists
+            if (status || Program.debug) //check if there
             {
-                if (File.Exists("snacks.csv"))
+                try
                 {
-                    using (StreamReader sr = new StreamReader("snacks.csv"))
+                    using (StreamReader sr = new StreamReader(path)) //make stringreader
                     {
-                        while (!sr.EndOfStream)
+                        //csv - comma seperated values 
+                        //firstname-lastname-email-phone-buisness-notes
+                        while (!sr.EndOfStream) //add each line to it one by one
                         {
-                            snackInvent snack = new snackInvent(); //make new class
-                                                                   //order is: snackname, price, quantity, imagepath
+                            string item = sr.ReadLine(); //gets the next line of text from the file
+                            var entry = item.Split(sep); //splits it by the seperator
+                            if (entry.Length >= min)
+                            {
+                                inventory c = new inventory //make new constact
+                                {
+                                    name = entry[0], //put the realevent input into the releavent field
+                                    imagePath = entry[1], //same
+                                    cost = Convert.ToInt32(entry[2]), //same
+                                    index = Convert.ToInt32(entry[3]) -1 //any guesses?
+                                };
+                                Program.inventory.Add(c); //add to list
+                            }
+                            else
+                            {
 
-                            string line = sr.ReadLine(); //read line
-                            string[] arr = line.Split(','); //split into an array based on the csv format
-
-                            //populate class based on the contents of the file
-                            snack.name = arr[0];
-                            snack.price = double.Parse(arr[1]);
-                            snack.amount = Int32.Parse(arr[2]);
-                            snack.imagepath = arr[3];
-
-                            Program.snacks.Add(snack); //add class into list
-                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add class to table
+                                coreCommands.error("error: below Max Length"); //show error during read
+                            }
                         }
                     }
                 }
+                catch (Exception ex) //show if exception
+                {
+                    MessageBox.Show("error" + ex.Message); //show error
+
+                }
             }
-            catch (Exception ex) //catch exception
+            else
             {
-                MessageBox.Show("Error during file read", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("file not found"); //show error
+
             }
-        } //the code for files
+        }
+        #endregion
+    } //the code for files
 }
