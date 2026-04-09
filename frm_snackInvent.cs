@@ -18,7 +18,7 @@ namespace snackShack
         {
             InitializeComponent();
             toolStripStatusLabel1.Text = ""; // Wipe the status strip of all text
-            nud_snackPrice.Minimum = constants.minimumPrice(); // Set the minimum price to the constant defined in constants.cs
+            nud_snackPrice.Minimum = constants.minPrice; // Set the minimum price to the constant defined in constants.cs
         }
 
         private void bttn_snackImage_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace snackShack
                 MessageBox.Show("Please Input a name");
                 txt_snackName.Focus();
             } 
-            else if(nud_snackPrice.Value >= constants.minimumPrice) //check if price is above minimum price defined in constants.cs
+            else if(nud_snackPrice.Value < constants.minPrice) //check if price is above minimum price defined in constants.cs
             {
                 MessageBox.Show("Please enter a price that is more than 0");
                 nud_snackPrice.Focus();
@@ -68,7 +68,7 @@ namespace snackShack
                 //reset
                 txt_imagePath.Text = "";
                 txt_snackName.Text = "";
-                nud_snackPrice.Value = 0;
+                nud_snackPrice.Value = constants.minPrice;
                 nud_snackQuantity.Value = 0;
                 pb_snackIcon.Image = null;
             }
