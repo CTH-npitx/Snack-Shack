@@ -143,7 +143,7 @@
             // pb_snackIcon
             // 
             this.pb_snackIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_snackIcon.Location = new System.Drawing.Point(296, 1);
+            this.pb_snackIcon.Location = new System.Drawing.Point(493, 1);
             this.pb_snackIcon.Name = "pb_snackIcon";
             this.pb_snackIcon.Size = new System.Drawing.Size(307, 204);
             this.pb_snackIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
