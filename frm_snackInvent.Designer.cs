@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_snackName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).BeginInit();
@@ -289,6 +291,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snackQuantity;
         private System.Windows.Forms.DataGridViewImageColumn col_snackIcon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_iconPath;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
