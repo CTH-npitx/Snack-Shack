@@ -212,6 +212,7 @@
             this.btn_add.Size = new System.Drawing.Size(75, 23);
             this.btn_add.TabIndex = 10;
             this.btn_add.Text = "Add";
+            this.toolTip1.SetToolTip(this.btn_add, "Add Entry to table");
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
