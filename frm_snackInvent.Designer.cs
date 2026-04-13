@@ -259,6 +259,7 @@
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.pb_snackIcon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_snackInvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Snack Shack Inventory";
