@@ -97,6 +97,7 @@
             this.nud_snackPrice.Size = new System.Drawing.Size(120, 20);
             this.nud_snackPrice.TabIndex = 3;
             this.nud_snackPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip1.SetToolTip(this.nud_snackPrice, "The price of the snack");
             // 
             // label3
             // 
