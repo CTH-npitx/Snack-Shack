@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_snackInvent));
             this.label1 = new System.Windows.Forms.Label();
             this.txt_snackName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -143,6 +144,8 @@
             // pb_snackIcon
             // 
             this.pb_snackIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pb_snackIcon.Image = ((System.Drawing.Image)(resources.GetObject("pb_snackIcon.Image")));
+            this.pb_snackIcon.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_snackIcon.InitialImage")));
             this.pb_snackIcon.Location = new System.Drawing.Point(493, 1);
             this.pb_snackIcon.Name = "pb_snackIcon";
             this.pb_snackIcon.Size = new System.Drawing.Size(307, 204);
