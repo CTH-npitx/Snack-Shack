@@ -159,9 +159,11 @@
             this.col_icon});
             this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_invent.Location = new System.Drawing.Point(0, 211);
+            this.dgv_invent.MultiSelect = false;
             this.dgv_invent.Name = "dgv_invent";
             this.dgv_invent.ReadOnly = true;
             this.dgv_invent.RowHeadersVisible = false;
+            this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_invent.Size = new System.Drawing.Size(800, 217);
             this.dgv_invent.TabIndex = 9;
             // 
