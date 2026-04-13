@@ -134,6 +134,7 @@
             this.txt_imagePath.Name = "txt_imagePath";
             this.txt_imagePath.Size = new System.Drawing.Size(100, 20);
             this.txt_imagePath.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txt_imagePath, "Image Path");
             // 
             // openFileDialog1
             // 
