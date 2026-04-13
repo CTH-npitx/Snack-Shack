@@ -39,15 +39,16 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pb_snackIcon = new System.Windows.Forms.PictureBox();
             this.dgv_invent = new System.Windows.Forms.DataGridView();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.col_snackName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snackPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snackQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snackIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_iconPath = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.col_icon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).BeginInit();
@@ -154,7 +155,8 @@
             this.col_snackPrice,
             this.col_snackQuantity,
             this.col_snackIcon,
-            this.col_iconPath});
+            this.col_iconPath,
+            this.col_icon});
             this.dgv_invent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_invent.Location = new System.Drawing.Point(0, 211);
             this.dgv_invent.MultiSelect = false;
@@ -164,40 +166,6 @@
             this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_invent.Size = new System.Drawing.Size(800, 217);
             this.dgv_invent.TabIndex = 9;
-            // 
-            // col_snackName
-            // 
-            this.col_snackName.HeaderText = "Snack Name";
-            this.col_snackName.Name = "col_snackName";
-            this.col_snackName.ReadOnly = true;
-            // 
-            // col_snackPrice
-            // 
-            this.col_snackPrice.HeaderText = "Snack Price";
-            this.col_snackPrice.Name = "col_snackPrice";
-            this.col_snackPrice.ReadOnly = true;
-            // 
-            // col_snackQuantity
-            // 
-            this.col_snackQuantity.HeaderText = "Snack Quantity";
-            this.col_snackQuantity.Name = "col_snackQuantity";
-            this.col_snackQuantity.ReadOnly = true;
-            // 
-            // col_snackIcon
-            // 
-            this.col_snackIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_snackIcon.HeaderText = "Icon";
-            this.col_snackIcon.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.col_snackIcon.Name = "col_snackIcon";
-            this.col_snackIcon.ReadOnly = true;
-            this.col_snackIcon.Width = 199;
-            // 
-            // col_iconPath
-            // 
-            this.col_iconPath.HeaderText = "path for icon";
-            this.col_iconPath.Name = "col_iconPath";
-            this.col_iconPath.ReadOnly = true;
-            this.col_iconPath.Visible = false;
             // 
             // btn_add
             // 
@@ -239,6 +207,47 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // col_snackName
+            // 
+            this.col_snackName.HeaderText = "Snack Name";
+            this.col_snackName.Name = "col_snackName";
+            this.col_snackName.ReadOnly = true;
+            // 
+            // col_snackPrice
+            // 
+            this.col_snackPrice.HeaderText = "Snack Price";
+            this.col_snackPrice.Name = "col_snackPrice";
+            this.col_snackPrice.ReadOnly = true;
+            // 
+            // col_snackQuantity
+            // 
+            this.col_snackQuantity.HeaderText = "Snack Quantity";
+            this.col_snackQuantity.Name = "col_snackQuantity";
+            this.col_snackQuantity.ReadOnly = true;
+            // 
+            // col_snackIcon
+            // 
+            this.col_snackIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_snackIcon.HeaderText = "Icon";
+            this.col_snackIcon.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.col_snackIcon.Name = "col_snackIcon";
+            this.col_snackIcon.ReadOnly = true;
+            this.col_snackIcon.Width = 199;
+            // 
+            // col_iconPath
+            // 
+            this.col_iconPath.HeaderText = "path for icon";
+            this.col_iconPath.Name = "col_iconPath";
+            this.col_iconPath.ReadOnly = true;
+            this.col_iconPath.Visible = false;
+            // 
+            // col_icon
+            // 
+            this.col_icon.HeaderText = "snack index";
+            this.col_icon.Name = "col_icon";
+            this.col_icon.ReadOnly = true;
+            this.col_icon.Visible = false;
             // 
             // frm_snackInvent
             // 
@@ -291,6 +300,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snackQuantity;
         private System.Windows.Forms.DataGridViewImageColumn col_snackIcon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_iconPath;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_icon;
     }
 }
 
