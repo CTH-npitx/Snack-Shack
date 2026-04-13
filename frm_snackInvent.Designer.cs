@@ -149,6 +149,7 @@
             this.pb_snackIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_snackIcon.TabIndex = 8;
             this.pb_snackIcon.TabStop = false;
+            this.toolTip1.SetToolTip(this.pb_snackIcon, "Icon Preview");
             // 
             // dgv_invent
             // 
