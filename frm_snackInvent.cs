@@ -87,7 +87,7 @@ namespace snackShack
                     foreach (var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
-                        sw.WriteLine(snack.name + constants.entrySep + snack.price + constants.entrySep + snack.amount + constants.entrySep + snack.imagepath); //write in csv format
+                        sw.WriteLine(snack.name + constants.entrySep + snack.price + constants.entrySep + snack.amount + constants.entrySep + snack.imagepath + constants.entrySep + snack.index); //write in csv format
 
                         count++; //increment count
                         toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count); //show how many entries have been written so far
