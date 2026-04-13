@@ -39,16 +39,16 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pb_snackIcon = new System.Windows.Forms.PictureBox();
             this.dgv_invent = new System.Windows.Forms.DataGridView();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.col_snackName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snackPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snackQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_snackIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_iconPath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_icon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).BeginInit();
@@ -167,47 +167,6 @@
             this.dgv_invent.Size = new System.Drawing.Size(800, 217);
             this.dgv_invent.TabIndex = 9;
             // 
-            // btn_add
-            // 
-            this.btn_add.Location = new System.Drawing.Point(4, 179);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(75, 23);
-            this.btn_add.TabIndex = 10;
-            this.btn_add.Text = "Add";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.bttn_snackImage);
-            this.panel1.Controls.Add(this.txt_imagePath);
-            this.panel1.Controls.Add(this.txt_snackName);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.nud_snackQuantity);
-            this.panel1.Controls.Add(this.nud_snackPrice);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(4, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 0;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
-            this.statusStrip1.TabIndex = 11;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
             // col_snackName
             // 
             this.col_snackName.HeaderText = "Snack Name";
@@ -248,6 +207,47 @@
             this.col_icon.Name = "col_icon";
             this.col_icon.ReadOnly = true;
             this.col_icon.Visible = false;
+            // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(4, 179);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 10;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.bttn_snackImage);
+            this.panel1.Controls.Add(this.txt_imagePath);
+            this.panel1.Controls.Add(this.txt_snackName);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.nud_snackQuantity);
+            this.panel1.Controls.Add(this.nud_snackPrice);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 0;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.TabIndex = 11;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // frm_snackInvent
             // 
