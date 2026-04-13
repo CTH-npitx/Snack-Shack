@@ -73,6 +73,7 @@
             this.txt_snackName.Name = "txt_snackName";
             this.txt_snackName.Size = new System.Drawing.Size(100, 20);
             this.txt_snackName.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txt_snackName, "The Name of the snck");
             // 
             // label2
             // 
