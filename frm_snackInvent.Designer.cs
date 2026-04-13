@@ -115,6 +115,7 @@
             this.nud_snackQuantity.Size = new System.Drawing.Size(120, 20);
             this.nud_snackQuantity.TabIndex = 5;
             this.nud_snackQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip1.SetToolTip(this.nud_snackQuantity, "Quantity of snacks");
             // 
             // bttn_snackImage
             // 
