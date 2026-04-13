@@ -114,7 +114,7 @@ namespace snackShack
                         while(!sr.EndOfStream)
                         {
                             snackInvent snack = new snackInvent(); //make new class
-                                //order is: snackname, price, quantity, imagepath
+                                //order is: snackname, price, quantity, imagepath, index
 
                             string line = sr.ReadLine(); //read line
                             string[] arr = line.Split(constants.entrySep); //split into an array based on the csv format
@@ -124,12 +124,13 @@ namespace snackShack
                             snack.price = double.Parse(arr[1]);
                             snack.amount = Int32.Parse(arr[2]);
                             snack.imagepath = arr[3];
+                            snack.index = int.Parse(arr[3]); 
 
                             count++;
                             toolStripStatusLabel1.Text =
                                 String.Format("Loaded {0} snacks from file", count); //show how many snacks loaded at this point
                             Program.snacks.Add(snack); //add class into list
-                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath); //add class to table
+                            dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath, snack.index); //add class to table
                         }
                     }
                 }
