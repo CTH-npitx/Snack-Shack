@@ -124,6 +124,7 @@
             this.bttn_snackImage.Size = new System.Drawing.Size(75, 23);
             this.bttn_snackImage.TabIndex = 6;
             this.bttn_snackImage.Text = "Image";
+            this.toolTip1.SetToolTip(this.bttn_snackImage, "Select Image");
             this.bttn_snackImage.UseVisualStyleBackColor = true;
             this.bttn_snackImage.Click += new System.EventHandler(this.bttn_snackImage_Click);
             // 
