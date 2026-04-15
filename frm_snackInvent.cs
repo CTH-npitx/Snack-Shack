@@ -133,6 +133,7 @@ namespace snackShack
             }
         }
 
+
         private void dgv_selectEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (dgv_invent == null)
@@ -145,7 +146,8 @@ namespace snackShack
             var item = Program.snacks[ind];
             if (item != null)
             {
-               
+                txt_imagePath.Text = item.imagepath;
+                pb_snackIcon.ImageLocation = item.imagepath;
             } //check if it exists
             btn_add.Text = "Edit Entry"; //change button text
         } //populate text boxes with the content of the selected row
