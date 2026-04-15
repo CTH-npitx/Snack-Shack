@@ -63,7 +63,7 @@ namespace snackShack
                 txt_imagePath.Text = "";
                 txt_snackName.Text = "";
                 nud_snackPrice.Value = constants.minPrice;
-                nud_snackQuantity.Value = 0;
+                nud_snackQuantity.Value = constants.minQuantity;
                 pb_snackIcon.Image = null;
             }
         }
