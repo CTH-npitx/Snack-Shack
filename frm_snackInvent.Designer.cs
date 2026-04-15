@@ -166,6 +166,7 @@
             this.dgv_invent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_invent.Size = new System.Drawing.Size(800, 217);
             this.dgv_invent.TabIndex = 9;
+            this.dgv_invent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_selectEdit);
             // 
             // col_snackName
             // 
