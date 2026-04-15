@@ -168,5 +168,10 @@ namespace snackShack
             } //check if it exists
             btn_add.Text = "Edit Entry"; //change button text
         } //populate text boxes with the content of the selected row
+
+        private void btn_clearEntry_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

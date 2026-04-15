@@ -49,6 +49,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btn_clearEntry = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snackIcon)).BeginInit();
@@ -250,11 +251,22 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
+            // btn_clearEntry
+            // 
+            this.btn_clearEntry.Location = new System.Drawing.Point(125, 182);
+            this.btn_clearEntry.Name = "btn_clearEntry";
+            this.btn_clearEntry.Size = new System.Drawing.Size(75, 23);
+            this.btn_clearEntry.TabIndex = 12;
+            this.btn_clearEntry.Text = "Clear Entry";
+            this.btn_clearEntry.UseVisualStyleBackColor = true;
+            this.btn_clearEntry.Click += new System.EventHandler(this.btn_clearEntry_Click);
+            // 
             // frm_snackInvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_clearEntry);
             this.Controls.Add(this.dgv_invent);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
@@ -302,6 +314,7 @@
         private System.Windows.Forms.DataGridViewImageColumn col_snackIcon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_iconPath;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_icon;
+        private System.Windows.Forms.Button btn_clearEntry;
     }
 }
 
