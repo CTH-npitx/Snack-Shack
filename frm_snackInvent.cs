@@ -132,5 +132,22 @@ namespace snackShack
 
             }
         }
+
+        private void dgv_selectEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgv_invent == null)
+            {
+                return; //output nothing
+            } //make sure there is something selected
+            var row = dgv_invent.CurrentRow; //set a variable to the contents of the current row
+            var indText = row.Cells[5].Value.ToString(); //get the index value from what was clicked
+            var ind = int.Parse(indText);
+            var item = Program.snacks[ind];
+            if (item != null)
+            {
+               
+            } //check if it exists
+            btn_add.Text = "Edit Entry"; //change button text
+        } //populate text boxes with the content of the selected row
     }
 }
