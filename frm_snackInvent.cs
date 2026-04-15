@@ -157,7 +157,7 @@ namespace snackShack
                 }
                 nud_snackPrice.Value= price;
                 var amount = Convert.ToDecimal(item.amount);
-                if(amount >= 0)
+                if(amount >= constants.minQuantity)
                 {
 
                 } else
