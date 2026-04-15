@@ -155,6 +155,16 @@ namespace snackShack
                 {
                     price = constants.minPrice;
                 }
+                nud_snackPrice.Value= price;
+                var amount = Convert.ToDecimal(item.amount);
+                if(amount >= 0)
+                {
+
+                } else
+                {
+                    amount = 0;
+                }
+                nud_snackQuantity.Value= amount;
             } //check if it exists
             btn_add.Text = "Edit Entry"; //change button text
         } //populate text boxes with the content of the selected row
