@@ -171,7 +171,15 @@ namespace snackShack
 
         private void btn_clearEntry_Click(object sender, EventArgs e)
         {
-
+            txt_imagePath.Text = "";
+            txt_snackName.Text = "";
+            nud_snackPrice.Value = constants.minPrice;
+            nud_snackQuantity.Value = constants.minQuantity;
+            pb_snackIcon.Image = null;
+            if (dgv_invent.CurrentRow != null)
+            {
+                dgv_invent.ClearSelection(); //deselect row
+            } //if a row is selected (which therefore means it was editing an entry), deselect all rows
         }
     }
 }
