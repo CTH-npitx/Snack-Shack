@@ -148,6 +148,13 @@ namespace snackShack
             {
                 txt_imagePath.Text = item.imagepath;
                 pb_snackIcon.ImageLocation = item.imagepath;
+                var price = Convert.ToDecimal(item.price);
+                if (price >= constants.minPrice)
+                {
+                } else
+                {
+                    price = constants.minPrice;
+                }
             } //check if it exists
             btn_add.Text = "Edit Entry"; //change button text
         } //populate text boxes with the content of the selected row
