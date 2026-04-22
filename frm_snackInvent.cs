@@ -49,16 +49,16 @@ namespace snackShack
             else
             {
                 int editIndex2 = editInd;
-                if(btn_add.Text == "")
-                snackInvent snack = addSnack(txt_snackName.Text, nud_snackPrice.Value, nud_snackQuantity.Value, txt_imagePath.Text, editInd);
+                if(btn_add.Text != "Edit") {
+                    editIndex2 = -1;
+                }
+                snackInvent snack = Program.addSnack(txt_snackName.Text, nud_snackPrice.Value, nud_snackQuantity.Value, txt_imagePath.Text, editInd);
 
                 dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath, snack.index); //add into table
                 toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
                 clearValues();
             }
         }
-
-
 
         private void frm_snackInvent_FormClosing(object sender, FormClosingEventArgs e)
         {
