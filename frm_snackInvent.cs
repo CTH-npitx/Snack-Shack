@@ -88,6 +88,14 @@ namespace snackShack
             {
                 snack = new snackInvent(); //make and set up class
             }
+            var totalSnack = Program.snacks.Count;
+            if(totalSnack >= edit && edit != -1)
+            {
+                Program.snacks[edit] = snack;
+            } else
+            {
+                Program.snacks.Add(snack);
+            }
             return snack;
         }
 
