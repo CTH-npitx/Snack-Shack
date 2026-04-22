@@ -18,7 +18,7 @@ namespace snackShack
         private void bttn_snackImage_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Image Files(*.jpg;*.jpeg;*.png;*.gif;*bmp)|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
-                // Set the open file dialog filter to allow for only image files, and configure it
+            // Set the open file dialog filter to allow for only image files, and configure it
 
             // Show the open file dialog and check if the user selected a file
             if (openFileDialog1.ShowDialog() == DialogResult.OK) //set the text and image box to the selected image and file
@@ -30,21 +30,21 @@ namespace snackShack
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            if(!File.Exists(txt_imagePath.Text))
+            if (!File.Exists(txt_imagePath.Text))
             {
                 MessageBox.Show("Please Select an image"); //error
                 bttn_snackImage.Focus(); //focus on requesit controll
-            } 
-            else if(txt_snackName.Text.Length == 0)
+            }
+            else if (txt_snackName.Text.Length == 0)
             {
                 MessageBox.Show("Please Input a name");
                 txt_snackName.Focus();
-            } 
-            else if(nud_snackPrice.Value < constants.minPrice) //check if price is above minimum price defined in constants.cs
+            }
+            else if (nud_snackPrice.Value < constants.minPrice) //check if price is above minimum price defined in constants.cs
             {
                 MessageBox.Show("Please enter a price that is more than 0");
                 nud_snackPrice.Focus();
-            } 
+            }
             else
             {
                 int editIndex2 = editInd;
