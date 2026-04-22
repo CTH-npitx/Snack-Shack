@@ -49,7 +49,7 @@ namespace snackShack
             else
             {
                 int editIndex2 = editInd;
-                if(btn_add.Text != "Edit") {
+                if(btn_add.Text == bttnAddName) {
                     editIndex2 = -1;
                 }
                 snackInvent snack = Program.addSnack(txt_snackName.Text, nud_snackPrice.Value, nud_snackQuantity.Value, txt_imagePath.Text, editInd);
@@ -125,6 +125,7 @@ namespace snackShack
             }
 
             clearValues();
+            bttnAddName = btn_add.Text;
         }
 
 
