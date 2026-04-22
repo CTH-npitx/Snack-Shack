@@ -7,6 +7,7 @@ namespace snackShack
 {
     public partial class frm_snackInvent : Form
     {
+        int editInd = -1;
         public frm_snackInvent()
         {
             InitializeComponent();
@@ -174,6 +175,7 @@ namespace snackShack
             var row = dgv_invent.CurrentRow; //set a variable to the contents of the current row
             var indText = row.Cells[5].Value.ToString(); //get the index value from what was clicked
             var ind = int.Parse(indText);
+            editInd = ind;
             var item = Program.snacks[ind];
             if (item != null)
             {
