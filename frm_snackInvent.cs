@@ -64,7 +64,7 @@ namespace snackShack
             }
         }
 
-        private snackInvent addItem(string nameIn, decimal priceIn, decimal amountIn, string pathIn, int edit = -1)
+        private snackInvent addSnack(string nameIn, decimal priceIn, decimal amountIn, string pathIn, int edit = -1)
         {
             bool isEdit = false;
             if(edit != -1)
