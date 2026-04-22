@@ -51,6 +51,8 @@ namespace snackShack
              //   Program.snacks.Add(snack); //add to list
              //   dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath, snack.index); //add into table
              //   toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
+                var snack = addSnack(txt_snackName.Text, nud_snackPrice.Value, nud_snackQuantity.Value, txt_imagePath.Text);
+
 
                 //reset
                 txt_imagePath.Text = "";
