@@ -58,6 +58,7 @@ namespace snackShack
                 nud_snackPrice.Value = constants.minPrice;
                 nud_snackQuantity.Value = constants.minQuantity;
                 pb_snackIcon.Image = null;
+
             }
         }
 
