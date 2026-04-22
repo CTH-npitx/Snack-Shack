@@ -175,6 +175,7 @@ namespace snackShack
             {
                 txt_imagePath.Text = item.imagepath;
                 pb_snackIcon.ImageLocation = item.imagepath;
+                txt_snackName.Text = item.name;
                 var price = Convert.ToDecimal(item.price);
                 if (price >= constants.minPrice)
                 {
