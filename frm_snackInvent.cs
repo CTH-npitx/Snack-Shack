@@ -48,10 +48,9 @@ namespace snackShack
             else
             {
                 int editIndex2 = editInd;
-                Program.snacks.Add(snack); //add to list
-                dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath, snack.index); //add into table
-
-                toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
+             //   Program.snacks.Add(snack); //add to list
+             //   dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath, snack.index); //add into table
+             //   toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
 
                 //reset
                 txt_imagePath.Text = "";
@@ -59,9 +58,8 @@ namespace snackShack
                 nud_snackPrice.Value = constants.minPrice;
                 nud_snackQuantity.Value = constants.minQuantity;
                 pb_snackIcon.Image = null;
-
+                editInd = -1
             }
-            editInd = -1
         }
 
         private snackInvent addItem(string nameIn, decimal priceIn, decimal amountIn, string pathIn, int edit = -1)
