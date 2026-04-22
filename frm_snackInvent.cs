@@ -52,14 +52,7 @@ namespace snackShack
 
                 dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath, snack.index); //add into table
                 toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
-
-                //reset
-                txt_imagePath.Text = "";
-                txt_snackName.Text = "";
-                nud_snackPrice.Value = constants.minPrice;
-                nud_snackQuantity.Value = constants.minQuantity;
-                pb_snackIcon.Image = null;
-                editInd = -1;
+                clearValues();
             }
         }
 
@@ -157,6 +150,8 @@ namespace snackShack
                 MessageBox.Show(ex.ToString(), "Error during file write", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+
+            clearValues();
         }
 
 
@@ -199,6 +194,11 @@ namespace snackShack
 
         private void btn_clearEntry_Click(object sender, EventArgs e)
         {
+            clearValues();
+        }
+
+        private void clearValues()
+        {
             txt_imagePath.Text = "";
             txt_snackName.Text = "";
             nud_snackPrice.Value = constants.minPrice;
@@ -208,6 +208,7 @@ namespace snackShack
             {
                 dgv_invent.ClearSelection(); //deselect row
             } //if a row is selected (which therefore means it was editing an entry), deselect all rows
+            editInd = -1;
         }
     }
 }
