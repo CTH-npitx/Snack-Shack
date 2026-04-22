@@ -7,6 +7,7 @@ namespace snackShack
 {
     public partial class frm_snackInvent : Form
     {
+        int editInd = -1;
         public frm_snackInvent()
         {
             InitializeComponent();
@@ -46,9 +47,9 @@ namespace snackShack
             } 
             else
             {
-           //     Program.snacks.Add(snack); //add to list
+                int editIndex2 = editInd;
+             //   Program.snacks.Add(snack); //add to list
              //   dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath, snack.index); //add into table
-
              //   toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
 
                 //reset
@@ -57,6 +58,7 @@ namespace snackShack
                 nud_snackPrice.Value = constants.minPrice;
                 nud_snackQuantity.Value = constants.minQuantity;
                 pb_snackIcon.Image = null;
+                editInd = -1
             }
         }
 
@@ -166,6 +168,7 @@ namespace snackShack
             var row = dgv_invent.CurrentRow; //set a variable to the contents of the current row
             var indText = row.Cells[5].Value.ToString(); //get the index value from what was clicked
             var ind = int.Parse(indText);
+            editInd = ind;
             var item = Program.snacks[ind];
             if (item != null)
             {
