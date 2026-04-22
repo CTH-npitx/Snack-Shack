@@ -46,10 +46,10 @@ namespace snackShack
             } 
             else
             {
-                Program.snacks.Add(snack); //add to list
-                dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath, snack.index); //add into table
+           //     Program.snacks.Add(snack); //add to list
+             //   dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath, snack.index); //add into table
 
-                toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
+             //   toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
 
                 //reset
                 txt_imagePath.Text = "";
