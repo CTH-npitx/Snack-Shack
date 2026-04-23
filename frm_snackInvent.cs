@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace snackShack
 {
@@ -94,7 +87,7 @@ namespace snackShack
             }
             catch (Exception ex) //catch exception
             {
-                MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                coreCommands.error("Error during file write", ex, false); //show error without exception message
             }
         }
         private void frm_snackInvent_Load(object sender, EventArgs e)
@@ -133,8 +126,7 @@ namespace snackShack
                 }
             } catch (Exception ex) //catch exception
             {
-                MessageBox.Show("Error during file read", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                coreCommands.error("Error during file read", ex, false); //show error without exception message
             }
         }
     }
