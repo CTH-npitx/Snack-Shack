@@ -10,10 +10,5 @@ namespace snackShack
         internal const decimal minPrice = 0.05M;
         internal const string fileName = "snacks";
         internal const string fileExtension = "csv";
-        /* internal static char fileSepChar() //give the seperation character as a char
-         {
-             return fileSepChar_con;
-         }
-        */
     }
 }
