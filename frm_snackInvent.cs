@@ -73,7 +73,7 @@ namespace snackShack
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter("snacks.csv")) {
+                using (StreamWriter sw = new StreamWriter(filePath)) {
                     int count = 0;
                     toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count); //show current number of entries, which is 0.
                                                                                                     //If this is what you see when done, something went wrong
@@ -96,12 +96,12 @@ namespace snackShack
         {
             try
             {
-                if(File.Exists("snacks.csv"))
+                if(File.Exists(filePath))
                 {
                     toolStripStatusLabel1.Text =
                         String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong...
                                                                                 //It means that it failed before it loaded something
-                    using (StreamReader sr = new StreamReader("snacks.csv"))
+                    using (StreamReader sr = new StreamReader(filePath))
                     {
                         int count = 0;
                         while(!sr.EndOfStream)
