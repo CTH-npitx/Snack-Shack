@@ -15,7 +15,7 @@ namespace snackShack
             nud_snackPrice.Minimum = constants.minPrice; // Set the minimum price to the constant defined in constants.cs
         }
         
-        string filePath = Path.Combine(coreCommands.path(),".files",constants.fileName + '.' + constants.fileExtension);
+        string filePath = Path.Combine(coreCommands.path(),".files",constants.fileName);
         private void bttn_snackImage_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Image Files(*.jpg;*.jpeg;*.png;*.gif;*bmp)|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
