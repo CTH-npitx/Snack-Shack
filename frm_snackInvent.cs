@@ -14,8 +14,8 @@ namespace snackShack
             toolStripStatusLabel1.Text = ""; // Wipe the status strip of all text
             nud_snackPrice.Minimum = constants.minPrice; // Set the minimum price to the constant defined in constants.cs
         }
-
-        string path = Path.Combine(coreCommands.path(), constants.fileName + constants.fileExtension);
+        
+        string filePath = Path.Combine(coreCommands.path(), constants.fileName + '.' + constants.fileExtension);
         private void bttn_snackImage_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Image Files(*.jpg;*.jpeg;*.png;*.gif;*bmp)|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
