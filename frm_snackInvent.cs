@@ -15,6 +15,9 @@ namespace snackShack
             InitializeComponent();
             toolStripStatusLabel1.Text = ""; // Wipe the status strip of all text
             nud_snackPrice.Minimum = constants.minPrice; // Set the minimum price to the constant defined in constants.cs
+            nud_snackQuantity.Minimum = constants.minQuantity; //set the minimum quantity to the constant
+            nud_snackQuantity.Maximum = constants.maxQuantity; //same
+            nud_snackPrice.Maximum = constants.maxPrice; // same
         }
         
         string filePath = Path.Combine(coreCommands.path(), constants.fileName + '.' + constants.fileExtension);
@@ -124,7 +127,12 @@ namespace snackShack
                 {
                     toolStripStatusLabel1.Text =
                         String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong...
-                                                                                //It means that it failed before it loaded something
+                                                                              //It means that it failed before it loaded something
+                    var priceMin = decimal.ToDouble(constants.minPrice);
+                    var amountMin = decimal.ToInt32(constants.minQuantity);
+                    var priceMax = decimal.ToDouble(constants.maxPrice);
+                    var amountMax = decimal.ToInt32(constants.maxQuantity);
+                    
                     using (StreamReader sr = new StreamReader(filePath))
                     {
                         int count = 0;
@@ -136,12 +144,37 @@ namespace snackShack
                             string line = sr.ReadLine(); //read line
                             string[] arr = line.Split(constants.entrySep); //split into an array based on the csv format
 
+                            //assign to vars
+                            string nameImport = arr[0];
+                            double priceImport = double.Parse(arr[1]);
+                            Int32 amountImport = int.Parse(arr[2]);
+                            string pathImport = arr[3];
+                            int indexImport = int.Parse(arr[4]);
+
+                            //fix invalid numbers
+                            if(priceImport < priceMin)
+                            {
+                                priceImport = priceMin;
+                            } //ensure price is atleast the minimum
+                            if(amountImport < amountMin)
+                            {
+                                amountImport = amountMin;
+                            } //ensure amount is atleast the min
+                            if(priceImport > priceMax)
+                            {
+                                priceImport = priceMax;
+                            } //ensure the price is no more than the max
+                            if(amountImport > amountMax)
+                            {
+                                amountImport = amountMax;
+                            } //ensure the amount is no more than the max
+
                             //populate class based on the contents of the file
-                            snack.name = arr[0];
-                            snack.price = double.Parse(arr[1]);
-                            snack.amount = Int32.Parse(arr[2]);
-                            snack.imagepath = arr[3];
-                            snack.index = int.Parse(arr[4]); 
+                            snack.name = nameImport;
+                            snack.price = priceImport;
+                            snack.amount = amountImport;
+                            snack.imagepath = pathImport;
+                            snack.index = indexImport;
 
                             count++;
                             toolStripStatusLabel1.Text =
