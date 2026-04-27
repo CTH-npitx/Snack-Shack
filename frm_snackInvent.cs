@@ -62,9 +62,20 @@ namespace snackShack
                 {
                     Program.snacks.Add(snack);
                     dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath, snack.index); //add into table
+                } else
+                {
+                    Program.snacks[editIndex2] = snack;
+                    var currentRow = dgv_invent.CurrentRow;
+                    currentRow.Cells[0].Value = snack.name;
+                    currentRow.Cells[1].Value = snack.price;
+                    currentRow.Cells[2].Value = snack.amount;
+                    var image = Image.FromFile(snack.imagepath);
+                    currentRow.Cells[3].Value = image;
+                    currentRow.Cells[4].Value = snack.imagepath;
+                    currentRow.Cells[5].Value = snack.index;
+
                 }
 
-                
                 toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
                 clearValues();
             }
