@@ -115,6 +115,7 @@ namespace snackShack
                             string pathImport = arr[3];
                             int indexImport = int.Parse(arr[4]);
 
+                            //fix invalid numbers
                             if(priceImport < priceMin)
                             {
                                 priceImport = priceMin;
