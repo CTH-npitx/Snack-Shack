@@ -107,10 +107,11 @@ namespace snackShack
 
                             //format values for import (including ensuring values valid)
                             string nameImport = arr[0];
+                            double priceImport = double.Parse(arr[1]);
 
                             //populate class based on the contents of the file
                             snack.name = nameImport;
-                            snack.price = double.Parse(arr[1]);
+                            snack.price = priceImport;
                             snack.amount = Int32.Parse(arr[2]);
                             snack.imagepath = arr[3];
                             snack.index = int.Parse(arr[4]); 
