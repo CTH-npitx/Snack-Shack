@@ -9,7 +9,6 @@ namespace snackShack
     public partial class frm_snackInvent : Form
     {
         int editInd = -1;
-        string bttnAddName = string.Empty;
         public frm_snackInvent()
         {
             InitializeComponent();
@@ -54,12 +53,43 @@ namespace snackShack
                 if(btn_add.Text == bttnAddName) {
                     editIndex2 = -1;
                 }
-                snackInvent snack = Program.addSnack(txt_snackName.Text, nud_snackPrice.Value, nud_snackQuantity.Value, txt_imagePath.Text, editInd);
+                var snack = addSnack(txt_snackName.Text, nud_snackPrice.Value, nud_snackQuantity.Value, txt_imagePath.Text,editIndex2);
 
                 dgv_invent.Rows.Add(snack.name, snack.price, snack.amount, Image.FromFile(snack.imagepath), snack.imagepath, snack.index); //add into table
                 toolStripStatusLabel1.Text = string.Format("Successfully added {0}", snack.name); //show name of snack added
                 clearValues();
             }
+        }
+
+        private snackInvent addSnack(string nameIn, decimal priceIn, decimal amountIn, string pathIn, int edit = -1)
+        {
+            bool isEdit = false;
+            if(edit != -1)
+            {
+                isEdit = true;
+            }
+            snackInvent snack = null;
+            string name = nameIn;
+            double price = Convert.ToDouble(priceIn);
+            Int32 amount = Convert.ToInt32(amountIn);
+            string path = pathIn;
+            
+            if (isEdit)
+            {
+                snack = Program.snacks[edit];
+            } else
+            {
+                snack = new snackInvent(); //make and set up class
+            }
+            var totalSnack = Program.snacks.Count;
+            if(totalSnack >= edit && edit != -1)
+            {
+                Program.snacks[edit] = snack;
+            } else
+            {
+                Program.snacks.Add(snack);
+            }
+            return snack;
         }
 
         private void frm_snackInvent_FormClosing(object sender, FormClosingEventArgs e)

@@ -18,39 +18,6 @@ namespace snackShack
         }
         internal const bool debug = true; //global var to controll default for debugs
         internal static List<snackInvent> snacks = new List<snackInvent>();
-
-        internal static snackInvent addSnack(string nameIn, decimal priceIn, decimal amountIn, string pathIn, int edit = -1)
-        {
-            bool isEdit = false;
-            if (edit != -1)
-            {
-                isEdit = true;
-            }
-            snackInvent snack = null;
-            string name = nameIn;
-            double price = Convert.ToDouble(priceIn);
-            Int32 amount = Convert.ToInt32(amountIn);
-            string path = pathIn;
-
-            if (isEdit)
-            {
-                snack = Program.snacks[edit];
-            }
-            else
-            {
-                snack = new snackInvent(); //make and set up class
-            }
-            var totalSnack = Program.snacks.Count;
-            if (totalSnack >= edit && edit != -1)
-            {
-                Program.snacks[edit] = snack;
-            }
-            else
-            {
-                Program.snacks.Add(snack);
-            }
-            return snack;
-        }
     }
     internal static class coreCommands
     {
