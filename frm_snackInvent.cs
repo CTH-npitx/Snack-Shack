@@ -108,7 +108,7 @@ namespace snackShack
                             string line = sr.ReadLine(); //read line
                             string[] arr = line.Split(constants.entrySep); //split into an array based on the csv format
 
-                            //format values for import (including ensuring values valid)
+                            //assign to vars
                             string nameImport = arr[0];
                             double priceImport = double.Parse(arr[1]);
                             Int32 amountImport = int.Parse(arr[2]);
