@@ -130,6 +130,8 @@ namespace snackShack
                                                                               //It means that it failed before it loaded something
                     var priceMin = decimal.ToDouble(constants.minPrice);
                     var amountMin = decimal.ToInt32(constants.minQuantity);
+                    var priceMax = decimal.ToDouble(constants.maxPrice);
+                    var amountMax = decimal.ToInt32(constants.maxQuantity);
                     
                     using (StreamReader sr = new StreamReader(filePath))
                     {
