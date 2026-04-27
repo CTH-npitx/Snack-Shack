@@ -72,27 +72,24 @@ namespace snackShack
             {
                 isEdit = true;
             }
-            snackInvent snack = null;
+            snackInvent snack = new snackInvent();
             string name = nameIn;
             double price = Convert.ToDouble(priceIn);
             Int32 amount = Convert.ToInt32(amountIn);
             string path = pathIn;
-            
-            if (isEdit)
+            int index = 0;
+            if(isEdit)
             {
-                snack = Program.snacks[edit];
+                index = edit;
             } else
             {
-                snack = new snackInvent(); //make and set up class
+                index = Program.snacks.Count;
             }
-            var totalSnack = Program.snacks.Count;
-            if(totalSnack >= edit && edit != -1)
-            {
-                Program.snacks[edit] = snack;
-            } else
-            {
-                Program.snacks.Add(snack);
-            }
+            snack.name = name;
+            snack.price = price;
+            snack.amount = amount;
+            snack.imagepath = path;
+            snack.index = index;
             return snack;
         }
 
