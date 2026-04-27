@@ -109,12 +109,13 @@ namespace snackShack
                             string nameImport = arr[0];
                             double priceImport = double.Parse(arr[1]);
                             Int32 amountImport = int.Parse(arr[2]);
+                            string pathImport = arr[3];
 
                             //populate class based on the contents of the file
                             snack.name = nameImport;
                             snack.price = priceImport;
                             snack.amount = amountImport;
-                            snack.imagepath = arr[3];
+                            snack.imagepath = pathImport;
                             snack.index = int.Parse(arr[4]); 
 
                             count++;
