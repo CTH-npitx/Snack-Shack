@@ -119,6 +119,10 @@ namespace snackShack
                             {
                                 priceImport = priceMin;
                             } //ensure price is atleast the minimum
+                            if(amountImport < amountMin)
+                            {
+                                amountImport = amountMin;
+                            } //ensure amount is atleast the min
 
                             //populate class based on the contents of the file
                             snack.name = nameImport;
