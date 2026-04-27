@@ -160,6 +160,14 @@ namespace snackShack
                             {
                                 amountImport = amountMin;
                             } //ensure amount is atleast the min
+                            if(priceImport > priceMax)
+                            {
+                                priceImport = priceMax;
+                            } //ensure the price is no more than the max
+                            if(amountImport > amountMax)
+                            {
+                                amountImport = amountMax;
+                            } //ensure the amount is no more than the max
 
                             //populate class based on the contents of the file
                             snack.name = nameImport;
