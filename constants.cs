@@ -8,12 +8,10 @@ namespace snackShack
         internal const char entrySep = ','; //seperation character
         internal const string preMadeErrorMsg = "I'm sorry dave, I'm afraid I can't do that"; //pre-made error message
         internal const decimal minPrice = 0.05M;
+        internal const decimal minQuantity = 0M;
+        internal const decimal maxQuantity = 100m;
+        internal const decimal maxPrice = 100m;
         internal const string fileName = "snacks";
         internal const string fileExtension = "csv";
-        /* internal static char fileSepChar() //give the seperation character as a char
-         {
-             return fileSepChar_con;
-         }
-        */
     }
 }
