@@ -105,8 +105,11 @@ namespace snackShack
                             string line = sr.ReadLine(); //read line
                             string[] arr = line.Split(constants.entrySep); //split into an array based on the csv format
 
+                            //format values for import (including ensuring values valid)
+                            string nameImport = arr[0];
+
                             //populate class based on the contents of the file
-                            snack.name = arr[0];
+                            snack.name = nameImport;
                             snack.price = double.Parse(arr[1]);
                             snack.amount = Int32.Parse(arr[2]);
                             snack.imagepath = arr[3];
