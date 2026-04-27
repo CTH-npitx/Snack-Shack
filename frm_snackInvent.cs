@@ -9,6 +9,7 @@ namespace snackShack
     public partial class frm_snackInvent : Form
     {
         int editInd = -1;
+        string bttnAddName = string.Empty;
         public frm_snackInvent()
         {
             InitializeComponent();
