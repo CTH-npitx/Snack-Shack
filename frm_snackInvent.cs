@@ -15,6 +15,9 @@ namespace snackShack
             InitializeComponent();
             toolStripStatusLabel1.Text = ""; // Wipe the status strip of all text
             nud_snackPrice.Minimum = constants.minPrice; // Set the minimum price to the constant defined in constants.cs
+            nud_snackQuantity.Minimum = constants.minQuantity; //set the minimum quantity to the constant
+            nud_snackQuantity.Maximum = constants.maxQuantity; //same
+            nud_snackPrice.Maximum = constants.maxPrice; // same
         }
         
         string filePath = Path.Combine(coreCommands.path(), constants.fileName + '.' + constants.fileExtension);
