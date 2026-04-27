@@ -115,6 +115,11 @@ namespace snackShack
                             string pathImport = arr[3];
                             int indexImport = int.Parse(arr[4]);
 
+                            if(priceImport < priceMin)
+                            {
+                                priceImport = priceMin;
+                            } //ensure price is atleast the minimum
+
                             //populate class based on the contents of the file
                             snack.name = nameImport;
                             snack.price = priceImport;
