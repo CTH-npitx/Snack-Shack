@@ -93,7 +93,10 @@ namespace snackShack
                 {
                     toolStripStatusLabel1.Text =
                         String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong...
-                                                                                //It means that it failed before it loaded something
+                                                                              //It means that it failed before it loaded something
+                    var priceMin = decimal.ToDouble(constants.minPrice);
+                    var amountMin = decimal.ToInt32(constants.minQuantity);
+                    
                     using (StreamReader sr = new StreamReader(filePath))
                     {
                         int count = 0;
