@@ -54,6 +54,7 @@
             this.lbl_snack3 = new System.Windows.Forms.Label();
             this.pb_snack2 = new System.Windows.Forms.PictureBox();
             this.lbl_snack2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snack1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snack12)).BeginInit();
@@ -230,10 +231,18 @@
             resources.ApplyResources(this.lbl_snack2, "lbl_snack2");
             this.lbl_snack2.Name = "lbl_snack2";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
             // frm_snackUI
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frm_snackUI";
             ((System.ComponentModel.ISupportInitialize)(this.pb_snack1)).EndInit();
@@ -281,5 +290,6 @@
         private System.Windows.Forms.Label lbl_snack3;
         private System.Windows.Forms.PictureBox pb_snack2;
         private System.Windows.Forms.Label lbl_snack2;
+        private System.Windows.Forms.Panel panel2;
     }
 }
