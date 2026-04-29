@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pb_snack1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>8, 3</value>
   </data>
   <data name="pb_snack1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -147,14 +147,17 @@
   <data name="lbl_snack1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 56</value>
+    <value>40, 56</value>
   </data>
   <data name="lbl_snack1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>18, 20</value>
   </data>
   <data name="lbl_snack1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -178,7 +181,7 @@
     <value>NoControl</value>
   </data>
   <data name="pb_snack12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 187</value>
+    <value>321, 155</value>
   </data>
   <data name="pb_snack12.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -201,14 +204,17 @@
   <data name="lbl_snack12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 241</value>
+    <value>348, 219</value>
   </data>
   <data name="lbl_snack12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 13</value>
+    <value>27, 20</value>
   </data>
   <data name="lbl_snack12.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -232,7 +238,7 @@
     <value>NoControl</value>
   </data>
   <data name="pb_snack11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 187</value>
+    <value>216, 155</value>
   </data>
   <data name="pb_snack11.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -255,14 +261,17 @@
   <data name="lbl_snack11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 241</value>
+    <value>245, 219</value>
   </data>
   <data name="lbl_snack11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 13</value>
+    <value>27, 20</value>
   </data>
   <data name="lbl_snack11.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -286,7 +295,7 @@
     <value>NoControl</value>
   </data>
   <data name="pb_snack10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 190</value>
+    <value>109, 155</value>
   </data>
   <data name="pb_snack10.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -309,14 +318,17 @@
   <data name="lbl_snack10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 244</value>
+    <value>145, 219</value>
   </data>
   <data name="lbl_snack10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 13</value>
+    <value>27, 20</value>
   </data>
   <data name="lbl_snack10.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -340,7 +352,7 @@
     <value>NoControl</value>
   </data>
   <data name="pb_snack9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 190</value>
+    <value>3, 155</value>
   </data>
   <data name="pb_snack9.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -363,14 +375,17 @@
   <data name="lbl_snack9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 244</value>
+    <value>40, 208</value>
   </data>
   <data name="lbl_snack9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>18, 20</value>
   </data>
   <data name="lbl_snack9.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -394,7 +409,7 @@
     <value>NoControl</value>
   </data>
   <data name="pb_snack8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 96</value>
+    <value>321, 77</value>
   </data>
   <data name="pb_snack8.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -417,14 +432,17 @@
   <data name="lbl_snack8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 150</value>
+    <value>348, 132</value>
   </data>
   <data name="lbl_snack8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>18, 20</value>
   </data>
   <data name="lbl_snack8.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -448,7 +466,7 @@
     <value>NoControl</value>
   </data>
   <data name="pb_snack7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 96</value>
+    <value>215, 77</value>
   </data>
   <data name="pb_snack7.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -471,14 +489,17 @@
   <data name="lbl_snack7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 150</value>
+    <value>245, 132</value>
   </data>
   <data name="lbl_snack7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>18, 20</value>
   </data>
   <data name="lbl_snack7.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -502,7 +523,7 @@
     <value>NoControl</value>
   </data>
   <data name="pb_snack6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 99</value>
+    <value>109, 79</value>
   </data>
   <data name="pb_snack6.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -525,14 +546,17 @@
   <data name="lbl_snack6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 153</value>
+    <value>145, 132</value>
   </data>
   <data name="lbl_snack6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>18, 20</value>
   </data>
   <data name="lbl_snack6.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -556,7 +580,7 @@
     <value>NoControl</value>
   </data>
   <data name="pb_snack5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 99</value>
+    <value>3, 79</value>
   </data>
   <data name="pb_snack5.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -579,14 +603,17 @@
   <data name="lbl_snack5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 153</value>
+    <value>40, 132</value>
   </data>
   <data name="lbl_snack5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>18, 20</value>
   </data>
   <data name="lbl_snack5.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -633,14 +660,17 @@
   <data name="lbl_snack4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 54</value>
+    <value>348, 53</value>
   </data>
   <data name="lbl_snack4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>18, 20</value>
   </data>
   <data name="lbl_snack4.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -664,7 +694,7 @@
     <value>NoControl</value>
   </data>
   <data name="pb_snack3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 0</value>
+    <value>215, 1</value>
   </data>
   <data name="pb_snack3.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -687,14 +717,17 @@
   <data name="lbl_snack3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 53</value>
+    <value>254, 54</value>
   </data>
   <data name="lbl_snack3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>18, 20</value>
   </data>
   <data name="lbl_snack3.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -718,7 +751,7 @@
     <value>NoControl</value>
   </data>
   <data name="pb_snack2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 3</value>
+    <value>113, 3</value>
   </data>
   <data name="pb_snack2.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -741,14 +774,17 @@
   <data name="lbl_snack2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lbl_snack2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="lbl_snack2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_snack2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 56</value>
+    <value>145, 56</value>
   </data>
   <data name="lbl_snack2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 13</value>
+    <value>18, 20</value>
   </data>
   <data name="lbl_snack2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -772,7 +808,7 @@
     <value>13, 13</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>424, 260</value>
+    <value>458, 425</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
