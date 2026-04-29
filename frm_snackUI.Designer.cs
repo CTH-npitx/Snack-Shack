@@ -54,10 +54,6 @@
             this.lbl_snack10 = new System.Windows.Forms.Label();
             this.pb_snack9 = new System.Windows.Forms.PictureBox();
             this.lbl_snack9 = new System.Windows.Forms.Label();
-            this.txt_dig1 = new System.Windows.Forms.TextBox();
-            this.txt_dig3 = new System.Windows.Forms.TextBox();
-            this.txt_dig4 = new System.Windows.Forms.TextBox();
-            this.txt_dig2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snack1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snack2)).BeginInit();
@@ -234,39 +230,11 @@
             resources.ApplyResources(this.lbl_snack9, "lbl_snack9");
             this.lbl_snack9.Name = "lbl_snack9";
             // 
-            // txt_dig1
-            // 
-            resources.ApplyResources(this.txt_dig1, "txt_dig1");
-            this.txt_dig1.Name = "txt_dig1";
-            this.txt_dig1.TextChanged += new System.EventHandler(this.txt_costChanged);
-            // 
-            // txt_dig3
-            // 
-            resources.ApplyResources(this.txt_dig3, "txt_dig3");
-            this.txt_dig3.Name = "txt_dig3";
-            this.txt_dig3.TextChanged += new System.EventHandler(this.txt_costChanged);
-            // 
-            // txt_dig4
-            // 
-            resources.ApplyResources(this.txt_dig4, "txt_dig4");
-            this.txt_dig4.Name = "txt_dig4";
-            this.txt_dig4.TextChanged += new System.EventHandler(this.txt_costChanged);
-            // 
-            // txt_dig2
-            // 
-            resources.ApplyResources(this.txt_dig2, "txt_dig2");
-            this.txt_dig2.Name = "txt_dig2";
-            this.txt_dig2.TextChanged += new System.EventHandler(this.txt_costChanged);
-            // 
             // frm_snackUI
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txt_dig4);
-            this.Controls.Add(this.txt_dig2);
-            this.Controls.Add(this.txt_dig3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txt_dig1);
             this.Name = "frm_snackUI";
             ((System.ComponentModel.ISupportInitialize)(this.pb_snack1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -283,7 +251,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_snack10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_snack9)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -314,9 +281,5 @@
         private System.Windows.Forms.Label lbl_snack3;
         private System.Windows.Forms.PictureBox pb_snack2;
         private System.Windows.Forms.Label lbl_snack2;
-        private System.Windows.Forms.TextBox txt_dig2;
-        private System.Windows.Forms.TextBox txt_dig4;
-        private System.Windows.Forms.TextBox txt_dig3;
-        private System.Windows.Forms.TextBox txt_dig1;
     }
 }
