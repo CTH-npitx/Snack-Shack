@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace snackShack
 {
-    public partial class Form2 : Form
+    public partial class frm_snackUI : Form
     {
-        public Form2()
+        public frm_snackUI()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace snackShack
 {
-    partial class Form2
+    partial class frm_snackUI
     {
         /// <summary>
         /// Required designer variable.
