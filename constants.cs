@@ -11,7 +11,6 @@ namespace snackShack
         internal const decimal minQuantity = 0M;
         internal const decimal maxQuantity = 100m;
         internal const decimal maxPrice = 100m;
-        internal const string fileName = "snacks";
-        internal const string fileExtension = "csv";
+        internal const string fileName = "snacks.csv";
     }
 }
