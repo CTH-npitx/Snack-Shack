@@ -70,6 +70,9 @@
     <EmbeddedResource Include="frm_snackInvent.resx">
       <DependentUpon>frm_snackInvent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_snackUI.resx">
+      <DependentUpon>frm_snackUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
