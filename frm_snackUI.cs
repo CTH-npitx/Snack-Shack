@@ -16,5 +16,10 @@ namespace snackShack
         {
             InitializeComponent();
         }
+
+        private void txt_costChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
