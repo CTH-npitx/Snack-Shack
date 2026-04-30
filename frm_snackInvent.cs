@@ -18,7 +18,10 @@ namespace snackShack
             nud_snackQuantity.Maximum = constants.maxQuantity; //same
             nud_snackPrice.Maximum = constants.maxPrice; // same
         }
-        
+
+        string adBtnTT = string.Empty; //creat variable for default add button tooltip text
+        string clerBtnTT = string.Empty; //create variable for default clear button text
+
         string filePath = Path.Combine(coreCommands.path(),".files",constants.fileName);
         private void bttn_snackImage_Click(object sender, EventArgs e)
         {
@@ -115,8 +118,10 @@ namespace snackShack
         private void frm_snackInvent_Load(object sender, EventArgs e)
         {
             readFile();
-            clearValues();
             bttnAddName = btn_add.Text;
+            adBtnTT = toolTip1.GetToolTip(btn_add);
+            clerBtnTT = toolTip1.GetToolTip(btn_clearEntry);
+            clearValues();
         }
 
         private void dgv_selectEdit(object sender, DataGridViewCellEventArgs e)
@@ -149,11 +154,16 @@ namespace snackShack
 
                 } else
                 {
-                    amount = 0;
+                    amount = constants.minQuantity;
                 }
                 nud_snackQuantity.Value= amount;
             } //check if it exists
             btn_add.Text = "Edit Entry"; //change button text
+            var visualNumber = ind + 1;
+            string tooltipText = "edit entry number " + visualNumber.ToString();
+            toolTip1.SetToolTip(btn_add, tooltipText);
+            tooltipText = clerBtnTT + " and deselect row";
+            toolTip1.SetToolTip(btn_clearEntry, tooltipText);
         } //populate text boxes with the content of the selected row
 
         private void btn_clearEntry_Click(object sender, EventArgs e)
@@ -173,6 +183,9 @@ namespace snackShack
                 dgv_invent.ClearSelection(); //deselect row
             } //if a row is selected (which therefore means it was editing an entry), deselect all rows
             editInd = -1;
+            toolTip1.SetToolTip(btn_add, adBtnTT);
+            toolTip1.SetToolTip(btn_clearEntry, clerBtnTT);
+            btn_add.Text = bttnAddName;
         }
 
         #region i/o
