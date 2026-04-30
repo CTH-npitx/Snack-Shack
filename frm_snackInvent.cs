@@ -107,6 +107,73 @@ namespace snackShack
             snack.index = index;
             return snack;
         }
+        
+        private void frm_snackInvent_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            writeFile();
+        }
+        private void frm_snackInvent_Load(object sender, EventArgs e)
+        {
+            readFile();
+            clearValues();
+            bttnAddName = btn_add.Text;
+        }
+
+        private void dgv_selectEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgv_invent == null)
+            {
+                return; //output nothing
+            } //make sure there is something selected
+            var row = dgv_invent.CurrentRow; //set a variable to the contents of the current row
+            var indText = row.Cells[5].Value.ToString(); //get the index value from what was clicked
+            var ind = int.Parse(indText);
+            editInd = ind;
+            var item = Program.snacks[ind];
+            if (item != null)
+            {
+                txt_imagePath.Text = item.imagepath;
+                pb_snackIcon.ImageLocation = item.imagepath;
+                txt_snackName.Text = item.name;
+                var price = Convert.ToDecimal(item.price);
+                if (price >= constants.minPrice)
+                {
+                } else
+                {
+                    price = constants.minPrice;
+                }
+                nud_snackPrice.Value= price;
+                var amount = Convert.ToDecimal(item.amount);
+                if(amount >= constants.minQuantity)
+                {
+
+                } else
+                {
+                    amount = 0;
+                }
+                nud_snackQuantity.Value= amount;
+            } //check if it exists
+            btn_add.Text = "Edit Entry"; //change button text
+        } //populate text boxes with the content of the selected row
+
+        private void btn_clearEntry_Click(object sender, EventArgs e)
+        {
+            clearValues();
+        }
+
+        private void clearValues()
+        {
+            txt_imagePath.Text = "";
+            txt_snackName.Text = "";
+            nud_snackPrice.Value = constants.minPrice;
+            nud_snackQuantity.Value = constants.minQuantity;
+            pb_snackIcon.Image = null;
+            if (dgv_invent.CurrentRow != null)
+            {
+                dgv_invent.ClearSelection(); //deselect row
+            } //if a row is selected (which therefore means it was editing an entry), deselect all rows
+            editInd = -1;
+        }
 
         private void writeFile()
         {
@@ -204,73 +271,5 @@ namespace snackShack
                 coreCommands.error("Error during file read", ex, false); //show error without exception message
             }
         } //read from file
-        
-        private void frm_snackInvent_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            writeFile();
-        }
-        private void frm_snackInvent_Load(object sender, EventArgs e)
-        {
-            readFile();
-            clearValues();
-            bttnAddName = btn_add.Text;
-        }
-
-
-        private void dgv_selectEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgv_invent == null)
-            {
-                return; //output nothing
-            } //make sure there is something selected
-            var row = dgv_invent.CurrentRow; //set a variable to the contents of the current row
-            var indText = row.Cells[5].Value.ToString(); //get the index value from what was clicked
-            var ind = int.Parse(indText);
-            editInd = ind;
-            var item = Program.snacks[ind];
-            if (item != null)
-            {
-                txt_imagePath.Text = item.imagepath;
-                pb_snackIcon.ImageLocation = item.imagepath;
-                txt_snackName.Text = item.name;
-                var price = Convert.ToDecimal(item.price);
-                if (price >= constants.minPrice)
-                {
-                } else
-                {
-                    price = constants.minPrice;
-                }
-                nud_snackPrice.Value= price;
-                var amount = Convert.ToDecimal(item.amount);
-                if(amount >= constants.minQuantity)
-                {
-
-                } else
-                {
-                    amount = 0;
-                }
-                nud_snackQuantity.Value= amount;
-            } //check if it exists
-            btn_add.Text = "Edit Entry"; //change button text
-        } //populate text boxes with the content of the selected row
-
-        private void btn_clearEntry_Click(object sender, EventArgs e)
-        {
-            clearValues();
-        }
-
-        private void clearValues()
-        {
-            txt_imagePath.Text = "";
-            txt_snackName.Text = "";
-            nud_snackPrice.Value = constants.minPrice;
-            nud_snackQuantity.Value = constants.minQuantity;
-            pb_snackIcon.Image = null;
-            if (dgv_invent.CurrentRow != null)
-            {
-                dgv_invent.ClearSelection(); //deselect row
-            } //if a row is selected (which therefore means it was editing an entry), deselect all rows
-            editInd = -1;
-        }
     }
 }
