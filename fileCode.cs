@@ -4,56 +4,20 @@ using System.IO;
 using System.Windows.Forms;
 using System;
 
-namespace snackShack.files
+namespace snackShack
 {
     internal static class files
     {
-        internal static void write() {
-            try
-            {
-                using (StreamWriter sw = new StreamWriter("snacks.csv"))
-                {
-                    foreach (var snack in Program.snacks)
-                    {
-                        //snack name, price, quantity, imagepath
-                        sw.WriteLine(snack.name + "," + snack.price + "," + snack.amount + "," + snack.imagepath);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error during file write", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        internal static void read()
+        #region I/O
+        internal static void Write(string filepath, char sep) 
         {
-            try
-            {
-                if (File.Exists("snacks.csv"))
-                {
-                    using (StreamReader sr = new StreamReader("snacks.csv"))
-                    {
-                        while (!sr.EndOfStream)
-                        {
-                            snackInvent snack = new snackInvent();
-                            //snackname, price, quantity, imagepath
-                            string line = sr.ReadLine();
-                            string[] arr = line.Split(',');
-                            snack.name = arr[0];
-                            snack.price = double.Parse(arr[1]);
-                            snack.amount = Int32.Parse(arr[2]);
-                            snack.imagepath = arr[3];
 
-                            Program.snacks.Add(snack);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error during file read", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        } //the write function
 
-            }
+        internal static void read(string path, char sep, int min) //the read function
+        {
+
         }
+        #endregion
     } //the code for files
 }
