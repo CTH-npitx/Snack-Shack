@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_snackName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_clearEntry = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_snackQuantity)).BeginInit();
@@ -73,6 +75,7 @@
             this.txt_snackName.Name = "txt_snackName";
             this.txt_snackName.Size = new System.Drawing.Size(100, 20);
             this.txt_snackName.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txt_snackName, "The Name of the snck");
             // 
             // label2
             // 
@@ -96,6 +99,7 @@
             this.nud_snackPrice.Size = new System.Drawing.Size(120, 20);
             this.nud_snackPrice.TabIndex = 3;
             this.nud_snackPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip1.SetToolTip(this.nud_snackPrice, "The price of the snack");
             // 
             // label3
             // 
@@ -113,6 +117,7 @@
             this.nud_snackQuantity.Size = new System.Drawing.Size(120, 20);
             this.nud_snackQuantity.TabIndex = 5;
             this.nud_snackQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip1.SetToolTip(this.nud_snackQuantity, "Quantity of snacks");
             // 
             // bttn_snackImage
             // 
@@ -121,6 +126,7 @@
             this.bttn_snackImage.Size = new System.Drawing.Size(75, 23);
             this.bttn_snackImage.TabIndex = 6;
             this.bttn_snackImage.Text = "Image";
+            this.toolTip1.SetToolTip(this.bttn_snackImage, "Select Image");
             this.bttn_snackImage.UseVisualStyleBackColor = true;
             this.bttn_snackImage.Click += new System.EventHandler(this.bttn_snackImage_Click);
             // 
@@ -130,6 +136,7 @@
             this.txt_imagePath.Name = "txt_imagePath";
             this.txt_imagePath.Size = new System.Drawing.Size(100, 20);
             this.txt_imagePath.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txt_imagePath, "Image Path");
             // 
             // openFileDialog1
             // 
@@ -138,12 +145,13 @@
             // pb_snackIcon
             // 
             this.pb_snackIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_snackIcon.Location = new System.Drawing.Point(296, 1);
+            this.pb_snackIcon.Location = new System.Drawing.Point(493, 1);
             this.pb_snackIcon.Name = "pb_snackIcon";
             this.pb_snackIcon.Size = new System.Drawing.Size(307, 204);
             this.pb_snackIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_snackIcon.TabIndex = 8;
             this.pb_snackIcon.TabStop = false;
+            this.toolTip1.SetToolTip(this.pb_snackIcon, "Icon Preview");
             // 
             // dgv_invent
             // 
@@ -217,6 +225,7 @@
             this.btn_add.Size = new System.Drawing.Size(75, 23);
             this.btn_add.TabIndex = 10;
             this.btn_add.Text = "Add";
+            this.toolTip1.SetToolTip(this.btn_add, "Add Entry to table");
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
@@ -313,6 +322,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_snackQuantity;
         private System.Windows.Forms.DataGridViewImageColumn col_snackIcon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_iconPath;
+        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_icon;
         private System.Windows.Forms.Button btn_clearEntry;
     }
