@@ -120,6 +120,8 @@ namespace snackShack
             readFile();
             clearValues();
             bttnAddName = btn_add.Text;
+            adBtnTT = toolTip1.GetToolTip(btn_add);
+            clerBtnTT = toolTip1.GetToolTip(btn_clearEntry);
         }
 
         private void dgv_selectEdit(object sender, DataGridViewCellEventArgs e)
