@@ -14,3 +14,4 @@ Use the StatusStrip to display the number of records read/written and any error 
 
 ideas
 - the status strip has multiple messages which honestly should never appear. So, that should be utilized as part of the "what went wrong" stuff
+- accidently put "tooltip1" in tooltip display. maybe possible easter egg?
