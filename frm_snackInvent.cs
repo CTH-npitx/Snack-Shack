@@ -118,10 +118,10 @@ namespace snackShack
         private void frm_snackInvent_Load(object sender, EventArgs e)
         {
             readFile();
-            clearValues();
             bttnAddName = btn_add.Text;
             adBtnTT = toolTip1.GetToolTip(btn_add);
             clerBtnTT = toolTip1.GetToolTip(btn_clearEntry);
+            clearValues();
         }
 
         private void dgv_selectEdit(object sender, DataGridViewCellEventArgs e)
