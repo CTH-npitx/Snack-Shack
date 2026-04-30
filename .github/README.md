@@ -13,3 +13,7 @@ Use the StatusStrip to display the number of records read/written and any error 
 	??
 
 make a storefront UI thing (initially just make a skeleton)
+
+___
+ideas
+- tba
