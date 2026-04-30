@@ -175,6 +175,7 @@ namespace snackShack
             editInd = -1;
         }
 
+        #region i/o
         private void writeFile()
         {
             try
@@ -271,5 +272,6 @@ namespace snackShack
                 coreCommands.error("Error during file read", ex, false); //show error without exception message
             }
         } //read from file
+        #endregion
     }
 }
