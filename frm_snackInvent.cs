@@ -154,7 +154,7 @@ namespace snackShack
 
                 } else
                 {
-                    amount = 0;
+                    amount = constants.minQuantity;
                 }
                 nud_snackQuantity.Value= amount;
             } //check if it exists
