@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace snackShack
+﻿namespace snackShack
 {
     internal class snackInvent
     {
@@ -12,7 +6,6 @@ namespace snackShack
         internal double price; //cost of snack
         internal int amount; //quantity of snack
         internal string imagepath; //path of image
-        //internal int index; 
-            //the index of the entry
+        internal int index; //the index of the entry
     }
 }
