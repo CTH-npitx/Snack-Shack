@@ -178,6 +178,8 @@ namespace snackShack
                 dgv_invent.ClearSelection(); //deselect row
             } //if a row is selected (which therefore means it was editing an entry), deselect all rows
             editInd = -1;
+            toolTip1.SetToolTip(btn_add, adBtnTT);
+            toolTip1.SetToolTip(btn_clearEntry, clerBtnTT);
         }
 
         #region i/o
