@@ -19,7 +19,7 @@ namespace snackShack
             nud_snackPrice.Maximum = constants.maxPrice; // same
         }
         
-        string filePath = Path.Combine(coreCommands.path(),".files",constants.fileName);
+        string filePath = Path.Combine(coreCommands.path(),constants.storageFolder,constants.fileName);
         private void bttn_snackImage_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Image Files(*.jpg;*.jpeg;*.png;*.gif;*bmp)|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
