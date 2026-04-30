@@ -47,12 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="constants.cs" />
-    <Compile Include="frm_snackUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_snackUI.Designer.cs">
-      <DependentUpon>frm_snackUI.cs</DependentUpon>
-    </Compile>
+    <Compile Include="fileCode.cs" />
     <Compile Include="frm_snackInvent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,9 +64,6 @@
     <Compile Include="snackInvent.cs" />
     <EmbeddedResource Include="frm_snackInvent.resx">
       <DependentUpon>frm_snackInvent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_snackUI.resx">
-      <DependentUpon>frm_snackUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
