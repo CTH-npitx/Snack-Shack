@@ -160,7 +160,7 @@ namespace snackShack
             } //check if it exists
             btn_add.Text = "Edit Entry"; //change button text
             var visualNumber = ind + 1;
-            string tooltipText = "edit entry" + visualNumber.ToString();
+            string tooltipText = "edit entry number " + visualNumber.ToString();
             toolTip1.SetToolTip(btn_add, tooltipText);
             tooltipText = clerBtnTT + "and deselect row";
             toolTip1.SetToolTip(btn_clearEntry, tooltipText);
