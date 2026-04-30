@@ -18,7 +18,10 @@ namespace snackShack
             nud_snackQuantity.Maximum = constants.maxQuantity; //same
             nud_snackPrice.Maximum = constants.maxPrice; // same
         }
-        
+
+        string adBtnTT = string.Empty; //creat variable for default add button tooltip text
+        string clerBtnTT = string.Empty; //create variable for default clear button text
+
         string filePath = Path.Combine(coreCommands.path(),".files",constants.fileName);
         private void bttn_snackImage_Click(object sender, EventArgs e)
         {
