@@ -108,14 +108,15 @@ namespace snackShack
             return snack;
         }
 
-        private void frm_snackInvent_FormClosing(object sender, FormClosingEventArgs e)
+        private void writeFile()
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(filePath)) {
+                using (StreamWriter sw = new StreamWriter(filePath))
+                {
                     int count = 0;
                     toolStripStatusLabel1.Text = String.Format("Wrote {0} snacks to file", count); //show current number of entries, which is 0.
-                                                                                                    //If this is what you see when done, something went wrong
+                                                                                                   //If this is what you see when done, something went wrong
                     foreach (var snack in Program.snacks)
                     {
                         //snack name, price, quantity, imagepath
@@ -130,12 +131,13 @@ namespace snackShack
             {
                 coreCommands.error("Error during file write", ex, false); //show error without exception message
             }
-        }
-        private void frm_snackInvent_Load(object sender, EventArgs e)
+        } //write to file
+
+        private void readFile()
         {
             try
             {
-                if(File.Exists(filePath))
+                if (File.Exists(filePath))
                 {
                     toolStripStatusLabel1.Text =
                         String.Format("Proceeding to load snacks from file"); //if you see this, something went wrong...
@@ -144,14 +146,14 @@ namespace snackShack
                     var amountMin = decimal.ToInt32(constants.minQuantity);
                     var priceMax = decimal.ToDouble(constants.maxPrice);
                     var amountMax = decimal.ToInt32(constants.maxQuantity);
-                    
+
                     using (StreamReader sr = new StreamReader(filePath))
                     {
                         int count = 0;
-                        while(!sr.EndOfStream)
+                        while (!sr.EndOfStream)
                         {
                             snackInvent snack = new snackInvent(); //make new class
-                                //order is: snackname, price, quantity, imagepath, index
+                                                                   //order is: snackname, price, quantity, imagepath, index
 
                             string line = sr.ReadLine(); //read line
                             string[] arr = line.Split(constants.entrySep); //split into an array based on the csv format
@@ -164,19 +166,19 @@ namespace snackShack
                             int indexImport = int.Parse(arr[4]);
 
                             //fix invalid numbers
-                            if(priceImport < priceMin)
+                            if (priceImport < priceMin)
                             {
                                 priceImport = priceMin;
                             } //ensure price is atleast the minimum
-                            if(amountImport < amountMin)
+                            if (amountImport < amountMin)
                             {
                                 amountImport = amountMin;
                             } //ensure amount is atleast the min
-                            if(priceImport > priceMax)
+                            if (priceImport > priceMax)
                             {
                                 priceImport = priceMax;
                             } //ensure the price is no more than the max
-                            if(amountImport > amountMax)
+                            if (amountImport > amountMax)
                             {
                                 amountImport = amountMax;
                             } //ensure the amount is no more than the max
@@ -196,11 +198,20 @@ namespace snackShack
                         }
                     }
                 }
-            } catch (Exception ex) //catch exception
+            }
+            catch (Exception ex) //catch exception
             {
                 coreCommands.error("Error during file read", ex, false); //show error without exception message
             }
-
+        } //read from file
+        
+        private void frm_snackInvent_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            writeFile();
+        }
+        private void frm_snackInvent_Load(object sender, EventArgs e)
+        {
+            readFile();
             clearValues();
             bttnAddName = btn_add.Text;
         }
