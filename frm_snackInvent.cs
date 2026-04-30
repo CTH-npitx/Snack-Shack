@@ -162,6 +162,8 @@ namespace snackShack
             var visualNumber = ind + 1;
             string tooltipText = "edit entry" + visualNumber.ToString();
             toolTip1.SetToolTip(btn_add, tooltipText);
+            tooltipText = clerBtnTT + "and deselect row";
+            toolTip1.SetToolTip(btn_clearEntry, tooltipText);
         } //populate text boxes with the content of the selected row
 
         private void btn_clearEntry_Click(object sender, EventArgs e)
