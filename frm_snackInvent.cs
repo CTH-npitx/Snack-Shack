@@ -159,6 +159,9 @@ namespace snackShack
                 nud_snackQuantity.Value= amount;
             } //check if it exists
             btn_add.Text = "Edit Entry"; //change button text
+            var visualNumber = ind + 1;
+            string tooltipText = "edit entry" + visualNumber.ToString();
+            toolTip1.SetToolTip(btn_add, tooltipText);
         } //populate text boxes with the content of the selected row
 
         private void btn_clearEntry_Click(object sender, EventArgs e)
