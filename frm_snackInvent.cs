@@ -185,6 +185,7 @@ namespace snackShack
             editInd = -1;
             toolTip1.SetToolTip(btn_add, adBtnTT);
             toolTip1.SetToolTip(btn_clearEntry, clerBtnTT);
+            btn_add.Text = bttnAddName;
         }
 
         #region i/o
