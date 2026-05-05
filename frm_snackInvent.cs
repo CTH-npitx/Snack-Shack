@@ -21,6 +21,7 @@ namespace snackShack
 
         string adBtnTT = string.Empty; //creat variable for default add button tooltip text
         string clerBtnTT = string.Empty; //create variable for default clear button text
+        Image pb_snackIcon_initial = null;
 
         string filePath = Path.Combine(coreCommands.path(),".files",constants.fileName);
         private void bttn_snackImage_Click(object sender, EventArgs e)
@@ -121,6 +122,7 @@ namespace snackShack
             bttnAddName = btn_add.Text;
             adBtnTT = toolTip1.GetToolTip(btn_add);
             clerBtnTT = toolTip1.GetToolTip(btn_clearEntry);
+            pb_snackIcon_initial = pb_snackIcon.InitialImage;
             clearValues();
         }
 
@@ -177,7 +179,7 @@ namespace snackShack
             txt_snackName.Text = "";
             nud_snackPrice.Value = constants.minPrice;
             nud_snackQuantity.Value = constants.minQuantity;
-            pb_snackIcon.Image = null;
+            pb_snackIcon.Image = pb_snackIcon_initial;
             if (dgv_invent.CurrentRow != null)
             {
                 dgv_invent.ClearSelection(); //deselect row
