@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI Images", "UI Images", "{
 		uiImages\VendingMachine.jpg = uiImages\VendingMachine.jpg
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{161C05D0-567B-4D3B-BC57-525B1DB3F88F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Preset Images", "Preset Images", "{161C05D0-567B-4D3B-BC57-525B1DB3F88F}"
 	ProjectSection(SolutionItems) = preProject
 		presetImages\2fer.jpg = presetImages\2fer.jpg
 		presetImages\airheads.jpg = presetImages\airheads.jpg
