@@ -106,5 +106,74 @@
   <ItemGroup>
     <None Include="uiImages\Interface Template Image.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\2fer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\airheads.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\almondjoy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\butterfinger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\Cheetos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\extragum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\figbars.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\hubbabubba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\icecubesgum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\juicyfruit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\kettlecookedruben.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\kitkat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\laysbbq.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\MilkyWay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\oatmealcremepies.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\potatoskins.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\pringles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\raisinets.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\ricecrisps.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\ruffles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\snickers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="presetImages\utz.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
