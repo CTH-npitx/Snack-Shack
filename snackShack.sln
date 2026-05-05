@@ -8,7 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI Images", "UI Images", "{511739F5-F6BA-41BD-A3C8-5C97CD8A851A}"
 	ProjectSection(SolutionItems) = preProject
 		uiImages\Interface Template Image.png = uiImages\Interface Template Image.png
-		uiImages\VendingMachine.jpg = uiImages\VendingMachine.jpg
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Preset Images", "Preset Images", "{161C05D0-567B-4D3B-BC57-525B1DB3F88F}"

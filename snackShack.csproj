@@ -94,8 +94,5 @@
   <ItemGroup>
     <None Include="uiImages\VendingMachine.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="uiImages\VendingMachine.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
