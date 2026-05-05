@@ -91,6 +91,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="uiImages\VendingMachine.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="uiImages\Interface Template Image.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
