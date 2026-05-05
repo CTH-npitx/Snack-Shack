@@ -5,10 +5,31 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snackShack", "snackShack.csproj", "{0B7C67A3-C011-4C1B-AAE5-E8233779010F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI Images", "UI Images", "{511739F5-F6BA-41BD-A3C8-5C97CD8A851A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Preset Images", "Preset Images", "{161C05D0-567B-4D3B-BC57-525B1DB3F88F}"
 	ProjectSection(SolutionItems) = preProject
-		uiImages\Interface Template Image.png = uiImages\Interface Template Image.png
-		uiImages\VendingMachine.jpg = uiImages\VendingMachine.jpg
+		presetImages\2fer.jpg = presetImages\2fer.jpg
+		presetImages\airheads.jpg = presetImages\airheads.jpg
+		presetImages\almondjoy.png = presetImages\almondjoy.png
+		presetImages\butterfinger.jpg = presetImages\butterfinger.jpg
+		presetImages\Cheetos.jpg = presetImages\Cheetos.jpg
+		presetImages\extragum.jpg = presetImages\extragum.jpg
+		presetImages\figbars.jpg = presetImages\figbars.jpg
+		presetImages\hubbabubba.jpg = presetImages\hubbabubba.jpg
+		presetImages\icecubesgum.jpg = presetImages\icecubesgum.jpg
+		presetImages\images.jpg = presetImages\images.jpg
+		presetImages\juicyfruit.jpg = presetImages\juicyfruit.jpg
+		presetImages\kettlecookedruben.jpg = presetImages\kettlecookedruben.jpg
+		presetImages\kitkat.jpg = presetImages\kitkat.jpg
+		presetImages\laysbbq.jpg = presetImages\laysbbq.jpg
+		presetImages\MilkyWay.jpg = presetImages\MilkyWay.jpg
+		presetImages\oatmealcremepies.jpg = presetImages\oatmealcremepies.jpg
+		presetImages\potatoskins.jpg = presetImages\potatoskins.jpg
+		presetImages\pringles.jpg = presetImages\pringles.jpg
+		presetImages\raisinets.jpg = presetImages\raisinets.jpg
+		presetImages\ricecrisps.jpg = presetImages\ricecrisps.jpg
+		presetImages\ruffles.jpg = presetImages\ruffles.jpg
+		presetImages\snickers.jpg = presetImages\snickers.jpg
+		presetImages\utz.jpg = presetImages\utz.jpg
 	EndProjectSection
 EndProject
 Global
